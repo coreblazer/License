@@ -57,13 +57,11 @@ namespace App1.ViewModels
             var observable = child.AsObservable<Helper.User>();
 
             // delete entire conversation list
-            await child.DeleteAsync();
 
             // subscribe to messages comming in, ignoring the ones that are from me
             var subscription = observable
                 .Where(f => !string.IsNullOrEmpty(f.Key)) // you get empty Key when there are no data on the server for specified node
-                .Subscribe(f => Debug.WriteLine("Received" + f.Key));
-            await child.PostAsync(new Helper.User { Username="Helaaaaaau"});
+                .Subscribe(f => Userlist.Add(f.Object));
 
 
         }
