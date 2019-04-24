@@ -14,6 +14,7 @@ namespace App1.ViewModels
     public class LoginPageViewModel
     {
         public ICommand LoginCommand { set; get; }
+        public ICommand NavigateToRegisterPageCommand { set; get; }
 
 
         private string userEmail = null;
@@ -45,23 +46,23 @@ namespace App1.ViewModels
 
         public LoginPageViewModel()
         {
-            LoginCommand = new Command(OnSubmit);
+            LoginCommand = new Command(Login);
+            NavigateToRegisterPageCommand = new Command(Register);
         }
 
-        public async void OnSubmit()
+        public async void Login()
         {
             try
             {
-                var auth = new FirebaseAuthProvider(new FirebaseConfig("AIzaSyDoNdqifOL3PtgY0ABTnXD6bNmPlhg39aE"));
-                var data = await auth.SignInWithEmailAndPasswordAsync(UserEmail, UserPassword);
-                string test=data.User.LocalId;
+                var data = await Connectors.Client.FireBaseAuthConfig.SignInWithEmailAndPasswordAsync(UserEmail, UserPassword);
+                string test = data.User.LocalId;
                 var firebaseClient = new FirebaseClient(
                                         "https://studhub-4b7ef.firebaseio.com/",
                                         new FirebaseOptions
                                         {
                                             AuthTokenAsyncFactory = () => Task.FromResult(data.FirebaseToken)
                                         });
-                
+
                 Connectors.Client.DatabaseClient = firebaseClient;
                 Helper.RetainedData.Email = test;
                 NavigationPage nav = new NavigationPage(new MainPageView());
@@ -74,7 +75,12 @@ namespace App1.ViewModels
                 await App.Current.MainPage.DisplayAlert("Alert", "Credentials wrong!", "OK");
             }
         }
+        public void Register()
+        {
+            NavigationPage newNavigationPage = new NavigationPage(new RegisterPageView());
+            Application.Current.MainPage = newNavigationPage;
+
+        }
+
     }
-
-
 }

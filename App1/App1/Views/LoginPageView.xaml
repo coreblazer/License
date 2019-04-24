@@ -12,6 +12,7 @@
             <Entry x:Name="emailEntry" Placeholder="Required" Text="{Binding UserEmail}"  />
             <Entry x:Name="passwordEntry" IsPassword="true" Placeholder="Required" Text="{Binding UserPassword}"/>
             <Button Text="Login" Command="{Binding LoginCommand}" />
+            <Button Text="Not a member yet? Hop in!" Command="{Binding NavigateToRegisterPageCommand}" />
             <Label x:Name="messageLabel" />
         </StackLayout>
     </ContentPage.Content>

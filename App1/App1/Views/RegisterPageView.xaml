@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Views.RegisterPageView">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="5">
+            <StackLayout Orientation="Horizontal">
+                <Entry Placeholder="First Name" Text="{Binding Firstname}"></Entry>
+                <Entry Placeholder="Last Name" Text="{Binding Lastname}"></Entry>
+            </StackLayout>
+            <Entry Placeholder="Email" Text="{Binding Email}"></Entry>
+            <Entry Placeholder="Password" IsPassword="True" Text="{Binding Password}"></Entry>
+            <Entry Placeholder="Confirm Password" IsPassword="True"></Entry>
+            <Button Text="Sign Up" Command="{Binding RegisterCommand}"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
