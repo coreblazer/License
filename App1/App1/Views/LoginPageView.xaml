@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Views.LoginPageView">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Sign Up"  />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="StartAndExpand">
+            <Image HorizontalOptions="Center" WidthRequest="200" Source="loginIcon.png"/>
+            <Entry x:Name="emailEntry" Placeholder="Required" Text="{Binding UserEmail}"  />
+            <Entry x:Name="passwordEntry" IsPassword="true" Placeholder="Required" Text="{Binding UserPassword}"/>
+            <Button Text="Login" Command="{Binding LoginCommand}" />
+            <Label x:Name="messageLabel" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
