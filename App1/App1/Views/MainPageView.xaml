@@ -5,11 +5,11 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Name="MenuItem1" Order="Primary"  Text="Item 1" Priority="0" />
     </ContentPage.ToolbarItems>
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <ListView x:Name="listTest">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Username}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
 </ContentPage>

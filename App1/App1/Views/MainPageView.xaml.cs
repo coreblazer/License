@@ -16,7 +16,7 @@ namespace App1.Views
 		public MainPageView ()
 		{
 			InitializeComponent ();
-            this.BindingContext = new MainPageViewModel();
-		}
+            BindingContext = new MainPageViewModel();           
+        }
 	}
 }

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Reactive.Linq;
@@ -12,10 +14,25 @@ using Firebase.Database.Query;
 
 namespace App1.ViewModels
 {
-    public class MainPageViewModel
+    public class MainPageViewModel: INotifyPropertyChanged
     {
-        public string UserName = "";
+        //public List<Helper.User> Userlist = new List<Helper.User>();
+        private ObservableCollection<Helper.User> userlist = new ObservableCollection<Helper.User>();
 
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public ObservableCollection<Helper.User> Userlist
+        {
+            get
+            {
+                return userlist;
+            }
+            set
+            {
+                userlist = value;
+                OnPropertyChanged("Userlist");
+            }
+        }
         public MainPageViewModel()
         {
             Initialize();
@@ -26,28 +43,15 @@ namespace App1.ViewModels
         }
         private async void RetrieveUserName()
         {
-            //IFirebaseConfig config = new FirebaseConfig
-            //{
-            //    FirebaseAuth
-            //    BasePath = "https://yourfirebase.firebaseio.com/"
-            //};
             var firebase = Connectors.Client.DatabaseClient;
-            var email = Helper.RetainedData.Email;
-            //var users = await GetUsers()
-            //var child = firebase.Child("Users/"+ Helper.RetainedData.Email);
-            var dd = 0;
-            //var test = await firebase
-            //  .Child("Users/" + Helper.RetainedData.Email)
-            //  .OrderByKey()
-            //  .OnceAsync<User>();
-            //string name = users.First().Username;
-            //var observable = child.AsObservable<Helper.User>();
-            //var sub = observable.Subscribe(f => Debug.WriteLine("eweeeeee"));
-            //EventStreamResponse response = await firebase.Child("chat", (sender, args, context) => {
-            //System.Console.WriteLine(args.Data);
-            //});
-            Debug.Write(dd);
-
+            var users = await firebase
+             .Child("Users")
+             .OrderByKey()
+             .OnceAsync<Helper.User>();
+            foreach (var user in users)
+            {
+                Userlist.Add(user.Object);
+            }
             var child = firebase.Child("Users");
 
             var observable = child.AsObservable<Helper.User>();
@@ -74,6 +78,14 @@ namespace App1.ViewModels
               {
                   Username = item.Object.Username
               }).ToList();
+        }
+
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
         }
     }
 }
