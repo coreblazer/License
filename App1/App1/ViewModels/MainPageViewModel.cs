@@ -8,6 +8,7 @@ using System.Reactive.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using App1.Helper;
+using App1.Models;
 using Firebase.Auth;
 using Firebase.Database;
 using Firebase.Database.Query;
@@ -17,11 +18,11 @@ namespace App1.ViewModels
     public class MainPageViewModel: INotifyPropertyChanged
     {
         //public List<Helper.User> Userlist = new List<Helper.User>();
-        private ObservableCollection<Helper.User> userlist = new ObservableCollection<Helper.User>();
+        private ObservableCollection<UserModel> userlist = new ObservableCollection<UserModel>();
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public ObservableCollection<Helper.User> Userlist
+        public ObservableCollection<UserModel> Userlist
         {
             get
             {
@@ -43,40 +44,41 @@ namespace App1.ViewModels
         }
         private async void RetrieveUserName()
         {
+            //to do add uuid like this: Users/Uuid/username
             var firebase = Connectors.Client.DatabaseClient;
             var users = await firebase
              .Child("Users")
              .OrderByKey()
-             .OnceAsync<Helper.User>();
+             .OnceAsync<UserModel>();
             foreach (var user in users)
             {
                 Userlist.Add(user.Object);
             }
-            var child = firebase.Child("Users");
+            //var child = firebase.Child("Users");
 
-            var observable = child.AsObservable<Helper.User>();
+            //var observable = child.AsObservable<UserModel>();
 
             // delete entire conversation list
 
             // subscribe to messages comming in, ignoring the ones that are from me
-            var subscription = observable
-                .Where(f => !string.IsNullOrEmpty(f.Key)) // you get empty Key when there are no data on the server for specified node
-                .Subscribe(f => Userlist.Add(f.Object));
+            //var subscription = observable
+            //    .Where(f => !string.IsNullOrEmpty(f.Key)) // you get empty Key when there are no data on the server for specified node
+            //    .Subscribe(f => Userlist.Add(f.Object));
 
 
         }
 
-        public async Task<List<Helper.User>> GetUsers()
-        {
-            var firebase = Connectors.Client.DatabaseClient;
+        //public async Task<List<Helper.User>> GetUsers()
+        //{
+        //    var firebase = Connectors.Client.DatabaseClient;
 
-            return (await firebase
-              .Child("Users/" + Helper.RetainedData.Email)
-              .OnceAsync<Helper.User>()).Select(item => new Helper.User
-              {
-                  Username = item.Object.Username
-              }).ToList();
-        }
+        //    return (await firebase
+        //      .Child("Users/" + Helper.RetainedData.Email)
+        //      .OnceAsync<Helper.User>()).Select(item => new Helper.User
+        //      {
+        //          Username = item.Object.Username
+        //      }).ToList();
+        //}
 
         protected virtual void OnPropertyChanged(string propertyName)
         {

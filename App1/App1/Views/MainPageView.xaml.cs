@@ -1,4 +1,5 @@
-﻿using App1.ViewModels;
+﻿using App1.Models;
+using App1.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,5 +19,12 @@ namespace App1.Views
 			InitializeComponent ();
             BindingContext = new MainPageViewModel();           
         }
-	}
+       protected void OnSelectedItem(object sender, SelectedItemChangedEventArgs e)
+        {
+            UserModel user = e.SelectedItem as UserModel;
+            NavigationPage nav = new NavigationPage(new ChatPageView(user.UserUUID));
+            Application.Current.MainPage = nav;
+        }
+
+    }
 }

@@ -6,18 +6,23 @@
         <ToolbarItem Name="MenuItem1" Order="Primary"  Text="Item 1" Priority="0" />
     </ContentPage.ToolbarItems>
     <ListView ItemsSource="{Binding Userlist}"
-              RowHeight="60">
+              RowHeight="60" ItemSelected="OnSelectedItem">
 
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
                     <StackLayout Margin="8">
-                        <Label Text="{Binding Username}"
-                               FontAttributes="Bold" />
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding FirstName}"
+                               FontAttributes="Bold"/>
+                            <Label Text="{Binding LastName}"
+                               FontAttributes="Bold"/>
+                        </StackLayout>
                     </StackLayout>
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
+
 
     </ListView>
 
