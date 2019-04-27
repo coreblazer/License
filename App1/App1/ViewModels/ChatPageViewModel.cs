@@ -3,6 +3,7 @@ using Firebase.Database.Query;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Reactive.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,7 @@ namespace App1.ViewModels
         private string author { get; set; }
         private string content { get; set; }
 
+        private List<MessageModel> sorted = new List<MessageModel>();
         private List<string> messageUuids = new List<string>();
         public string UserUuid { get; set; }
         public ICommand SendMessageCommand { get; set; }
@@ -61,15 +63,20 @@ namespace App1.ViewModels
 
         public async void SendMessage()
         {
-            Author = Helper.RetainedData.CurrentUser.FirstName + Helper.RetainedData.CurrentUser.LastName;
+            Author = Helper.RetainedData.CurrentUser.FirstName + " " + Helper.RetainedData.CurrentUser.LastName;
             string messageUuid = Helper.UUIDGenerator.UuidGenerator;
-            MessageModel message = new MessageModel(messageUuid, Author, Helper.RetainedData.CurrentUser.UserUUID, Content, DateTime.Now);
+            MessageModel message = new MessageModel(messageUuid,Helper.RetainedData.UserUuid, Author, Helper.RetainedData.CurrentUser.UserUUID, Content, DateTime.Now);
             MessageList.Add(message);
             await Connectors.Client.DatabaseClient
                     .Child("Conversations")
                     .Child(UserUuid)
                     .Child(messageUuid)
                     .PutAsync(message);
+            await Connectors.Client.DatabaseClient
+        .Child("Conversations")
+        .Child(Helper.RetainedData.UserUuid)
+        .Child(messageUuid)
+        .PutAsync(message);
         }
         protected void SubscribeToReceiveMessage()
         {
@@ -79,12 +86,24 @@ namespace App1.ViewModels
                 .Where(f => !string.IsNullOrEmpty(f.Key))
                 .Subscribe(f =>
                 {
-                    if (f.Object.UserUuid == UserUuid)
+                    if (f.Object.UserUuid == UserUuid && f.Object.AuthorUuid == Helper.RetainedData.UserUuid)
                     {
 
                         if (!(messageUuids.Contains(f.Object.MessageUuid)))
                         {
-                            MessageList.Add(f.Object);
+                            sorted.Add(f.Object);
+                            sorted= sorted.OrderBy(x => x.TimeStamp).ToList();
+                            foreach (var item in sorted)
+                            {
+                                MessageList.Add(item);
+
+                            }
+                            sorted.Clear();
+
+                        }
+                        else
+                        {
+                            messageUuids.Add(f.Object.MessageUuid);
                         }
 
                     }
@@ -103,14 +122,26 @@ namespace App1.ViewModels
              .OnceAsync<MessageModel>();
             foreach (var message in messages)
             {
-                if (message.Object.UserUuid == UserUuid)
+                if (message.Object.UserUuid == UserUuid && message.Object.UserUuid==Helper.RetainedData.UserUuid)
                 {
-                    MessageList.Add(message.Object);
-                    messageUuids.Add(message.Object.MessageUuid);
+                    if (!(messageUuids.Contains(message.Object.MessageUuid)))
+                    {
+                        sorted.Add(message.Object);
+                        sorted = sorted.OrderBy(o => o.TimeStamp).ToList();
+                        foreach (var item in sorted)
+                        {
+                            MessageList.Add(item);
+
+                        }
+                        sorted.Clear();
+                        messageUuids.Add(message.Object.MessageUuid);
+                    }
                 }
+
             }
-
-
         }
+
+
     }
 }
+
