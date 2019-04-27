@@ -8,15 +8,18 @@ namespace App1.Models
     {
         public string MessageUuid { get; set; }
         public string Author { get; set; }
+        public string UserUuid { get; set; }
         public string Content { get; set; }
         public DateTime TimeStamp { get; set; }
 
-        public MessageModel(string messageUuid, string author, string content, DateTime timestamp)
+        public MessageModel(string messageUuid, string author,string useruuid, string content, DateTime timestamp)
         {
             this.MessageUuid = messageUuid;
             this.Author = author;
+            this.UserUuid = useruuid;
             this.Content = content;
             this.TimeStamp = timestamp;
+
         }
     }
 }

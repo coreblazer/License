@@ -81,15 +81,16 @@ namespace App1.ViewModels
                                             AuthTokenAsyncFactory = () => Task.FromResult(loginNewlyCreatedUser.FirebaseToken)
                                         });
 
-                UserModel userToBeAdded = new UserModel(Firstname, Lastname, UserUUIDGenerator(), Email);
-                MessageModel message = new MessageModel(UserUUIDGenerator(), "Initialize", "Initialize", DateTime.Now);
+                UserModel userToBeAdded = new UserModel(Firstname, Lastname, loginNewlyCreatedUser.User.LocalId, Email);
+                MessageModel message = new MessageModel(Helper.UUIDGenerator.UuidGenerator, "Initialize","Initialize", "Initialize", DateTime.Now);
                 await firebaseClient
                     .Child("Users")
-                    .Child(userToBeAdded.UserUUID)
+                    .Child(loginNewlyCreatedUser.User.LocalId)
                     .PutAsync(userToBeAdded);
                 await firebaseClient
                     .Child("Conversations")
-                    .Child(userToBeAdded.UserUUID)
+                    .Child(loginNewlyCreatedUser.User.LocalId)
+                    .Child(Helper.UUIDGenerator.UuidGenerator)
                     .PutAsync(message);
             }
             catch (Exception e)
@@ -99,18 +100,7 @@ namespace App1.ViewModels
 
         }
 
-        public string UserUUIDGenerator()
-        {
-            StringBuilder builder = new StringBuilder();
-            Random random = new Random();
-            char ch;
-            for (int i = 0; i < 10; i++)
-            {
-                ch = Convert.ToChar(Convert.ToInt32(Math.Floor(26 * random.NextDouble() + 65)));
-                builder.Append(ch);
-            }
-            return builder.ToString();
-        }
+
 
 
 

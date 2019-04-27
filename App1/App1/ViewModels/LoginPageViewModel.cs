@@ -1,4 +1,5 @@
-﻿using App1.Views;
+﻿using App1.Models;
+using App1.Views;
 using Firebase.Auth;
 using Firebase.Database;
 using Firebase.Database.Query;
@@ -64,6 +65,8 @@ namespace App1.ViewModels
 
                 Connectors.Client.DatabaseClient = firebaseClient;
                 Helper.RetainedData.Email = UserEmail;
+                Helper.RetainedData.UserUuid = data.User.LocalId;
+                await GetMyUserName();
                 NavigationPage nav = new NavigationPage(new MainPageView());
                 Application.Current.MainPage = nav;
 
@@ -72,6 +75,22 @@ namespace App1.ViewModels
             {
                 Console.WriteLine(e);
                 await App.Current.MainPage.DisplayAlert("Alert", "Credentials wrong!", "OK");
+            }
+        }
+
+        private async Task GetMyUserName()
+        {
+            //to do add uuid like this: Users/Uuid/username
+            var users = await Connectors.Client.DatabaseClient
+             .Child("Users")
+             .OrderByKey()
+             .OnceAsync<UserModel>();
+            foreach (var user in users)
+            {
+                if (user.Object.UserUUID == Helper.RetainedData.UserUuid)
+                {
+                    Helper.RetainedData.CurrentUser = user.Object;
+                }
             }
         }
         public void Register()

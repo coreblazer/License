@@ -4,11 +4,30 @@
              x:Class="App1.Views.ChatPageView">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <StackLayout x:Name="MyContent" VerticalOptions="Start">
+            </StackLayout>
+            <ListView ItemsSource="{Binding MessageList}"
+              RowHeight="60" >
 
-   
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Margin="8">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Author}"
+                               FontAttributes="Bold"/>
+                                    <Label Text="{Binding Content}"
+                               FontAttributes="Bold"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand">
+                <Entry x:Name="messageEntry"  Text="{Binding Content}" HorizontalOptions="FillAndExpand"/>
+                <Button Text="Send" Command="{Binding SendMessageCommand}" HorizontalOptions="End"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
