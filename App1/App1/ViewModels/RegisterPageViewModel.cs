@@ -1,4 +1,5 @@
 ﻿using App1.Helper;
+using App1.Models;
 using App1.Views;
 using Firebase.Auth;
 using Firebase.Database;
@@ -79,13 +80,19 @@ namespace App1.ViewModels
                                         {
                                             AuthTokenAsyncFactory = () => Task.FromResult(loginNewlyCreatedUser.FirebaseToken)
                                         });
-                RegisteredUser userToBeAdded = new RegisteredUser(Firstname, Lastname);
+
+                UserModel userToBeAdded = new UserModel(Firstname, Lastname, UserUUIDGenerator(), Email);
+                MessageModel message = new MessageModel(UserUUIDGenerator(), "Initialize", "Initialize", DateTime.Now);
                 await firebaseClient
                     .Child("Users")
-                    .Child(UserUUIDGenerator())
+                    .Child(userToBeAdded.UserUUID)
                     .PutAsync(userToBeAdded);
-                var boolean = true;
-            }catch(Exception e)
+                await firebaseClient
+                    .Child("Conversations")
+                    .Child(userToBeAdded.UserUUID)
+                    .PutAsync(message);
+            }
+            catch (Exception e)
             {
                 Debug.Write("got error" + e);
             }

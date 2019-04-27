@@ -18,9 +18,11 @@ namespace App1.ViewModels
     public class MainPageViewModel: INotifyPropertyChanged
     {
         //public List<Helper.User> Userlist = new List<Helper.User>();
+        public event PropertyChangedEventHandler PropertyChanged;
+
         private ObservableCollection<UserModel> userlist = new ObservableCollection<UserModel>();
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        private List<string> messageUuid = new List<string>();
 
         public ObservableCollection<UserModel> Userlist
         {
@@ -34,15 +36,33 @@ namespace App1.ViewModels
                 OnPropertyChanged("Userlist");
             }
         }
+
+        private ObservableCollection<MessageModel> messageList = new ObservableCollection<MessageModel>();
+
+
+
+        public ObservableCollection<MessageModel> MessageList
+        {
+            get
+            {
+                return messageList;
+            }
+            set
+            {
+                messageList = value;
+                OnPropertyChanged("MessageList");
+            }
+        }
         public MainPageViewModel()
         {
             Initialize();
         }
-        private void Initialize()
+        private async void Initialize()
         {
-            RetrieveUserName();
+            await RetrieveUserName();
+            SubscribeToReceiveMessages();
         }
-        private async void RetrieveUserName()
+        private async Task RetrieveUserName()
         {
             //to do add uuid like this: Users/Uuid/username
             var firebase = Connectors.Client.DatabaseClient;
@@ -54,7 +74,7 @@ namespace App1.ViewModels
             {
                 Userlist.Add(user.Object);
             }
-            //var child = firebase.Child("Users");
+            var child = firebase.Child("Users");
 
             //var observable = child.AsObservable<UserModel>();
 
@@ -64,21 +84,28 @@ namespace App1.ViewModels
             //var subscription = observable
             //    .Where(f => !string.IsNullOrEmpty(f.Key)) // you get empty Key when there are no data on the server for specified node
             //    .Subscribe(f => Userlist.Add(f.Object));
-
-
         }
 
-        //public async Task<List<Helper.User>> GetUsers()
-        //{
-        //    var firebase = Connectors.Client.DatabaseClient;
+        private void SubscribeToReceiveMessages()
+        {
+            string uuid = Userlist.Where(index => index.UserEmail == RetainedData.Email).FirstOrDefault().UserUUID;
+            var child = Connectors.Client.DatabaseClient.Child("Conversations").Child(uuid);
 
-        //    return (await firebase
-        //      .Child("Users/" + Helper.RetainedData.Email)
-        //      .OnceAsync<Helper.User>()).Select(item => new Helper.User
-        //      {
-        //          Username = item.Object.Username
-        //      }).ToList();
-        //}
+            var observable = child.AsObservable<MessageModel>();
+            var subscription = observable
+                .Where(f => !string.IsNullOrEmpty(f.Key))
+                .Subscribe(f => {
+                    if (messageUuid.Contains(f.Object.MessageUuid))
+                    {
+                        Debug.Write("Already have item");
+                        return;
+                    }
+                    {
+                        messageUuid.Add(f.Object.MessageUuid);
+                        Debug.Write("You have received a new message " + f.Object.Content);
+                    }
+                });
+        } 
 
         protected virtual void OnPropertyChanged(string propertyName)
         {

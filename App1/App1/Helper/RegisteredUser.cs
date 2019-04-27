@@ -15,5 +15,6 @@ namespace App1.Helper
             this.FirstName = firstName;
             this.LastName = lastName;
         }
+
     }
 }

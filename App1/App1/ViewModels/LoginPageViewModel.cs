@@ -55,7 +55,6 @@ namespace App1.ViewModels
             try
             {
                 var data = await Connectors.Client.FireBaseAuthConfig.SignInWithEmailAndPasswordAsync(UserEmail, UserPassword);
-                string test = data.User.LocalId;
                 var firebaseClient = new FirebaseClient(
                                         "https://studhub-4b7ef.firebaseio.com/",
                                         new FirebaseOptions
@@ -64,7 +63,7 @@ namespace App1.ViewModels
                                         });
 
                 Connectors.Client.DatabaseClient = firebaseClient;
-                Helper.RetainedData.Email = test;
+                Helper.RetainedData.Email = UserEmail;
                 NavigationPage nav = new NavigationPage(new MainPageView());
                 Application.Current.MainPage = nav;
 

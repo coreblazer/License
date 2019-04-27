@@ -9,5 +9,16 @@ namespace App1.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string UserUUID { get; set; }
+        public string UserEmail { get; set; }
+
+        public UserModel(string firstName, string lastName, string userUUID, string userEmail)
+        {
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.UserUUID = userUUID;
+            this.UserEmail = userEmail;
+
+        }
+
     }
 }
