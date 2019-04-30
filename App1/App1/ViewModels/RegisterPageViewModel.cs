@@ -82,7 +82,7 @@ namespace App1.ViewModels
                                         });
 
                 UserModel userToBeAdded = new UserModel(Firstname, Lastname, loginNewlyCreatedUser.User.LocalId, Email);
-                MessageModel message = new MessageModel(Helper.UUIDGenerator.UuidGenerator, "Initialize","Initialize", "Initialize", DateTime.Now);
+                MessageModel message = new MessageModel("abv", "abc", Helper.RetainedData.UserUuid, "abc", "abc", DateTime.Now);
                 await firebaseClient
                     .Child("Users")
                     .Child(loginNewlyCreatedUser.User.LocalId)

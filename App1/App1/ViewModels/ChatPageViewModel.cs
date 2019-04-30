@@ -65,7 +65,7 @@ namespace App1.ViewModels
         {
             Author = Helper.RetainedData.CurrentUser.FirstName + " " + Helper.RetainedData.CurrentUser.LastName;
             string messageUuid = Helper.UUIDGenerator.UuidGenerator;
-            MessageModel message = new MessageModel(messageUuid, Author, Helper.RetainedData.UserUuid, Content, DateTime.Now);
+            MessageModel message = new MessageModel(messageUuid, Author, Helper.RetainedData.UserUuid, Content,UserUuid, DateTime.Now);
             MessageList.Add(message);
             await Connectors.Client.DatabaseClient
                     .Child("Conversations")
@@ -87,7 +87,7 @@ namespace App1.ViewModels
                 .Where(f => !string.IsNullOrEmpty(f.Key))
                 .Subscribe(f =>
                 {
-                    if (f.Object.UserUuid == UserUuid)
+                    if (f.Object.AuthorUuid == UserUuid)
                     {
                         if (!(messageUuids.Contains(f.Object.MessageUuid)))
                         {
@@ -112,12 +112,12 @@ namespace App1.ViewModels
             var firebase = Connectors.Client.DatabaseClient;
             var messages = await firebase
              .Child("Conversations")
-             .Child(Helper.RetainedData.UserUuid)
+             .Child(Helper.RetainedData.CurrentUser.UserUUID)
              .OrderByKey()
              .OnceAsync<MessageModel>();
             foreach (var message in messages)
             {
-                if (message.Object.UserUuid == UserUuid)
+                if (message.Object.TargetUuid == UserUuid)
                 {
 
                     sorted.Add(message.Object);
