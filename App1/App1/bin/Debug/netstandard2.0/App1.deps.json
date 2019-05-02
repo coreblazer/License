@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "165fb15b2c62cc6a5732fa57fcee287dad474b6f"
+    "signature": "0499a231a33f7f563ddaef06273bf711306c0202"
   },
   "compilationOptions": {},
   "targets": {
@@ -16,6 +16,7 @@
           "Forms.Controls.FlexButton": "0.9.1",
           "NETStandard.Library": "2.0.3",
           "Reactive.Streams": "1.0.2",
+          "XForms.Plugin.AnimationNavigationPage": "1.0.7",
           "Xamarin.Forms": "3.4.0.1008975"
         },
         "runtime": {
@@ -264,6 +265,17 @@
             "fileVersion": "2.0.0.0"
           }
         }
+      },
+      "XForms.Plugin.AnimationNavigationPage/1.0.7": {
+        "dependencies": {
+          "Xamarin.Forms": "3.4.0.1008975"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FormsControls.Base.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -454,6 +466,13 @@
       "sha512": "sha512-036/h8HtzRFgTrfhY57IeHoYRsPTO2XTA6uUFdmZzw2QR1sdszfofhI9HrCJTRx6fCzmjPg5Cxk5chYrjKarNw==",
       "path": "xamarin.forms/3.4.0.1008975",
       "hashPath": "xamarin.forms.3.4.0.1008975.nupkg.sha512"
+    },
+    "XForms.Plugin.AnimationNavigationPage/1.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-G15kdWjUAlIOAwy0Gax+2CD4HzFAhcFgB5ztMoJJ1FFrhBd8ZpQ3R2RmGfQxNtZDcrjxIpbsPojluA+4SnAL6w==",
+      "path": "xforms.plugin.animationnavigationpage/1.0.7",
+      "hashPath": "xforms.plugin.animationnavigationpage.1.0.7.nupkg.sha512"
     }
   }
 }

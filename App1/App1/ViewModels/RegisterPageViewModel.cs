@@ -22,6 +22,11 @@ namespace App1.ViewModels
         private string lastName { get; set; }
         private string email { get; set; }
         private string password { get; set; }
+        private string confirmPassword { get; set; }
+        private bool passwordCorrectFormat { get; set; }
+        private bool passwordAndConfirmPasswords { get; set; }
+        private string backgroundColorForInvalidEntries { get; set; }
+
 
         public string Firstname
         {
@@ -47,6 +52,41 @@ namespace App1.ViewModels
             set => password = value;
         }
 
+        public string ConfirmPassword
+        {
+            get => confirmPassword;
+            set => confirmPassword = value;
+        }
+
+        public string BackgroundColorForInvalidEntries
+        {
+            get => backgroundColorForInvalidEntries;
+            set
+            {
+                confirmPassword = value;
+                OnPropertyChanged("BackgroundColorForInvalidEntries");
+            }
+        }
+
+        public bool PasswordCorrectFormat
+        {
+            get => passwordCorrectFormat;
+            set
+            {
+                passwordCorrectFormat = value;
+                OnPropertyChanged("PasswordCorrectFormat");
+            }
+        }
+        public bool PasswordAndConfirmPasswords
+        {
+            get => passwordAndConfirmPasswords;
+            set
+            {
+                passwordAndConfirmPasswords = value;
+                OnPropertyChanged("PasswordAndConfirmPasswords");
+            }
+        }
+
         public RegisterPageViewModel()
         {
             RegisterCommand = new Command(RegisterNewUser);
@@ -58,7 +98,9 @@ namespace App1.ViewModels
             IsBusy = true;
             try
             {
-                var userRegistration = await Connectors.Client.FireBaseAuthConfig.CreateUserWithEmailAndPasswordAsync(Email, Password);
+
+                await Connectors.Client.FireBaseAuthConfig.CreateUserWithEmailAndPasswordAsync(Email, Password);
+
                 InsertNewUser();
                 NavigationPage nav = new NavigationPage(new LoginPageView());
                 Application.Current.MainPage = nav;
@@ -103,14 +145,17 @@ namespace App1.ViewModels
             {
                 Debug.Write("got error" + e);
                 IsBusy = false;
-
             }
 
         }
+            
+        private void CheckPasswordAndConfirmPasswordValues()
+        {
+            if (!(Password.Equals(ConfirmPassword)))
+            {
+                PasswordAndConfirmPasswords = false;
 
-
-
-
-
+            }
+        }
     }
 }

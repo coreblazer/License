@@ -312,6 +312,18 @@
           "build/Xamarin.Forms.props": {},
           "build/Xamarin.Forms.targets": {}
         }
+      },
+      "XForms.Plugin.AnimationNavigationPage/1.0.7": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.4.0.1008975"
+        },
+        "compile": {
+          "lib/netstandard2.0/FormsControls.Base.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FormsControls.Base.dll": {}
+        }
       }
     }
   },
@@ -1627,6 +1639,22 @@
         "xamarin.forms.3.4.0.1008975.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
+    },
+    "XForms.Plugin.AnimationNavigationPage/1.0.7": {
+      "sha512": "G15kdWjUAlIOAwy0Gax+2CD4HzFAhcFgB5ztMoJJ1FFrhBd8ZpQ3R2RmGfQxNtZDcrjxIpbsPojluA+4SnAL6w==",
+      "type": "package",
+      "path": "xforms.plugin.animationnavigationpage/1.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/FormsControls.Base.dll",
+        "lib/MonoAndroid10/FormsControls.Droid.dll",
+        "lib/Xamarin.iOS10/FormsControls.Base.dll",
+        "lib/Xamarin.iOS10/FormsControls.Touch.dll",
+        "lib/netstandard2.0/FormsControls.Base.dll",
+        "xforms.plugin.animationnavigationpage.1.0.7.nupkg.sha512",
+        "xforms.plugin.animationnavigationpage.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -1638,6 +1666,7 @@
       "Forms.Controls.FlexButton >= 0.9.1",
       "NETStandard.Library >= 2.0.3",
       "Reactive.Streams >= 1.0.2",
+      "XForms.Plugin.AnimationNavigationPage >= 1.0.7",
       "Xamarin.Forms >= 3.4.0.1008975"
     ]
   },
@@ -1711,6 +1740,10 @@
           "Reactive.Streams": {
             "target": "Package",
             "version": "[1.0.2, )"
+          },
+          "XForms.Plugin.AnimationNavigationPage": {
+            "target": "Package",
+            "version": "[1.0.7, )"
           },
           "Xamarin.Forms": {
             "target": "Package",

@@ -18,5 +18,7 @@ namespace App1.Views
 			InitializeComponent();
             this.BindingContext = new RegisterPageViewModel();
 		}
-	}
+
+     
+    }
 }

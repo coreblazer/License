@@ -114,6 +114,8 @@ class MonoPackageManager_Resources {
 		"FireSharp.dll",
 		"Flex.Android.dll",
 		"Flex.dll",
+		"FormsControls.Base.dll",
+		"FormsControls.Droid.dll",
 		"FormsViewGroup.dll",
 		"Lex.Db.dll",
 		"LiteDB.dll",

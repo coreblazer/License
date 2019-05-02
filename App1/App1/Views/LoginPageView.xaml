@@ -13,6 +13,7 @@
                 <RowDefinition Height="40" />
                 <RowDefinition Height="40" />
                 <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="300" />
@@ -30,6 +31,7 @@
     HighlightForegroundColor="#49516F"
     BackgroundColor="#6279B8"
     HighlightBackgroundColor="#8EA4D2"
+                             IsEnabled="{Binding IsBusy}"
                              Grid.Row="2" Grid.Column="0"/>
             <flex:FlexButton Text="Not a member yet? Hop in!" ClickedCommand="{Binding NavigateToRegisterPageCommand}" 
                               WidthRequest="76"
@@ -39,7 +41,8 @@
     HighlightForegroundColor="#49516F"
     BackgroundColor="#6279B8"
     HighlightBackgroundColor="#8EA4D2"
-                             Grid.Row="3" Grid.Column="0"/>
+                             Grid.Row="3" Grid.Column="0"
+                             IsEnabled="{Binding IsBusy}"/>
             <!--<StackLayout VerticalOptions="StartAndExpand"  Padding="20" Spacing="10">
             <Image HorizontalOptions="Center" WidthRequest="200" Source="loginIcon.png"/>
             <Entry x:Name="emailEntry" Placeholder="Required" Text="{Binding UserEmail}"  />
@@ -56,7 +59,7 @@
                          IsVisible="{Binding IsBusy}"
                           HeightRequest="40"
                           VerticalOptions="CenterAndExpand"
-                          HorizontalOptions="CenterAndExpand"/>
+                          HorizontalOptions="CenterAndExpand" Grid.Row="4"/>
         </Grid>
 
     </ContentPage.Content>

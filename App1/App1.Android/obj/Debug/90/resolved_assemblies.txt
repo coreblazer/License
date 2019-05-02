@@ -6,6 +6,8 @@ C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\FireSharp.dll
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\Flex.Android.dll
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\Flex.dll
+C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\FormsControls.Base.dll
+C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\FormsControls.Droid.dll
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\FormsViewGroup.dll
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\Java.Interop.dll
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\Lex.Db.dll

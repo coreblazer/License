@@ -19,7 +19,10 @@ namespace App1.ViewModels
         public bool IsBusy
         {
             get => isbusy;
-            set => isbusy = value;
+            set
+            {
+                isbusy = value; OnPropertyChanged("IsBusy");
+            }
         }
         private ObservableCollection<MessageModel> messageList = new ObservableCollection<MessageModel>();
 

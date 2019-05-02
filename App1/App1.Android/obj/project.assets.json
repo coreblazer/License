@@ -630,6 +630,20 @@
           "build/MonoAndroid80/Xamarin.GooglePlayServices.Tasks.targets": {}
         }
       },
+      "XForms.Plugin.AnimationNavigationPage/1.0.7": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.4.0.1008975"
+        },
+        "compile": {
+          "lib/MonoAndroid10/FormsControls.Base.dll": {},
+          "lib/MonoAndroid10/FormsControls.Droid.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/FormsControls.Base.dll": {},
+          "lib/MonoAndroid10/FormsControls.Droid.dll": {}
+        }
+      },
       "App1/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -640,6 +654,7 @@
           "FirebaseDatabase.net": "4.0.1",
           "Forms.Controls.FlexButton": "0.9.1",
           "Reactive.Streams": "1.0.2",
+          "XForms.Plugin.AnimationNavigationPage": "1.0.7",
           "Xamarin.Forms": "3.4.0.1008975"
         },
         "compile": {
@@ -1795,6 +1810,22 @@
         "lib/MonoAndroid80/Xamarin.GooglePlayServices.Tasks.dll",
         "xamarin.googleplayservices.tasks.60.1142.1.nupkg.sha512",
         "xamarin.googleplayservices.tasks.nuspec"
+      ]
+    },
+    "XForms.Plugin.AnimationNavigationPage/1.0.7": {
+      "sha512": "G15kdWjUAlIOAwy0Gax+2CD4HzFAhcFgB5ztMoJJ1FFrhBd8ZpQ3R2RmGfQxNtZDcrjxIpbsPojluA+4SnAL6w==",
+      "type": "package",
+      "path": "xforms.plugin.animationnavigationpage/1.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/FormsControls.Base.dll",
+        "lib/MonoAndroid10/FormsControls.Droid.dll",
+        "lib/Xamarin.iOS10/FormsControls.Base.dll",
+        "lib/Xamarin.iOS10/FormsControls.Touch.dll",
+        "lib/netstandard2.0/FormsControls.Base.dll",
+        "xforms.plugin.animationnavigationpage.1.0.7.nupkg.sha512",
+        "xforms.plugin.animationnavigationpage.nuspec"
       ]
     },
     "App1/1.0.0": {

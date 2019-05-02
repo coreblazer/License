@@ -3,6 +3,7 @@ using App1.Views;
 using Firebase.Auth;
 using Firebase.Database;
 using Firebase.Database.Query;
+using FormsControls.Base;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -69,8 +70,6 @@ namespace App1.ViewModels
                 Helper.RetainedData.Email = UserEmail;
                 Helper.RetainedData.UserUuid = data.User.LocalId;
                 await RetainLoggedUser();
-                var userrr = Helper.RetainedData.CurrentUser;
-
                 NavigationPage nav = new NavigationPage(new MainPageView());
                 Application.Current.MainPage = nav;
                 IsBusy = false;
