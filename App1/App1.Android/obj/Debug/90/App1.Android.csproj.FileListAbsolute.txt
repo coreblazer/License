@@ -67,6 +67,9 @@ C:\Users\Bogdan\source\repos\App1\App1\App1.Android\bin\Debug\System.ServiceMode
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\bin\Debug\System.Web.Services.pdb
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\bin\Debug\System.Net.pdb
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\bin\Debug\Mono.Security.pdb
+C:\Users\Bogdan\source\repos\App1\App1\App1.Android\bin\Debug\App1.dll.mdb
+C:\Users\Bogdan\source\repos\App1\App1\App1.Android\bin\Debug\Lex.Db.dll.mdb
+C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\res\drawable\login_background.jpg
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\linksrc\App1.Android.pdb
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\linksrc\FormsViewGroup.pdb
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\linksrc\Mono.Android.pdb
@@ -90,8 +93,6 @@ C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\linksrc\System.
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\linksrc\System.Web.Services.pdb
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\linksrc\System.Net.pdb
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\linksrc\Mono.Security.pdb
-C:\Users\Bogdan\source\repos\App1\App1\App1.Android\bin\Debug\App1.dll.mdb
-C:\Users\Bogdan\source\repos\App1\App1\App1.Android\bin\Debug\Lex.Db.dll.mdb
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\linksrc\App1.dll.mdb
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\linksrc\Lex.Db.dll.mdb
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\App1.dll.mdb
@@ -119,5 +120,6 @@ C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\Xamarin.Forms.Core.pdb
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\Xamarin.Forms.Platform.Android.pdb
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\Xamarin.Forms.Xaml.pdb
+C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\res\drawable\login.jpg
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\linksrc\App1.dll.mdb
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\linksrc\Lex.Db.dll.mdb

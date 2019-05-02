@@ -3,6 +3,8 @@ Firebase.Auth
 Firebase.Database.Platform
 Firebase
 FireSharp
+Flex.Android
+Flex
 FormsViewGroup
 Lex.Db
 LiteDB

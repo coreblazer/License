@@ -12,7 +12,7 @@ using Xamarin.Forms;
 
 namespace App1.ViewModels
 {
-    public class LoginPageViewModel
+    public class LoginPageViewModel: BaseViewModel
     {
         public ICommand LoginCommand { set; get; }
         public ICommand NavigateToRegisterPageCommand { set; get; }
@@ -53,8 +53,10 @@ namespace App1.ViewModels
 
         public async void Login()
         {
+            if (IsBusy) return;
             try
             {
+                IsBusy = true;
                 var data = await Connectors.Client.FireBaseAuthConfig.SignInWithEmailAndPasswordAsync(UserEmail, UserPassword);
                 var firebaseClient = new FirebaseClient(
                                         "https://studhub-4b7ef.firebaseio.com/",
@@ -66,37 +68,43 @@ namespace App1.ViewModels
                 Connectors.Client.DatabaseClient = firebaseClient;
                 Helper.RetainedData.Email = UserEmail;
                 Helper.RetainedData.UserUuid = data.User.LocalId;
-                await GetMyUserName();
+                await RetainLoggedUser();
+                var userrr = Helper.RetainedData.CurrentUser;
+
                 NavigationPage nav = new NavigationPage(new MainPageView());
                 Application.Current.MainPage = nav;
+                IsBusy = false;
 
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
                 await App.Current.MainPage.DisplayAlert("Alert", "Credentials wrong!", "OK");
+                IsBusy = false;
             }
         }
 
-        private async Task GetMyUserName()
+        private async Task RetainLoggedUser()
         {
             //to do add uuid like this: Users/Uuid/username
             var users = await Connectors.Client.DatabaseClient
              .Child("Users")
              .OrderByKey()
+             .StartAt(Helper.RetainedData.UserUuid)
              .OnceAsync<UserModel>();
             foreach (var user in users)
             {
-                if (user.Object.UserUUID == Helper.RetainedData.UserUuid)
-                {
-                    Helper.RetainedData.CurrentUser = user.Object;
-                }
+
+                Helper.RetainedData.CurrentUser = user.Object;
             }
         }
         public void Register()
         {
+            if (IsBusy) return;
+            IsBusy = true;
             NavigationPage newNavigationPage = new NavigationPage(new RegisterPageView());
             Application.Current.MainPage = newNavigationPage;
+            IsBusy = false;
 
         }
 

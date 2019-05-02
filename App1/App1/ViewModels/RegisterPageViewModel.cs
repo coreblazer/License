@@ -14,7 +14,7 @@ using Xamarin.Forms;
 
 namespace App1.ViewModels
 {
-    public class RegisterPageViewModel
+    public class RegisterPageViewModel: BaseViewModel
     {
         public ICommand RegisterCommand { set; get; }
 
@@ -54,6 +54,8 @@ namespace App1.ViewModels
 
         private async void RegisterNewUser()
         {
+            if (IsBusy) return;
+            IsBusy = true;
             try
             {
                 var userRegistration = await Connectors.Client.FireBaseAuthConfig.CreateUserWithEmailAndPasswordAsync(Email, Password);
@@ -66,11 +68,14 @@ namespace App1.ViewModels
             {
                 Console.WriteLine(e);
                 await App.Current.MainPage.DisplayAlert("Alert", "Credentials wrong!", "OK");
+                IsBusy = false;
             }
         }
 
         private async void InsertNewUser() //for inserting new user informations in the db
         {
+            if (IsBusy) return;
+            IsBusy = true;
             try
             {
                 var loginNewlyCreatedUser = await Connectors.Client.FireBaseAuthConfig.SignInWithEmailAndPasswordAsync(Email, Password);
@@ -92,10 +97,13 @@ namespace App1.ViewModels
                     .Child(loginNewlyCreatedUser.User.LocalId)
                     .Child(Helper.UUIDGenerator.UuidGenerator)
                     .PutAsync(message);
+                IsBusy = false;
             }
             catch (Exception e)
             {
                 Debug.Write("got error" + e);
+                IsBusy = false;
+
             }
 
         }

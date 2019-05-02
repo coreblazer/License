@@ -21,8 +21,6 @@ namespace App1.Models
             this.Content = content;
             this.TargetUuid = targetUuid;
             this.TimeStamp = timestamp;
-
-
         }
     }
 }

@@ -1,19 +1,63 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App1.Views.LoginPageView">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Sign Up"  />
-    </ContentPage.ToolbarItems>
+             xmlns:Controls="clr-namespace:App1.CustomRenders"
+             xmlns:flex="clr-namespace:Flex.Controls;assembly=Flex"
+             x:Class="App1.Views.LoginPageView"
+             BackgroundImage="login.jpg">
 
     <ContentPage.Content>
-        <StackLayout VerticalOptions="StartAndExpand">
+        <Grid Padding="20" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300" />
+                <ColumnDefinition Width="5*" />
+            </Grid.ColumnDefinitions>
+            
+            <Controls:CustomEntry Grid.Row="0" Grid.Column="0"  Placeholder="Email"  VerticalOptions="CenterAndExpand" Text="{Binding UserEmail}"/>
+            <Controls:CustomEntry Grid.Row="1" Grid.Column="0"  IsPassword="true" Placeholder="Password" VerticalOptions="CenterAndExpand"
+                                  Text="{Binding UserPassword}" />
+            <flex:FlexButton Text="Login" ClickedCommand="{Binding LoginCommand}" 
+                             WidthRequest="76"
+                             HeightRequest="76"
+                             CornerRadius="38"
+                             ForegroundColor="#ffffff"
+    HighlightForegroundColor="#49516F"
+    BackgroundColor="#6279B8"
+    HighlightBackgroundColor="#8EA4D2"
+                             Grid.Row="2" Grid.Column="0"/>
+            <flex:FlexButton Text="Not a member yet? Hop in!" ClickedCommand="{Binding NavigateToRegisterPageCommand}" 
+                              WidthRequest="76"
+                             HeightRequest="76"
+                             CornerRadius="38"
+                             ForegroundColor="#ffffff"
+    HighlightForegroundColor="#49516F"
+    BackgroundColor="#6279B8"
+    HighlightBackgroundColor="#8EA4D2"
+                             Grid.Row="3" Grid.Column="0"/>
+            <!--<StackLayout VerticalOptions="StartAndExpand"  Padding="20" Spacing="10">
             <Image HorizontalOptions="Center" WidthRequest="200" Source="loginIcon.png"/>
             <Entry x:Name="emailEntry" Placeholder="Required" Text="{Binding UserEmail}"  />
-            <Entry x:Name="passwordEntry" IsPassword="true" Placeholder="Required" Text="{Binding UserPassword}"/>
+            <Controls:CustomEntry x:Name="passwordEntry"
+                                  IsPassword="true" Placeholder="Required" 
+                                  Text="{Binding UserPassword}" BackgroundColor="White" 
+                                  WidthRequest="50" VerticalOptions="Start"
+         HorizontalOptions="FillAndExpand"/>
             <Button Text="Login" Command="{Binding LoginCommand}" />
             <Button Text="Not a member yet? Hop in!" Command="{Binding NavigateToRegisterPageCommand}" />
             <Label x:Name="messageLabel" />
-        </StackLayout>
+        </StackLayout>-->
+            <ActivityIndicator IsRunning="{Binding IsBusy}"
+                         IsVisible="{Binding IsBusy}"
+                          HeightRequest="40"
+                          VerticalOptions="CenterAndExpand"
+                          HorizontalOptions="CenterAndExpand"/>
+        </Grid>
+
     </ContentPage.Content>
 </ContentPage>

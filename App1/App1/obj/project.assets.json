@@ -56,6 +56,18 @@
           "lib/portable-net45+sl5+wp8+win8/FireSharp.dll": {}
         }
       },
+      "Forms.Controls.FlexButton/0.9.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.3.0.912540"
+        },
+        "compile": {
+          "lib/netstandard1.0/Flex.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Flex.dll": {}
+        }
+      },
       "Lex.Db/1.2.6": {
         "type": "package",
         "compile": {
@@ -350,6 +362,25 @@
         "firesharp.2.0.4.nupkg.sha512",
         "firesharp.nuspec",
         "lib/portable-net45+sl5+wp8+win8/FireSharp.dll"
+      ]
+    },
+    "Forms.Controls.FlexButton/0.9.1": {
+      "sha512": "tuBXrZV0/1azbKmMEGO65nH2r3VLU1e4WqutaegVTHuQNI8li6dtyuCQmJO9mHXz4N84AY28BTOsGHgIOx7rZA==",
+      "type": "package",
+      "path": "forms.controls.flexbutton/0.9.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "forms.controls.flexbutton.0.9.1.nupkg.sha512",
+        "forms.controls.flexbutton.nuspec",
+        "lib/monoandroid10/Flex.Android.dll",
+        "lib/monoandroid10/Flex.dll",
+        "lib/netstandard1.0/Flex.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Flex.dll",
+        "lib/uap10.0/Flex.UWP.dll",
+        "lib/uap10.0/Flex.dll",
+        "lib/xamarinios10/Flex.dll",
+        "lib/xamarinios10/Flex.iOS.dll"
       ]
     },
     "Lex.Db/1.2.6": {
@@ -1604,6 +1635,7 @@
       "FirebaseAuthentication.net >= 3.2.0",
       "FirebaseDatabase.Platform.net >= 3.0.0",
       "FirebaseDatabase.net >= 4.0.1",
+      "Forms.Controls.FlexButton >= 0.9.1",
       "NETStandard.Library >= 2.0.3",
       "Reactive.Streams >= 1.0.2",
       "Xamarin.Forms >= 3.4.0.1008975"
@@ -1665,6 +1697,10 @@
           "FirebaseDatabase.net": {
             "target": "Package",
             "version": "[4.0.1, )"
+          },
+          "Forms.Controls.FlexButton": {
+            "target": "Package",
+            "version": "[0.9.1, )"
           },
           "NETStandard.Library": {
             "suppressParent": "All",

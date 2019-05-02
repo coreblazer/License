@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "1480126a72919b8294a660e8fbeede7ebe598ad8"
+    "signature": "165fb15b2c62cc6a5732fa57fcee287dad474b6f"
   },
   "compilationOptions": {},
   "targets": {
@@ -13,6 +13,7 @@
           "FirebaseAuthentication.net": "3.2.0",
           "FirebaseDatabase.Platform.net": "3.0.0",
           "FirebaseDatabase.net": "4.0.1",
+          "Forms.Controls.FlexButton": "0.9.1",
           "NETStandard.Library": "2.0.3",
           "Reactive.Streams": "1.0.2",
           "Xamarin.Forms": "3.4.0.1008975"
@@ -68,6 +69,17 @@
           "lib/portable-net45+sl5+wp8+win8/FireSharp.dll": {
             "assemblyVersion": "2.0.3.0",
             "fileVersion": "2.0.3.0"
+          }
+        }
+      },
+      "Forms.Controls.FlexButton/0.9.1": {
+        "dependencies": {
+          "Xamarin.Forms": "3.4.0.1008975"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Flex.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -288,6 +300,13 @@
       "sha512": "sha512-laSHpVUBG6iCTUixmpeUmYxie2zbziOBM+LU0v2A0ETE9dUyBA+8aY63xql/o8LXj+kFybBLYUKBUrLCZWaq+A==",
       "path": "firesharp/2.0.4",
       "hashPath": "firesharp.2.0.4.nupkg.sha512"
+    },
+    "Forms.Controls.FlexButton/0.9.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tuBXrZV0/1azbKmMEGO65nH2r3VLU1e4WqutaegVTHuQNI8li6dtyuCQmJO9mHXz4N84AY28BTOsGHgIOx7rZA==",
+      "path": "forms.controls.flexbutton/0.9.1",
+      "hashPath": "forms.controls.flexbutton.0.9.1.nupkg.sha512"
     },
     "Lex.Db/1.2.6": {
       "type": "package",

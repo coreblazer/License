@@ -112,6 +112,8 @@ class MonoPackageManager_Resources {
 		"Firebase.Database.Platform.dll",
 		"Firebase.dll",
 		"FireSharp.dll",
+		"Flex.Android.dll",
+		"Flex.dll",
 		"FormsViewGroup.dll",
 		"Lex.Db.dll",
 		"LiteDB.dll",

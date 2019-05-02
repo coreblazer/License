@@ -12,10 +12,15 @@ using System.Text;
 
 namespace App1.ViewModels
 {
-    public class BaseViewModel: INotifyPropertyChanged
+    public class BaseViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-
+        private bool isbusy { get; set; }
+        public bool IsBusy
+        {
+            get => isbusy;
+            set => isbusy = value;
+        }
         private ObservableCollection<MessageModel> messageList = new ObservableCollection<MessageModel>();
 
         private List<string> messageUuid = new List<string>();
@@ -32,14 +37,15 @@ namespace App1.ViewModels
                 OnPropertyChanged("MessageList");
             }
         }
-        
+
         protected void SubscribeToReceiveMessages()
         {
-            var child = Connectors.Client.DatabaseClient.Child("Conversations").Child(Helper.RetainedData.UserUuid);
+            var child = Connectors.Client.DatabaseClient.Child("Conversations").Child(Helper.RetainedData.CurrentUser.UserUUID);
             var observable = child.AsObservable<MessageModel>();
             var subscription = observable
                 .Where(f => !string.IsNullOrEmpty(f.Key))
-                .Subscribe(f => {
+                .Subscribe(f =>
+                {
                     if (messageUuid.Contains(f.Object.MessageUuid))
                     {
                         Debug.Write("Already have item");

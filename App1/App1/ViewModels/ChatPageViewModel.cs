@@ -50,6 +50,7 @@ namespace App1.ViewModels
         public ChatPageViewModel(string userUuid)
         {
             UserUuid = userUuid;
+            base.SubscribeToReceiveMessages();
             SubscribeToReceiveMessages();
             Initialize();
         }
@@ -57,15 +58,15 @@ namespace App1.ViewModels
         public async void Initialize()
         {
             SendMessageCommand = new Command(SendMessage);
-            await RetrieveMessages();
-            SubscribeToReceiveMessage();
+            await RetrieveMessageHistory();
+            SubscribeToReceiveMessageFromCurrentUser();
         }
 
         public async void SendMessage()
         {
             Author = Helper.RetainedData.CurrentUser.FirstName + " " + Helper.RetainedData.CurrentUser.LastName;
             string messageUuid = Helper.UUIDGenerator.UuidGenerator;
-            MessageModel message = new MessageModel(messageUuid, Author, Helper.RetainedData.UserUuid, Content,UserUuid, DateTime.Now);
+            MessageModel message = new MessageModel(messageUuid, Author, Helper.RetainedData.UserUuid, Content, UserUuid, DateTime.Now);
             MessageList.Add(message);
             await Connectors.Client.DatabaseClient
                     .Child("Conversations")
@@ -77,8 +78,9 @@ namespace App1.ViewModels
         .Child(Helper.RetainedData.CurrentUser.UserUUID)
         .Child(messageUuid)
         .PutAsync(message);
+        Content = string.Empty;
         }
-        protected void SubscribeToReceiveMessage()
+        protected void SubscribeToReceiveMessageFromCurrentUser()
         {
             var uuid = Helper.RetainedData.CurrentUser.UserUUID;
             var child = Connectors.Client.DatabaseClient.Child("Conversations").Child(Helper.RetainedData.CurrentUser.UserUUID);
@@ -92,7 +94,7 @@ namespace App1.ViewModels
                         if (!(messageUuids.Contains(f.Object.MessageUuid)))
                         {
                             sorted.Add(f.Object);
-                            sorted = sorted.OrderBy(x => x.TimeStamp).ToList();
+                            sorted = sorted.OrderBy(x => x.TimeStamp).ToList();//necessary for ordering the messages when arriving
                             foreach (var item in sorted)
                             {
                                 MessageList.Add(item);
@@ -105,10 +107,9 @@ namespace App1.ViewModels
 
                 });
         }
-        public async Task RetrieveMessages()
+        public async Task RetrieveMessageHistory()
         {
-
-            //to do add uuid like this: Users/Uuid/username
+            //TODO Change columns to something like this: Conversations/CurrentUserUuid/AuthorUuid/messageuuid
             var firebase = Connectors.Client.DatabaseClient;
             var messages = await firebase
              .Child("Conversations")
@@ -121,7 +122,7 @@ namespace App1.ViewModels
                 {
 
                     sorted.Add(message.Object);
-                    sorted = sorted.OrderBy(o => o.TimeStamp).ToList();
+                    sorted = sorted.OrderBy(o => o.TimeStamp).ToList();//necessary for ordering the messages when arriving
                     foreach (var item in sorted)
                     {
                         MessageList.Add(item);
