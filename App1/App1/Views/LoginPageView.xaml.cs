@@ -1,10 +1,6 @@
 ﻿using App1.ViewModels;
+using Plugin.Media;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,9 +11,21 @@ namespace App1.Views
     {
         public LoginPageView()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             var viewModel = new LoginPageViewModel();
             this.BindingContext = viewModel;
             InitializeComponent();
         }
+        private async void RegisterButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new RegisterPageView()));
+        }
+
+        protected override bool OnBackButtonPressed()
+        {
+            Navigation.PopAsync();
+            return true;
+        }
     }
+        
 }

@@ -7,5 +7,6 @@ namespace App1.CustomRenders
 {
     public class CustomEntry : Entry
     {
+
     }
 }

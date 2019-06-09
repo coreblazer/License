@@ -148,6 +148,35 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "Plugin.CurrentActivity/2.1.0.2": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid44/Plugin.CurrentActivity.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid44/Plugin.CurrentActivity.dll": {}
+        }
+      },
+      "Plugin.Permissions/3.0.0.12": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.CurrentActivity": "2.1.0.2",
+          "Xamarin.Android.Support.Compat": "25.4.0.2",
+          "Xamarin.Android.Support.Core.Utils": "25.4.0.2"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid71/Plugin.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid71/Plugin.Permissions.dll": {}
+        }
+      },
       "Reactive.Streams/1.0.2": {
         "type": "package",
         "dependencies": {
@@ -158,6 +187,33 @@
         },
         "runtime": {
           "lib/netstandard1.0/Reactive.Streams.dll": {}
+        }
+      },
+      "Refractored.FloatingActionButton/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Android.Support.v7.RecyclerView": "25.4.0.2"
+        },
+        "compile": {
+          "lib/MonoAndroid10/Refractored.Fab.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/Refractored.Fab.dll": {}
+        }
+      },
+      "Refractored.FloatingActionButtonForms/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Refractored.FloatingActionButton": "2.1.0",
+          "Xamarin.Forms": "2.4.0.282"
+        },
+        "compile": {
+          "lib/MonoAndroid10/Refractored.FabControl.Droid.dll": {},
+          "lib/MonoAndroid10/Refractored.FabControl.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/Refractored.FabControl.Droid.dll": {},
+          "lib/MonoAndroid10/Refractored.FabControl.dll": {}
         }
       },
       "System.Reactive/4.0.0": {
@@ -197,6 +253,37 @@
         },
         "runtime": {
           "lib/MonoAndroid10/_._": {}
+        }
+      },
+      "Xam.Plugin.Media/4.0.1.5": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.Permissions": "3.0.0.12",
+          "Xamarin.Android.Support.Core.Utils": "25.4.0.2"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid71/Plugin.Media.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid71/Plugin.Media.dll": {}
+        }
+      },
+      "Xam.Plugins.Forms.ImageCircle/3.0.0.5": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.0.0.446417"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid71/ImageCircle.Forms.Plugin.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid71/ImageCircle.Forms.Plugin.dll": {}
         }
       },
       "Xamarin.Android.Arch.Core.Common/1.0.0.1": {
@@ -654,7 +741,10 @@
           "FirebaseDatabase.net": "4.0.1",
           "Forms.Controls.FlexButton": "0.9.1",
           "Reactive.Streams": "1.0.2",
+          "Refractored.FloatingActionButtonForms": "2.1.0",
           "XForms.Plugin.AnimationNavigationPage": "1.0.7",
+          "Xam.Plugin.Media": "4.0.1.5",
+          "Xam.Plugins.Forms.ImageCircle": "3.0.0.5",
           "Xamarin.Forms": "3.4.0.1008975"
         },
         "compile": {
@@ -1078,6 +1168,43 @@
         "newtonsoft.json.nuspec"
       ]
     },
+    "Plugin.CurrentActivity/2.1.0.2": {
+      "sha512": "uiMbA0G1ulSEj7MtGUQDDhzw80+QgvH5ts+Yt9cyft1dF4Eb0tYxiXAgNPuohJXpxhZmRs+6ZjL6QBaL/wUKDQ==",
+      "type": "package",
+      "path": "plugin.currentactivity/2.1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid44/Plugin.CurrentActivity.dll",
+        "lib/monoandroid44/Plugin.CurrentActivity.xml",
+        "plugin.currentactivity.2.1.0.2.nupkg.sha512",
+        "plugin.currentactivity.nuspec",
+        "readme.txt"
+      ]
+    },
+    "Plugin.Permissions/3.0.0.12": {
+      "sha512": "VrYqI/ufk3bH6gTP1JJlLByjhS0CHu3riKmdozhX9/qXA9hlvLolmcqKJdyAqpzmrVC74m3ZtirUBIrBxvT1Lw==",
+      "type": "package",
+      "path": "plugin.permissions/3.0.0.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid71/Plugin.Permissions.dll",
+        "lib/monoandroid71/Plugin.Permissions.xml",
+        "lib/netstandard1.0/Plugin.Permissions.dll",
+        "lib/netstandard1.0/Plugin.Permissions.xml",
+        "lib/netstandard2.0/Plugin.Permissions.dll",
+        "lib/netstandard2.0/Plugin.Permissions.xml",
+        "lib/uap10.0.10240/Plugin.Permissions.dll",
+        "lib/uap10.0.10240/Plugin.Permissions.pri",
+        "lib/uap10.0.10240/Plugin.Permissions.xml",
+        "lib/xamarinios10/Plugin.Permissions.dll",
+        "lib/xamarinios10/Plugin.Permissions.xml",
+        "plugin.permissions.3.0.0.12.nupkg.sha512",
+        "plugin.permissions.nuspec",
+        "readme.txt"
+      ]
+    },
     "Reactive.Streams/1.0.2": {
       "sha512": "Pux+eMwOLJGx7nKbODddR1HJuyWNQck1ZdR8klCiezCXF8G19YLu9l94PjFivzRCL/mKVOXWA3O3MaTQkNsNLA==",
       "type": "package",
@@ -1089,6 +1216,40 @@
         "lib/netstandard1.0/Reactive.Streams.dll",
         "reactive.streams.1.0.2.nupkg.sha512",
         "reactive.streams.nuspec"
+      ]
+    },
+    "Refractored.FloatingActionButton/2.1.0": {
+      "sha512": "eT/4xmP50hIm38IqrORreZw0qYsoCCuDiAGVYPstgfAWwzfRthVe0/PlFC6yR4K5TB6dnSA8YZC40o/kQSujwg==",
+      "type": "package",
+      "path": "refractored.floatingactionbutton/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/Refractored.Fab.dll",
+        "lib/MonoAndroid10/Refractored.Fab.pdb",
+        "refractored.floatingactionbutton.2.1.0.nupkg.sha512",
+        "refractored.floatingactionbutton.nuspec"
+      ]
+    },
+    "Refractored.FloatingActionButtonForms/2.1.0": {
+      "sha512": "Uc1P1yNYMr+l7cRosv+2doMqS4VRj2M488NcoPAWAB5Lg9miV8PqfDR0F1CZKwZ42M3biYKO5TdTcjasw5iWZA==",
+      "type": "package",
+      "path": "refractored.floatingactionbuttonforms/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/Refractored.FabControl.Droid.dll",
+        "lib/MonoAndroid10/Refractored.FabControl.Droid.pdb",
+        "lib/MonoAndroid10/Refractored.FabControl.Droid.xml",
+        "lib/MonoAndroid10/Refractored.FabControl.dll",
+        "lib/MonoAndroid10/Refractored.FabControl.pdb",
+        "lib/MonoAndroid10/Refractored.FabControl.xml",
+        "lib/netstandard1.0/Refractored.FabControl.deps.json",
+        "lib/netstandard1.0/Refractored.FabControl.dll",
+        "lib/netstandard1.0/Refractored.FabControl.pdb",
+        "lib/netstandard1.0/Refractored.FabControl.xml",
+        "refractored.floatingactionbuttonforms.2.1.0.nupkg.sha512",
+        "refractored.floatingactionbuttonforms.nuspec"
       ]
     },
     "System.Reactive/4.0.0": {
@@ -1306,6 +1467,53 @@
         "runtimes/aot/lib/netcore50/System.Runtime.InteropServices.WindowsRuntime.dll",
         "system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512",
         "system.runtime.interopservices.windowsruntime.nuspec"
+      ]
+    },
+    "Xam.Plugin.Media/4.0.1.5": {
+      "sha512": "a5l/M2Tl06BqBX/uhM/pr+q1jDkh2tRQr5Ne9rjAuD9VYn5STE+7kVFTzIUNPMnMr9PZLJkWP5WAr/tBN5oepw==",
+      "type": "package",
+      "path": "xam.plugin.media/4.0.1.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid71/Plugin.Media.dll",
+        "lib/monoandroid71/Plugin.Media.xml",
+        "lib/netstandard1.0/Plugin.Media.dll",
+        "lib/netstandard1.0/Plugin.Media.xml",
+        "lib/netstandard2.0/Plugin.Media.dll",
+        "lib/netstandard2.0/Plugin.Media.xml",
+        "lib/tizen40/Plugin.Media.dll",
+        "lib/tizen40/Plugin.Media.xml",
+        "lib/uap10.0.10240/Plugin.Media.dll",
+        "lib/uap10.0.10240/Plugin.Media.pri",
+        "lib/uap10.0.10240/Plugin.Media.xml",
+        "lib/xamarinios10/Plugin.Media.dll",
+        "lib/xamarinios10/Plugin.Media.xml",
+        "readme.txt",
+        "xam.plugin.media.4.0.1.5.nupkg.sha512",
+        "xam.plugin.media.nuspec"
+      ]
+    },
+    "Xam.Plugins.Forms.ImageCircle/3.0.0.5": {
+      "sha512": "59HyuAaUzuloQmu/PVCDCJQMRuuhqmIpCQ+d5hH5Qp8AZsa/vDi5ulrXDKRMZSZt/xbXsyZV+aZ/W/SZaYt2Mg==",
+      "type": "package",
+      "path": "xam.plugins.forms.imagecircle/3.0.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid71/ImageCircle.Forms.Plugin.dll",
+        "lib/monoandroid71/ImageCircle.Forms.Plugin.xml",
+        "lib/netstandard1.0/ImageCircle.Forms.Plugin.dll",
+        "lib/netstandard1.0/ImageCircle.Forms.Plugin.xml",
+        "lib/netstandard2.0/ImageCircle.Forms.Plugin.dll",
+        "lib/netstandard2.0/ImageCircle.Forms.Plugin.xml",
+        "lib/uap10.0.16299/ImageCircle.Forms.Plugin.dll",
+        "lib/uap10.0.16299/ImageCircle.Forms.Plugin.pri",
+        "lib/uap10.0.16299/ImageCircle.Forms.Plugin.xml",
+        "lib/xamarinios10/ImageCircle.Forms.Plugin.dll",
+        "lib/xamarinios10/ImageCircle.Forms.Plugin.xml",
+        "xam.plugins.forms.imagecircle.3.0.0.5.nupkg.sha512",
+        "xam.plugins.forms.imagecircle.nuspec"
       ]
     },
     "Xamarin.Android.Arch.Core.Common/1.0.0.1": {

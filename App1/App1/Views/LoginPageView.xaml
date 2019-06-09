@@ -19,10 +19,10 @@
                 <ColumnDefinition Width="300" />
                 <ColumnDefinition Width="5*" />
             </Grid.ColumnDefinitions>
-            
-            <Controls:CustomEntry Grid.Row="0" Grid.Column="0"  Placeholder="Email"  VerticalOptions="CenterAndExpand" Text="{Binding UserEmail}"/>
+
+            <Controls:CustomEntry Grid.Row="0" Grid.Column="0"  Placeholder="Email"  VerticalOptions="CenterAndExpand" Text="{Binding UserEmail}" TextColor="White"/>
             <Controls:CustomEntry Grid.Row="1" Grid.Column="0"  IsPassword="true" Placeholder="Password" VerticalOptions="CenterAndExpand"
-                                  Text="{Binding UserPassword}" />
+                                  Text="{Binding UserPassword}" TextColor="White"/>
             <flex:FlexButton Text="Login" ClickedCommand="{Binding LoginCommand}" 
                              WidthRequest="76"
                              HeightRequest="76"
@@ -33,28 +33,16 @@
     HighlightBackgroundColor="#8EA4D2"
                              IsEnabled="{Binding IsBusy}"
                              Grid.Row="2" Grid.Column="0"/>
-            <flex:FlexButton Text="Not a member yet? Hop in!" ClickedCommand="{Binding NavigateToRegisterPageCommand}" 
+            <flex:FlexButton Text="Not a member yet? Hop in!" Clicked="RegisterButtonClicked" 
                               WidthRequest="76"
                              HeightRequest="76"
                              CornerRadius="38"
                              ForegroundColor="#ffffff"
-    HighlightForegroundColor="#49516F"
-    BackgroundColor="#6279B8"
-    HighlightBackgroundColor="#8EA4D2"
+                             HighlightForegroundColor="#49516F"
+                             BackgroundColor="#6279B8"
+                             HighlightBackgroundColor="#8EA4D2"
                              Grid.Row="3" Grid.Column="0"
-                             IsEnabled="{Binding IsBusy}"/>
-            <!--<StackLayout VerticalOptions="StartAndExpand"  Padding="20" Spacing="10">
-            <Image HorizontalOptions="Center" WidthRequest="200" Source="loginIcon.png"/>
-            <Entry x:Name="emailEntry" Placeholder="Required" Text="{Binding UserEmail}"  />
-            <Controls:CustomEntry x:Name="passwordEntry"
-                                  IsPassword="true" Placeholder="Required" 
-                                  Text="{Binding UserPassword}" BackgroundColor="White" 
-                                  WidthRequest="50" VerticalOptions="Start"
-         HorizontalOptions="FillAndExpand"/>
-            <Button Text="Login" Command="{Binding LoginCommand}" />
-            <Button Text="Not a member yet? Hop in!" Command="{Binding NavigateToRegisterPageCommand}" />
-            <Label x:Name="messageLabel" />
-        </StackLayout>-->
+                             />
             <ActivityIndicator IsRunning="{Binding IsBusy}"
                          IsVisible="{Binding IsBusy}"
                           HeightRequest="40"

@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:Controls="clr-namespace:App1.CustomRenders"
+             xmlns:flex="clr-namespace:Flex.Controls;assembly=Flex"
              x:Class="App1.Views.RegisterPageView"
              BackgroundImage="login.jpg">
     <ContentPage.Content>
@@ -15,14 +16,24 @@
                 <RowDefinition Height="40" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200" />
-                <ColumnDefinition Width="300" />
+                <ColumnDefinition Width="175" />
+                <ColumnDefinition Width="175" />
             </Grid.ColumnDefinitions>
-            <Controls:CustomEntry Placeholder="First Name" Text="{Binding Firstname}" Grid.Row="0" Grid.Column="0"/>
-            <Controls:CustomEntry Placeholder="Last Name" Text="{Binding Lastname}" Grid.Row="0" Grid.Column="1"/>
-            <Controls:CustomEntry Placeholder="Email" Text="{Binding Email}" Grid.Row="1" Grid.Column="0"/>
-            <Controls:CustomEntry Placeholder="Password" Text="{Binding Password}" Grid.Row="2" Grid.Column="0"/>
-            <Controls:CustomEntry Placeholder="Confirm Password" Text="{Binding ConfirmPassword}" Grid.Row="3" Grid.Column="0"/>
+            <Controls:CustomEntry Placeholder="First Name" Text="{Binding Firstname}" Grid.Row="0" Grid.Column="0"  TextColor="Gray"/>
+            <Controls:CustomEntry Placeholder="Last Name" Text="{Binding Lastname}" Grid.Row="0" Grid.Column="1"  TextColor="Gray"/>
+            <Controls:CustomEntry Placeholder="Email" Text="{Binding Email}" Grid.Row="1" Grid.Column="0"  TextColor="Gray"/>
+            <Controls:CustomEntry Placeholder="Password" Text="{Binding Password}" Grid.Row="2" Grid.Column="0" TextColor="Gray" IsPassword="True"/>
+            <Controls:CustomEntry Placeholder="Confirm Password" Text="{Binding ConfirmPassword}" Grid.Row="3" Grid.Column="0" TextColor="Gray" IsPassword="True"/>
+            <flex:FlexButton Text="Join us!" ClickedCommand="{Binding RegisterCommand}" 
+                             WidthRequest="76"
+                             HeightRequest="76"
+                             CornerRadius="38"
+                             ForegroundColor="#ffffff"
+    HighlightForegroundColor="#49516F"
+    BackgroundColor="#6279B8"
+    HighlightBackgroundColor="#8EA4D2"
+                             IsToggled="{Binding IsBusy}"
+                             Grid.Row="4" Grid.Column="0"/>
         </Grid>
         <!--<StackLayout VerticalOptions="CenterAndExpand" Padding="5">
             <StackLayout Orientation="Horizontal">

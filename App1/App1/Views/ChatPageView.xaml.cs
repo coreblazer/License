@@ -18,5 +18,12 @@ namespace App1.Views
             this.BindingContext = new ChatPageViewModel(userUUID);
             InitializeComponent();
         }
+
+        protected override bool OnBackButtonPressed()
+        {
+            // If you want to continue going back
+            base.OnBackButtonPressed();
+            return false;
+        }
     }
 }

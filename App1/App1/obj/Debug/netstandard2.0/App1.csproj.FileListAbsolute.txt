@@ -10,7 +10,11 @@ C:\Users\Bogdan\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\App1.Assemb
 C:\Users\Bogdan\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\App1.AssemblyInfo.cs
 C:\Users\Bogdan\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\App1.dll
 C:\Users\Bogdan\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\App1.pdb
-C:\Users\Bogdan\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\App1.csprojAssemblyReference.cache
 C:\Users\Bogdan\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\Views\RegisterPageView.xaml.g.cs
 C:\Users\Bogdan\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\Views\ChatPageView.xaml.g.cs
+C:\Users\Bogdan\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\App1.csprojAssemblyReference.cache
+C:\Users\Bogdan\source\repos\App1\App1\App1\bin\Debug\netstandard2.0\Mono.Android.dll
+C:\Users\Bogdan\source\repos\App1\App1\App1\bin\Debug\netstandard2.0\Mono.Android.pdb
+C:\Users\Bogdan\source\repos\App1\App1\App1\bin\Debug\netstandard2.0\Mono.Android.xml
+C:\Users\Bogdan\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\App1.csproj.CopyComplete
 C:\Users\Bogdan\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\XamlC.stamp

@@ -18,7 +18,10 @@ namespace App1.ViewModels
     public class MainPageViewModel : BaseViewModel, INotifyPropertyChanged
     {
         private ObservableCollection<UserModel> userlist = new ObservableCollection<UserModel>();
-
+        public string UserName
+        {
+            get; set;
+        }
 
         public ObservableCollection<UserModel> Userlist
         {
@@ -34,11 +37,14 @@ namespace App1.ViewModels
         }
         public MainPageViewModel()
         {
+
             Initialize();
+            UserName = Helper.RetainedData.CurrentUser.FirstName + " " + Helper.RetainedData.CurrentUser.LastName;
         }
         private async void Initialize()
         {
             await RetrieveUsers();
+
         }
         private async Task RetrieveUsers()
         {

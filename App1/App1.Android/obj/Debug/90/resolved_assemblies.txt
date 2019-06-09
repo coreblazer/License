@@ -9,6 +9,7 @@ C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\FormsControls.Base.dll
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\FormsControls.Droid.dll
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\FormsViewGroup.dll
+C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\ImageCircle.Forms.Plugin.dll
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\Java.Interop.dll
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\Lex.Db.dll
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\LiteDB.dll
@@ -17,7 +18,13 @@ C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\Mono.Android.dll
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\mscorlib.dll
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll
+C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\Plugin.CurrentActivity.dll
+C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\Plugin.Media.dll
+C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\Plugin.Permissions.dll
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\Reactive.Streams.dll
+C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\Refractored.Fab.dll
+C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\Refractored.FabControl.dll
+C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\Refractored.FabControl.Droid.dll
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\System.Core.dll
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\System.dll
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\System.Net.Http.dll
@@ -78,6 +85,7 @@ C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\System.Linq.Expressions.dll
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\System.Runtime.Extensions.dll
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\System.Net.dll
+C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\System.ObjectModel.dll
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\Mono.Security.dll
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\System.Net.Primitives.dll
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\System.Runtime.InteropServices.WindowsRuntime.dll

@@ -1,29 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              x:Class="App1.Views.MainPageView">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Name="MenuItem1" Order="Primary"  Text="Item 1" Priority="0" />
-    </ContentPage.ToolbarItems>
-    <ListView ItemsSource="{Binding Userlist}"
+    <StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <Grid ColumnSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="{Binding UserName, StringFormat='Welcome, {0:F0} !'}" IsVisible="True" Grid.Column="1"/>
+                    <controls:CircleImage Source="http://upload.wikimedia.org/wikipedia/commons/5/55/Tamarin_portrait.JPG" Aspect="AspectFill" Grid.Column="0" IsVisible="True">
+                        <controls:CircleImage.WidthRequest>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On Platform="Android, iOS">55</On>
+                            </OnPlatform>
+                        </controls:CircleImage.WidthRequest>
+                        <controls:CircleImage.HeightRequest>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On Platform="Android, iOS">55</On>
+                            </OnPlatform>
+                        </controls:CircleImage.HeightRequest>
+                    </controls:CircleImage>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+        <ListView ItemsSource="{Binding Userlist}"
               RowHeight="60" ItemSelected="OnSelectedItem">
 
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <StackLayout Margin="8">
-                        <StackLayout Orientation="Horizontal">
-                            <Label Text="{Binding FirstName}"
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Margin="8">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding FirstName}"
                                FontAttributes="Bold"/>
-                            <Label Text="{Binding LastName}"
+                                <Label Text="{Binding LastName}"
                                FontAttributes="Bold"/>
+                            </StackLayout>
                         </StackLayout>
-                    </StackLayout>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
 
 
-    </ListView>
+        </ListView>
+    </StackLayout>
 
 </ContentPage>

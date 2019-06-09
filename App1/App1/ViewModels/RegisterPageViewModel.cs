@@ -1,4 +1,6 @@
-﻿using App1.Helper;
+﻿using Android.Content.Res;
+using App1.Helper;
+using App1.Interfaces;
 using App1.Models;
 using App1.Views;
 using Firebase.Auth;
@@ -14,7 +16,7 @@ using Xamarin.Forms;
 
 namespace App1.ViewModels
 {
-    public class RegisterPageViewModel: BaseViewModel
+    public class RegisterPageViewModel : BaseViewModel, INav
     {
         public ICommand RegisterCommand { set; get; }
 
@@ -100,24 +102,24 @@ namespace App1.ViewModels
             {
 
                 await Connectors.Client.FireBaseAuthConfig.CreateUserWithEmailAndPasswordAsync(Email, Password);
-
-                InsertNewUser();
-                NavigationPage nav = new NavigationPage(new LoginPageView());
-                Application.Current.MainPage = nav;
-
+                if (await PasswordsFieldsAreValid())
+                {
+                    InsertNewUser();
+                    NavigationPage nav = new NavigationPage(new LoginPageView());
+                    Application.Current.MainPage = nav;
+                }
+                IsBusy = false;
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                await App.Current.MainPage.DisplayAlert("Alert", "Credentials wrong!", "OK");
+                await App.Current.MainPage.DisplayAlert("Alert", "Something went wrong", "OK");
                 IsBusy = false;
             }
         }
 
         private async void InsertNewUser() //for inserting new user informations in the db
         {
-            if (IsBusy) return;
-            IsBusy = true;
             try
             {
                 var loginNewlyCreatedUser = await Connectors.Client.FireBaseAuthConfig.SignInWithEmailAndPasswordAsync(Email, Password);
@@ -146,16 +148,33 @@ namespace App1.ViewModels
                 Debug.Write("got error" + e);
                 IsBusy = false;
             }
-
         }
-            
-        private void CheckPasswordAndConfirmPasswordValues()
+
+        private async Task<bool> PasswordsFieldsAreValid()
         {
             if (!(Password.Equals(ConfirmPassword)))
             {
-                PasswordAndConfirmPasswords = false;
 
+                await App.Current.MainPage.DisplayAlert("Alert", "The passwords fields are not the same", "OK");
+                return false;
             }
+            if (Password.Length < 6)
+            {
+
+                await App.Current.MainPage.DisplayAlert("Alert", "Password should be at least 6 characters", "OK");
+                return false;
+            }
+            return true;
+        }
+
+        public void GoBackToPreviousPageAsync(Page page)
+        {
+            //await Navigation.PopModalAsync();
+        }
+
+        Task INav.GoBackToPreviousPageAsync(Page page)
+        {
+            throw new NotImplementedException();
         }
     }
 }

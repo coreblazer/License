@@ -1313,6 +1313,61 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 </table>
          */
         public static int fabSize=0x7f01013d;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int fab_colorDisabled=0x7f010175;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int fab_colorNormal=0x7f010174;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int fab_colorPressed=0x7f010173;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int fab_colorRipple=0x7f010176;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int fab_shadow=0x7f010177;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>normal</code></td><td>0</td><td></td></tr>
+<tr><td><code>mini</code></td><td>1</td><td></td></tr>
+</table>
+         */
+        public static int fab_size=0x7f010178;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -2962,30 +3017,30 @@ containing a value of this type.
         public static int abc_config_showMenuShortcutsWhenKeyboardPresent=0x7f0e0004;
     }
     public static final class color {
-        public static int abc_background_cache_hint_selector_material_dark=0x7f0d004f;
-        public static int abc_background_cache_hint_selector_material_light=0x7f0d0050;
-        public static int abc_btn_colored_borderless_text_material=0x7f0d0051;
-        public static int abc_btn_colored_text_material=0x7f0d0052;
-        public static int abc_color_highlight_material=0x7f0d0053;
-        public static int abc_hint_foreground_material_dark=0x7f0d0054;
-        public static int abc_hint_foreground_material_light=0x7f0d0055;
+        public static int abc_background_cache_hint_selector_material_dark=0x7f0d0050;
+        public static int abc_background_cache_hint_selector_material_light=0x7f0d0051;
+        public static int abc_btn_colored_borderless_text_material=0x7f0d0052;
+        public static int abc_btn_colored_text_material=0x7f0d0053;
+        public static int abc_color_highlight_material=0x7f0d0054;
+        public static int abc_hint_foreground_material_dark=0x7f0d0055;
+        public static int abc_hint_foreground_material_light=0x7f0d0056;
         public static int abc_input_method_navigation_guard=0x7f0d0004;
-        public static int abc_primary_text_disable_only_material_dark=0x7f0d0056;
-        public static int abc_primary_text_disable_only_material_light=0x7f0d0057;
-        public static int abc_primary_text_material_dark=0x7f0d0058;
-        public static int abc_primary_text_material_light=0x7f0d0059;
-        public static int abc_search_url_text=0x7f0d005a;
+        public static int abc_primary_text_disable_only_material_dark=0x7f0d0057;
+        public static int abc_primary_text_disable_only_material_light=0x7f0d0058;
+        public static int abc_primary_text_material_dark=0x7f0d0059;
+        public static int abc_primary_text_material_light=0x7f0d005a;
+        public static int abc_search_url_text=0x7f0d005b;
         public static int abc_search_url_text_normal=0x7f0d0005;
         public static int abc_search_url_text_pressed=0x7f0d0006;
         public static int abc_search_url_text_selected=0x7f0d0007;
-        public static int abc_secondary_text_material_dark=0x7f0d005b;
-        public static int abc_secondary_text_material_light=0x7f0d005c;
-        public static int abc_tint_btn_checkable=0x7f0d005d;
-        public static int abc_tint_default=0x7f0d005e;
-        public static int abc_tint_edittext=0x7f0d005f;
-        public static int abc_tint_seek_thumb=0x7f0d0060;
-        public static int abc_tint_spinner=0x7f0d0061;
-        public static int abc_tint_switch_track=0x7f0d0062;
+        public static int abc_secondary_text_material_dark=0x7f0d005c;
+        public static int abc_secondary_text_material_light=0x7f0d005d;
+        public static int abc_tint_btn_checkable=0x7f0d005e;
+        public static int abc_tint_default=0x7f0d005f;
+        public static int abc_tint_edittext=0x7f0d0060;
+        public static int abc_tint_seek_thumb=0x7f0d0061;
+        public static int abc_tint_spinner=0x7f0d0062;
+        public static int abc_tint_switch_track=0x7f0d0063;
         public static int accent_material_dark=0x7f0d0008;
         public static int accent_material_light=0x7f0d0009;
         public static int background_floating_material_dark=0x7f0d000a;
@@ -3004,11 +3059,11 @@ containing a value of this type.
         public static int cardview_light_background=0x7f0d0001;
         public static int cardview_shadow_end_color=0x7f0d0002;
         public static int cardview_shadow_start_color=0x7f0d0003;
-        public static int colorAccent=0x7f0d004e;
-        public static int colorPrimary=0x7f0d004c;
-        public static int colorPrimaryDark=0x7f0d004d;
+        public static int colorAccent=0x7f0d004f;
+        public static int colorPrimary=0x7f0d004d;
+        public static int colorPrimaryDark=0x7f0d004e;
         public static int design_bottom_navigation_shadow_color=0x7f0d0040;
-        public static int design_error=0x7f0d0063;
+        public static int design_error=0x7f0d0064;
         public static int design_fab_shadow_end_color=0x7f0d0041;
         public static int design_fab_shadow_mid_color=0x7f0d0042;
         public static int design_fab_shadow_start_color=0x7f0d0043;
@@ -3017,17 +3072,20 @@ containing a value of this type.
         public static int design_fab_stroke_top_inner_color=0x7f0d0046;
         public static int design_fab_stroke_top_outer_color=0x7f0d0047;
         public static int design_snackbar_background_color=0x7f0d0048;
-        public static int design_tint_password_toggle=0x7f0d0064;
+        public static int design_tint_password_toggle=0x7f0d0065;
         public static int dim_foreground_disabled_material_dark=0x7f0d0016;
         public static int dim_foreground_disabled_material_light=0x7f0d0017;
         public static int dim_foreground_material_dark=0x7f0d0018;
         public static int dim_foreground_material_light=0x7f0d0019;
         public static int error_color_material=0x7f0d001a;
+        /**  http://www.google.com/design/spec/style/color.html#color-ui-color-palette 
+         */
+        public static int fab_material_blue_500=0x7f0d004b;
         public static int foreground_material_dark=0x7f0d001b;
         public static int foreground_material_light=0x7f0d001c;
         public static int highlighted_text_material_dark=0x7f0d001d;
         public static int highlighted_text_material_light=0x7f0d001e;
-        public static int launcher_background=0x7f0d004b;
+        public static int launcher_background=0x7f0d004c;
         public static int material_blue_grey_800=0x7f0d001f;
         public static int material_blue_grey_900=0x7f0d0020;
         public static int material_blue_grey_950=0x7f0d0021;
@@ -3059,8 +3117,8 @@ containing a value of this type.
         public static int secondary_text_disabled_material_light=0x7f0d0038;
         public static int switch_thumb_disabled_material_dark=0x7f0d0039;
         public static int switch_thumb_disabled_material_light=0x7f0d003a;
-        public static int switch_thumb_material_dark=0x7f0d0065;
-        public static int switch_thumb_material_light=0x7f0d0066;
+        public static int switch_thumb_material_dark=0x7f0d0066;
+        public static int switch_thumb_material_light=0x7f0d0067;
         public static int switch_thumb_normal_material_dark=0x7f0d003b;
         public static int switch_thumb_normal_material_light=0x7f0d003c;
         public static int tooltip_background_dark=0x7f0d003d;
@@ -3189,6 +3247,11 @@ containing a value of this type.
         public static int design_tab_text_size_2line=0x7f0a008f;
         public static int disabled_alpha_material_dark=0x7f0a0059;
         public static int disabled_alpha_material_light=0x7f0a005a;
+        public static int fab_elevation_lollipop=0x7f0a00a8;
+        public static int fab_scroll_threshold=0x7f0a00a7;
+        public static int fab_shadow_size=0x7f0a00a6;
+        public static int fab_size_mini=0x7f0a00a5;
+        public static int fab_size_normal=0x7f0a00a4;
         public static int fastscroll_default_thickness=0x7f0a0000;
         public static int fastscroll_margin=0x7f0a0001;
         public static int fastscroll_minimum_range=0x7f0a0002;
@@ -3317,233 +3380,235 @@ containing a value of this type.
         public static int abc_textfield_search_material=0x7f020051;
         public static int abc_vector_test=0x7f020052;
         public static int avd_hide_password=0x7f020053;
-        public static int avd_hide_password_1=0x7f020131;
-        public static int avd_hide_password_2=0x7f020132;
-        public static int avd_hide_password_3=0x7f020133;
+        public static int avd_hide_password_1=0x7f020133;
+        public static int avd_hide_password_2=0x7f020134;
+        public static int avd_hide_password_3=0x7f020135;
         public static int avd_show_password=0x7f020054;
-        public static int avd_show_password_1=0x7f020134;
-        public static int avd_show_password_2=0x7f020135;
-        public static int avd_show_password_3=0x7f020136;
+        public static int avd_show_password_1=0x7f020136;
+        public static int avd_show_password_2=0x7f020137;
+        public static int avd_show_password_3=0x7f020138;
         public static int design_bottom_navigation_item_background=0x7f020055;
         public static int design_fab_background=0x7f020056;
         public static int design_ic_visibility=0x7f020057;
         public static int design_ic_visibility_off=0x7f020058;
         public static int design_password_eye=0x7f020059;
         public static int design_snackbar_background=0x7f02005a;
-        public static int ic_audiotrack_dark=0x7f02005b;
-        public static int ic_audiotrack_light=0x7f02005c;
-        public static int ic_dialog_close_dark=0x7f02005d;
-        public static int ic_dialog_close_light=0x7f02005e;
-        public static int ic_group_collapse_00=0x7f02005f;
-        public static int ic_group_collapse_01=0x7f020060;
-        public static int ic_group_collapse_02=0x7f020061;
-        public static int ic_group_collapse_03=0x7f020062;
-        public static int ic_group_collapse_04=0x7f020063;
-        public static int ic_group_collapse_05=0x7f020064;
-        public static int ic_group_collapse_06=0x7f020065;
-        public static int ic_group_collapse_07=0x7f020066;
-        public static int ic_group_collapse_08=0x7f020067;
-        public static int ic_group_collapse_09=0x7f020068;
-        public static int ic_group_collapse_10=0x7f020069;
-        public static int ic_group_collapse_11=0x7f02006a;
-        public static int ic_group_collapse_12=0x7f02006b;
-        public static int ic_group_collapse_13=0x7f02006c;
-        public static int ic_group_collapse_14=0x7f02006d;
-        public static int ic_group_collapse_15=0x7f02006e;
-        public static int ic_group_expand_00=0x7f02006f;
-        public static int ic_group_expand_01=0x7f020070;
-        public static int ic_group_expand_02=0x7f020071;
-        public static int ic_group_expand_03=0x7f020072;
-        public static int ic_group_expand_04=0x7f020073;
-        public static int ic_group_expand_05=0x7f020074;
-        public static int ic_group_expand_06=0x7f020075;
-        public static int ic_group_expand_07=0x7f020076;
-        public static int ic_group_expand_08=0x7f020077;
-        public static int ic_group_expand_09=0x7f020078;
-        public static int ic_group_expand_10=0x7f020079;
-        public static int ic_group_expand_11=0x7f02007a;
-        public static int ic_group_expand_12=0x7f02007b;
-        public static int ic_group_expand_13=0x7f02007c;
-        public static int ic_group_expand_14=0x7f02007d;
-        public static int ic_group_expand_15=0x7f02007e;
-        public static int ic_media_pause_dark=0x7f02007f;
-        public static int ic_media_pause_light=0x7f020080;
-        public static int ic_media_play_dark=0x7f020081;
-        public static int ic_media_play_light=0x7f020082;
-        public static int ic_media_stop_dark=0x7f020083;
-        public static int ic_media_stop_light=0x7f020084;
-        public static int ic_mr_button_connected_00_dark=0x7f020085;
-        public static int ic_mr_button_connected_00_light=0x7f020086;
-        public static int ic_mr_button_connected_01_dark=0x7f020087;
-        public static int ic_mr_button_connected_01_light=0x7f020088;
-        public static int ic_mr_button_connected_02_dark=0x7f020089;
-        public static int ic_mr_button_connected_02_light=0x7f02008a;
-        public static int ic_mr_button_connected_03_dark=0x7f02008b;
-        public static int ic_mr_button_connected_03_light=0x7f02008c;
-        public static int ic_mr_button_connected_04_dark=0x7f02008d;
-        public static int ic_mr_button_connected_04_light=0x7f02008e;
-        public static int ic_mr_button_connected_05_dark=0x7f02008f;
-        public static int ic_mr_button_connected_05_light=0x7f020090;
-        public static int ic_mr_button_connected_06_dark=0x7f020091;
-        public static int ic_mr_button_connected_06_light=0x7f020092;
-        public static int ic_mr_button_connected_07_dark=0x7f020093;
-        public static int ic_mr_button_connected_07_light=0x7f020094;
-        public static int ic_mr_button_connected_08_dark=0x7f020095;
-        public static int ic_mr_button_connected_08_light=0x7f020096;
-        public static int ic_mr_button_connected_09_dark=0x7f020097;
-        public static int ic_mr_button_connected_09_light=0x7f020098;
-        public static int ic_mr_button_connected_10_dark=0x7f020099;
-        public static int ic_mr_button_connected_10_light=0x7f02009a;
-        public static int ic_mr_button_connected_11_dark=0x7f02009b;
-        public static int ic_mr_button_connected_11_light=0x7f02009c;
-        public static int ic_mr_button_connected_12_dark=0x7f02009d;
-        public static int ic_mr_button_connected_12_light=0x7f02009e;
-        public static int ic_mr_button_connected_13_dark=0x7f02009f;
-        public static int ic_mr_button_connected_13_light=0x7f0200a0;
-        public static int ic_mr_button_connected_14_dark=0x7f0200a1;
-        public static int ic_mr_button_connected_14_light=0x7f0200a2;
-        public static int ic_mr_button_connected_15_dark=0x7f0200a3;
-        public static int ic_mr_button_connected_15_light=0x7f0200a4;
-        public static int ic_mr_button_connected_16_dark=0x7f0200a5;
-        public static int ic_mr_button_connected_16_light=0x7f0200a6;
-        public static int ic_mr_button_connected_17_dark=0x7f0200a7;
-        public static int ic_mr_button_connected_17_light=0x7f0200a8;
-        public static int ic_mr_button_connected_18_dark=0x7f0200a9;
-        public static int ic_mr_button_connected_18_light=0x7f0200aa;
-        public static int ic_mr_button_connected_19_dark=0x7f0200ab;
-        public static int ic_mr_button_connected_19_light=0x7f0200ac;
-        public static int ic_mr_button_connected_20_dark=0x7f0200ad;
-        public static int ic_mr_button_connected_20_light=0x7f0200ae;
-        public static int ic_mr_button_connected_21_dark=0x7f0200af;
-        public static int ic_mr_button_connected_21_light=0x7f0200b0;
-        public static int ic_mr_button_connected_22_dark=0x7f0200b1;
-        public static int ic_mr_button_connected_22_light=0x7f0200b2;
-        public static int ic_mr_button_connected_23_dark=0x7f0200b3;
-        public static int ic_mr_button_connected_23_light=0x7f0200b4;
-        public static int ic_mr_button_connected_24_dark=0x7f0200b5;
-        public static int ic_mr_button_connected_24_light=0x7f0200b6;
-        public static int ic_mr_button_connected_25_dark=0x7f0200b7;
-        public static int ic_mr_button_connected_25_light=0x7f0200b8;
-        public static int ic_mr_button_connected_26_dark=0x7f0200b9;
-        public static int ic_mr_button_connected_26_light=0x7f0200ba;
-        public static int ic_mr_button_connected_27_dark=0x7f0200bb;
-        public static int ic_mr_button_connected_27_light=0x7f0200bc;
-        public static int ic_mr_button_connected_28_dark=0x7f0200bd;
-        public static int ic_mr_button_connected_28_light=0x7f0200be;
-        public static int ic_mr_button_connected_29_dark=0x7f0200bf;
-        public static int ic_mr_button_connected_29_light=0x7f0200c0;
-        public static int ic_mr_button_connected_30_dark=0x7f0200c1;
-        public static int ic_mr_button_connected_30_light=0x7f0200c2;
-        public static int ic_mr_button_connecting_00_dark=0x7f0200c3;
-        public static int ic_mr_button_connecting_00_light=0x7f0200c4;
-        public static int ic_mr_button_connecting_01_dark=0x7f0200c5;
-        public static int ic_mr_button_connecting_01_light=0x7f0200c6;
-        public static int ic_mr_button_connecting_02_dark=0x7f0200c7;
-        public static int ic_mr_button_connecting_02_light=0x7f0200c8;
-        public static int ic_mr_button_connecting_03_dark=0x7f0200c9;
-        public static int ic_mr_button_connecting_03_light=0x7f0200ca;
-        public static int ic_mr_button_connecting_04_dark=0x7f0200cb;
-        public static int ic_mr_button_connecting_04_light=0x7f0200cc;
-        public static int ic_mr_button_connecting_05_dark=0x7f0200cd;
-        public static int ic_mr_button_connecting_05_light=0x7f0200ce;
-        public static int ic_mr_button_connecting_06_dark=0x7f0200cf;
-        public static int ic_mr_button_connecting_06_light=0x7f0200d0;
-        public static int ic_mr_button_connecting_07_dark=0x7f0200d1;
-        public static int ic_mr_button_connecting_07_light=0x7f0200d2;
-        public static int ic_mr_button_connecting_08_dark=0x7f0200d3;
-        public static int ic_mr_button_connecting_08_light=0x7f0200d4;
-        public static int ic_mr_button_connecting_09_dark=0x7f0200d5;
-        public static int ic_mr_button_connecting_09_light=0x7f0200d6;
-        public static int ic_mr_button_connecting_10_dark=0x7f0200d7;
-        public static int ic_mr_button_connecting_10_light=0x7f0200d8;
-        public static int ic_mr_button_connecting_11_dark=0x7f0200d9;
-        public static int ic_mr_button_connecting_11_light=0x7f0200da;
-        public static int ic_mr_button_connecting_12_dark=0x7f0200db;
-        public static int ic_mr_button_connecting_12_light=0x7f0200dc;
-        public static int ic_mr_button_connecting_13_dark=0x7f0200dd;
-        public static int ic_mr_button_connecting_13_light=0x7f0200de;
-        public static int ic_mr_button_connecting_14_dark=0x7f0200df;
-        public static int ic_mr_button_connecting_14_light=0x7f0200e0;
-        public static int ic_mr_button_connecting_15_dark=0x7f0200e1;
-        public static int ic_mr_button_connecting_15_light=0x7f0200e2;
-        public static int ic_mr_button_connecting_16_dark=0x7f0200e3;
-        public static int ic_mr_button_connecting_16_light=0x7f0200e4;
-        public static int ic_mr_button_connecting_17_dark=0x7f0200e5;
-        public static int ic_mr_button_connecting_17_light=0x7f0200e6;
-        public static int ic_mr_button_connecting_18_dark=0x7f0200e7;
-        public static int ic_mr_button_connecting_18_light=0x7f0200e8;
-        public static int ic_mr_button_connecting_19_dark=0x7f0200e9;
-        public static int ic_mr_button_connecting_19_light=0x7f0200ea;
-        public static int ic_mr_button_connecting_20_dark=0x7f0200eb;
-        public static int ic_mr_button_connecting_20_light=0x7f0200ec;
-        public static int ic_mr_button_connecting_21_dark=0x7f0200ed;
-        public static int ic_mr_button_connecting_21_light=0x7f0200ee;
-        public static int ic_mr_button_connecting_22_dark=0x7f0200ef;
-        public static int ic_mr_button_connecting_22_light=0x7f0200f0;
-        public static int ic_mr_button_connecting_23_dark=0x7f0200f1;
-        public static int ic_mr_button_connecting_23_light=0x7f0200f2;
-        public static int ic_mr_button_connecting_24_dark=0x7f0200f3;
-        public static int ic_mr_button_connecting_24_light=0x7f0200f4;
-        public static int ic_mr_button_connecting_25_dark=0x7f0200f5;
-        public static int ic_mr_button_connecting_25_light=0x7f0200f6;
-        public static int ic_mr_button_connecting_26_dark=0x7f0200f7;
-        public static int ic_mr_button_connecting_26_light=0x7f0200f8;
-        public static int ic_mr_button_connecting_27_dark=0x7f0200f9;
-        public static int ic_mr_button_connecting_27_light=0x7f0200fa;
-        public static int ic_mr_button_connecting_28_dark=0x7f0200fb;
-        public static int ic_mr_button_connecting_28_light=0x7f0200fc;
-        public static int ic_mr_button_connecting_29_dark=0x7f0200fd;
-        public static int ic_mr_button_connecting_29_light=0x7f0200fe;
-        public static int ic_mr_button_connecting_30_dark=0x7f0200ff;
-        public static int ic_mr_button_connecting_30_light=0x7f020100;
-        public static int ic_mr_button_disabled_dark=0x7f020101;
-        public static int ic_mr_button_disabled_light=0x7f020102;
-        public static int ic_mr_button_disconnected_dark=0x7f020103;
-        public static int ic_mr_button_disconnected_light=0x7f020104;
-        public static int ic_mr_button_grey=0x7f020105;
-        public static int ic_vol_type_speaker_dark=0x7f020106;
-        public static int ic_vol_type_speaker_group_dark=0x7f020107;
-        public static int ic_vol_type_speaker_group_light=0x7f020108;
-        public static int ic_vol_type_speaker_light=0x7f020109;
-        public static int ic_vol_type_tv_dark=0x7f02010a;
-        public static int ic_vol_type_tv_light=0x7f02010b;
-        public static int login=0x7f02010c;
-        public static int login_background=0x7f02010d;
-        public static int mr_button_connected_dark=0x7f02010e;
-        public static int mr_button_connected_light=0x7f02010f;
-        public static int mr_button_connecting_dark=0x7f020110;
-        public static int mr_button_connecting_light=0x7f020111;
-        public static int mr_button_dark=0x7f020112;
-        public static int mr_button_light=0x7f020113;
-        public static int mr_dialog_close_dark=0x7f020114;
-        public static int mr_dialog_close_light=0x7f020115;
-        public static int mr_dialog_material_background_dark=0x7f020116;
-        public static int mr_dialog_material_background_light=0x7f020117;
-        public static int mr_group_collapse=0x7f020118;
-        public static int mr_group_expand=0x7f020119;
-        public static int mr_media_pause_dark=0x7f02011a;
-        public static int mr_media_pause_light=0x7f02011b;
-        public static int mr_media_play_dark=0x7f02011c;
-        public static int mr_media_play_light=0x7f02011d;
-        public static int mr_media_stop_dark=0x7f02011e;
-        public static int mr_media_stop_light=0x7f02011f;
-        public static int mr_vol_type_audiotrack_dark=0x7f020120;
-        public static int mr_vol_type_audiotrack_light=0x7f020121;
-        public static int navigation_empty_icon=0x7f020122;
-        public static int notification_action_background=0x7f020123;
-        public static int notification_bg=0x7f020124;
-        public static int notification_bg_low=0x7f020125;
-        public static int notification_bg_low_normal=0x7f020126;
-        public static int notification_bg_low_pressed=0x7f020127;
-        public static int notification_bg_normal=0x7f020128;
-        public static int notification_bg_normal_pressed=0x7f020129;
-        public static int notification_icon_background=0x7f02012a;
-        public static int notification_template_icon_bg=0x7f02012f;
-        public static int notification_template_icon_low_bg=0x7f020130;
-        public static int notification_tile_bg=0x7f02012b;
-        public static int notify_panel_notification_icon_bg=0x7f02012c;
-        public static int tooltip_frame_dark=0x7f02012d;
-        public static int tooltip_frame_light=0x7f02012e;
+        public static int fab_shadow=0x7f02005b;
+        public static int fab_shadow_mini=0x7f02005c;
+        public static int ic_audiotrack_dark=0x7f02005d;
+        public static int ic_audiotrack_light=0x7f02005e;
+        public static int ic_dialog_close_dark=0x7f02005f;
+        public static int ic_dialog_close_light=0x7f020060;
+        public static int ic_group_collapse_00=0x7f020061;
+        public static int ic_group_collapse_01=0x7f020062;
+        public static int ic_group_collapse_02=0x7f020063;
+        public static int ic_group_collapse_03=0x7f020064;
+        public static int ic_group_collapse_04=0x7f020065;
+        public static int ic_group_collapse_05=0x7f020066;
+        public static int ic_group_collapse_06=0x7f020067;
+        public static int ic_group_collapse_07=0x7f020068;
+        public static int ic_group_collapse_08=0x7f020069;
+        public static int ic_group_collapse_09=0x7f02006a;
+        public static int ic_group_collapse_10=0x7f02006b;
+        public static int ic_group_collapse_11=0x7f02006c;
+        public static int ic_group_collapse_12=0x7f02006d;
+        public static int ic_group_collapse_13=0x7f02006e;
+        public static int ic_group_collapse_14=0x7f02006f;
+        public static int ic_group_collapse_15=0x7f020070;
+        public static int ic_group_expand_00=0x7f020071;
+        public static int ic_group_expand_01=0x7f020072;
+        public static int ic_group_expand_02=0x7f020073;
+        public static int ic_group_expand_03=0x7f020074;
+        public static int ic_group_expand_04=0x7f020075;
+        public static int ic_group_expand_05=0x7f020076;
+        public static int ic_group_expand_06=0x7f020077;
+        public static int ic_group_expand_07=0x7f020078;
+        public static int ic_group_expand_08=0x7f020079;
+        public static int ic_group_expand_09=0x7f02007a;
+        public static int ic_group_expand_10=0x7f02007b;
+        public static int ic_group_expand_11=0x7f02007c;
+        public static int ic_group_expand_12=0x7f02007d;
+        public static int ic_group_expand_13=0x7f02007e;
+        public static int ic_group_expand_14=0x7f02007f;
+        public static int ic_group_expand_15=0x7f020080;
+        public static int ic_media_pause_dark=0x7f020081;
+        public static int ic_media_pause_light=0x7f020082;
+        public static int ic_media_play_dark=0x7f020083;
+        public static int ic_media_play_light=0x7f020084;
+        public static int ic_media_stop_dark=0x7f020085;
+        public static int ic_media_stop_light=0x7f020086;
+        public static int ic_mr_button_connected_00_dark=0x7f020087;
+        public static int ic_mr_button_connected_00_light=0x7f020088;
+        public static int ic_mr_button_connected_01_dark=0x7f020089;
+        public static int ic_mr_button_connected_01_light=0x7f02008a;
+        public static int ic_mr_button_connected_02_dark=0x7f02008b;
+        public static int ic_mr_button_connected_02_light=0x7f02008c;
+        public static int ic_mr_button_connected_03_dark=0x7f02008d;
+        public static int ic_mr_button_connected_03_light=0x7f02008e;
+        public static int ic_mr_button_connected_04_dark=0x7f02008f;
+        public static int ic_mr_button_connected_04_light=0x7f020090;
+        public static int ic_mr_button_connected_05_dark=0x7f020091;
+        public static int ic_mr_button_connected_05_light=0x7f020092;
+        public static int ic_mr_button_connected_06_dark=0x7f020093;
+        public static int ic_mr_button_connected_06_light=0x7f020094;
+        public static int ic_mr_button_connected_07_dark=0x7f020095;
+        public static int ic_mr_button_connected_07_light=0x7f020096;
+        public static int ic_mr_button_connected_08_dark=0x7f020097;
+        public static int ic_mr_button_connected_08_light=0x7f020098;
+        public static int ic_mr_button_connected_09_dark=0x7f020099;
+        public static int ic_mr_button_connected_09_light=0x7f02009a;
+        public static int ic_mr_button_connected_10_dark=0x7f02009b;
+        public static int ic_mr_button_connected_10_light=0x7f02009c;
+        public static int ic_mr_button_connected_11_dark=0x7f02009d;
+        public static int ic_mr_button_connected_11_light=0x7f02009e;
+        public static int ic_mr_button_connected_12_dark=0x7f02009f;
+        public static int ic_mr_button_connected_12_light=0x7f0200a0;
+        public static int ic_mr_button_connected_13_dark=0x7f0200a1;
+        public static int ic_mr_button_connected_13_light=0x7f0200a2;
+        public static int ic_mr_button_connected_14_dark=0x7f0200a3;
+        public static int ic_mr_button_connected_14_light=0x7f0200a4;
+        public static int ic_mr_button_connected_15_dark=0x7f0200a5;
+        public static int ic_mr_button_connected_15_light=0x7f0200a6;
+        public static int ic_mr_button_connected_16_dark=0x7f0200a7;
+        public static int ic_mr_button_connected_16_light=0x7f0200a8;
+        public static int ic_mr_button_connected_17_dark=0x7f0200a9;
+        public static int ic_mr_button_connected_17_light=0x7f0200aa;
+        public static int ic_mr_button_connected_18_dark=0x7f0200ab;
+        public static int ic_mr_button_connected_18_light=0x7f0200ac;
+        public static int ic_mr_button_connected_19_dark=0x7f0200ad;
+        public static int ic_mr_button_connected_19_light=0x7f0200ae;
+        public static int ic_mr_button_connected_20_dark=0x7f0200af;
+        public static int ic_mr_button_connected_20_light=0x7f0200b0;
+        public static int ic_mr_button_connected_21_dark=0x7f0200b1;
+        public static int ic_mr_button_connected_21_light=0x7f0200b2;
+        public static int ic_mr_button_connected_22_dark=0x7f0200b3;
+        public static int ic_mr_button_connected_22_light=0x7f0200b4;
+        public static int ic_mr_button_connected_23_dark=0x7f0200b5;
+        public static int ic_mr_button_connected_23_light=0x7f0200b6;
+        public static int ic_mr_button_connected_24_dark=0x7f0200b7;
+        public static int ic_mr_button_connected_24_light=0x7f0200b8;
+        public static int ic_mr_button_connected_25_dark=0x7f0200b9;
+        public static int ic_mr_button_connected_25_light=0x7f0200ba;
+        public static int ic_mr_button_connected_26_dark=0x7f0200bb;
+        public static int ic_mr_button_connected_26_light=0x7f0200bc;
+        public static int ic_mr_button_connected_27_dark=0x7f0200bd;
+        public static int ic_mr_button_connected_27_light=0x7f0200be;
+        public static int ic_mr_button_connected_28_dark=0x7f0200bf;
+        public static int ic_mr_button_connected_28_light=0x7f0200c0;
+        public static int ic_mr_button_connected_29_dark=0x7f0200c1;
+        public static int ic_mr_button_connected_29_light=0x7f0200c2;
+        public static int ic_mr_button_connected_30_dark=0x7f0200c3;
+        public static int ic_mr_button_connected_30_light=0x7f0200c4;
+        public static int ic_mr_button_connecting_00_dark=0x7f0200c5;
+        public static int ic_mr_button_connecting_00_light=0x7f0200c6;
+        public static int ic_mr_button_connecting_01_dark=0x7f0200c7;
+        public static int ic_mr_button_connecting_01_light=0x7f0200c8;
+        public static int ic_mr_button_connecting_02_dark=0x7f0200c9;
+        public static int ic_mr_button_connecting_02_light=0x7f0200ca;
+        public static int ic_mr_button_connecting_03_dark=0x7f0200cb;
+        public static int ic_mr_button_connecting_03_light=0x7f0200cc;
+        public static int ic_mr_button_connecting_04_dark=0x7f0200cd;
+        public static int ic_mr_button_connecting_04_light=0x7f0200ce;
+        public static int ic_mr_button_connecting_05_dark=0x7f0200cf;
+        public static int ic_mr_button_connecting_05_light=0x7f0200d0;
+        public static int ic_mr_button_connecting_06_dark=0x7f0200d1;
+        public static int ic_mr_button_connecting_06_light=0x7f0200d2;
+        public static int ic_mr_button_connecting_07_dark=0x7f0200d3;
+        public static int ic_mr_button_connecting_07_light=0x7f0200d4;
+        public static int ic_mr_button_connecting_08_dark=0x7f0200d5;
+        public static int ic_mr_button_connecting_08_light=0x7f0200d6;
+        public static int ic_mr_button_connecting_09_dark=0x7f0200d7;
+        public static int ic_mr_button_connecting_09_light=0x7f0200d8;
+        public static int ic_mr_button_connecting_10_dark=0x7f0200d9;
+        public static int ic_mr_button_connecting_10_light=0x7f0200da;
+        public static int ic_mr_button_connecting_11_dark=0x7f0200db;
+        public static int ic_mr_button_connecting_11_light=0x7f0200dc;
+        public static int ic_mr_button_connecting_12_dark=0x7f0200dd;
+        public static int ic_mr_button_connecting_12_light=0x7f0200de;
+        public static int ic_mr_button_connecting_13_dark=0x7f0200df;
+        public static int ic_mr_button_connecting_13_light=0x7f0200e0;
+        public static int ic_mr_button_connecting_14_dark=0x7f0200e1;
+        public static int ic_mr_button_connecting_14_light=0x7f0200e2;
+        public static int ic_mr_button_connecting_15_dark=0x7f0200e3;
+        public static int ic_mr_button_connecting_15_light=0x7f0200e4;
+        public static int ic_mr_button_connecting_16_dark=0x7f0200e5;
+        public static int ic_mr_button_connecting_16_light=0x7f0200e6;
+        public static int ic_mr_button_connecting_17_dark=0x7f0200e7;
+        public static int ic_mr_button_connecting_17_light=0x7f0200e8;
+        public static int ic_mr_button_connecting_18_dark=0x7f0200e9;
+        public static int ic_mr_button_connecting_18_light=0x7f0200ea;
+        public static int ic_mr_button_connecting_19_dark=0x7f0200eb;
+        public static int ic_mr_button_connecting_19_light=0x7f0200ec;
+        public static int ic_mr_button_connecting_20_dark=0x7f0200ed;
+        public static int ic_mr_button_connecting_20_light=0x7f0200ee;
+        public static int ic_mr_button_connecting_21_dark=0x7f0200ef;
+        public static int ic_mr_button_connecting_21_light=0x7f0200f0;
+        public static int ic_mr_button_connecting_22_dark=0x7f0200f1;
+        public static int ic_mr_button_connecting_22_light=0x7f0200f2;
+        public static int ic_mr_button_connecting_23_dark=0x7f0200f3;
+        public static int ic_mr_button_connecting_23_light=0x7f0200f4;
+        public static int ic_mr_button_connecting_24_dark=0x7f0200f5;
+        public static int ic_mr_button_connecting_24_light=0x7f0200f6;
+        public static int ic_mr_button_connecting_25_dark=0x7f0200f7;
+        public static int ic_mr_button_connecting_25_light=0x7f0200f8;
+        public static int ic_mr_button_connecting_26_dark=0x7f0200f9;
+        public static int ic_mr_button_connecting_26_light=0x7f0200fa;
+        public static int ic_mr_button_connecting_27_dark=0x7f0200fb;
+        public static int ic_mr_button_connecting_27_light=0x7f0200fc;
+        public static int ic_mr_button_connecting_28_dark=0x7f0200fd;
+        public static int ic_mr_button_connecting_28_light=0x7f0200fe;
+        public static int ic_mr_button_connecting_29_dark=0x7f0200ff;
+        public static int ic_mr_button_connecting_29_light=0x7f020100;
+        public static int ic_mr_button_connecting_30_dark=0x7f020101;
+        public static int ic_mr_button_connecting_30_light=0x7f020102;
+        public static int ic_mr_button_disabled_dark=0x7f020103;
+        public static int ic_mr_button_disabled_light=0x7f020104;
+        public static int ic_mr_button_disconnected_dark=0x7f020105;
+        public static int ic_mr_button_disconnected_light=0x7f020106;
+        public static int ic_mr_button_grey=0x7f020107;
+        public static int ic_vol_type_speaker_dark=0x7f020108;
+        public static int ic_vol_type_speaker_group_dark=0x7f020109;
+        public static int ic_vol_type_speaker_group_light=0x7f02010a;
+        public static int ic_vol_type_speaker_light=0x7f02010b;
+        public static int ic_vol_type_tv_dark=0x7f02010c;
+        public static int ic_vol_type_tv_light=0x7f02010d;
+        public static int login=0x7f02010e;
+        public static int login_background=0x7f02010f;
+        public static int mr_button_connected_dark=0x7f020110;
+        public static int mr_button_connected_light=0x7f020111;
+        public static int mr_button_connecting_dark=0x7f020112;
+        public static int mr_button_connecting_light=0x7f020113;
+        public static int mr_button_dark=0x7f020114;
+        public static int mr_button_light=0x7f020115;
+        public static int mr_dialog_close_dark=0x7f020116;
+        public static int mr_dialog_close_light=0x7f020117;
+        public static int mr_dialog_material_background_dark=0x7f020118;
+        public static int mr_dialog_material_background_light=0x7f020119;
+        public static int mr_group_collapse=0x7f02011a;
+        public static int mr_group_expand=0x7f02011b;
+        public static int mr_media_pause_dark=0x7f02011c;
+        public static int mr_media_pause_light=0x7f02011d;
+        public static int mr_media_play_dark=0x7f02011e;
+        public static int mr_media_play_light=0x7f02011f;
+        public static int mr_media_stop_dark=0x7f020120;
+        public static int mr_media_stop_light=0x7f020121;
+        public static int mr_vol_type_audiotrack_dark=0x7f020122;
+        public static int mr_vol_type_audiotrack_light=0x7f020123;
+        public static int navigation_empty_icon=0x7f020124;
+        public static int notification_action_background=0x7f020125;
+        public static int notification_bg=0x7f020126;
+        public static int notification_bg_low=0x7f020127;
+        public static int notification_bg_low_normal=0x7f020128;
+        public static int notification_bg_low_pressed=0x7f020129;
+        public static int notification_bg_normal=0x7f02012a;
+        public static int notification_bg_normal_pressed=0x7f02012b;
+        public static int notification_icon_background=0x7f02012c;
+        public static int notification_template_icon_bg=0x7f020131;
+        public static int notification_template_icon_low_bg=0x7f020132;
+        public static int notification_tile_bg=0x7f02012d;
+        public static int notify_panel_notification_icon_bg=0x7f02012e;
+        public static int tooltip_frame_dark=0x7f02012f;
+        public static int tooltip_frame_light=0x7f020130;
     }
     public static final class id {
         public static int ALT=0x7f0b0032;
@@ -3849,6 +3914,8 @@ containing a value of this type.
         public static int launcher_foreground=0x7f030002;
     }
     public static final class string {
+        public static int ApplicationName=0x7f09003e;
+        public static int Hello=0x7f09003d;
         public static int abc_action_bar_home_description=0x7f090016;
         public static int abc_action_bar_up_description=0x7f090017;
         public static int abc_action_menu_overflow_description=0x7f090018;
@@ -8447,6 +8514,12 @@ containing a value of this type.
            <tr><td><code>{@link #FloatingActionButton_borderWidth android.support.transition:borderWidth}</code></td><td></td></tr>
            <tr><td><code>{@link #FloatingActionButton_elevation android.support.transition:elevation}</code></td><td></td></tr>
            <tr><td><code>{@link #FloatingActionButton_fabSize android.support.transition:fabSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_fab_colorDisabled android.support.transition:fab_colorDisabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_fab_colorNormal android.support.transition:fab_colorNormal}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_fab_colorPressed android.support.transition:fab_colorPressed}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_fab_colorRipple android.support.transition:fab_colorRipple}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_fab_shadow android.support.transition:fab_shadow}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_fab_size android.support.transition:fab_size}</code></td><td></td></tr>
            <tr><td><code>{@link #FloatingActionButton_pressedTranslationZ android.support.transition:pressedTranslationZ}</code></td><td></td></tr>
            <tr><td><code>{@link #FloatingActionButton_rippleColor android.support.transition:rippleColor}</code></td><td></td></tr>
            <tr><td><code>{@link #FloatingActionButton_useCompatPadding android.support.transition:useCompatPadding}</code></td><td></td></tr>
@@ -8456,13 +8529,21 @@ containing a value of this type.
            @see #FloatingActionButton_borderWidth
            @see #FloatingActionButton_elevation
            @see #FloatingActionButton_fabSize
+           @see #FloatingActionButton_fab_colorDisabled
+           @see #FloatingActionButton_fab_colorNormal
+           @see #FloatingActionButton_fab_colorPressed
+           @see #FloatingActionButton_fab_colorRipple
+           @see #FloatingActionButton_fab_shadow
+           @see #FloatingActionButton_fab_size
            @see #FloatingActionButton_pressedTranslationZ
            @see #FloatingActionButton_rippleColor
            @see #FloatingActionButton_useCompatPadding
          */
         public static final int[] FloatingActionButton = {
             0x7f01003e, 0x7f010116, 0x7f010117, 0x7f01013c,
-            0x7f01013d, 0x7f01013e, 0x7f01013f, 0x7f010140
+            0x7f01013d, 0x7f01013e, 0x7f01013f, 0x7f010140,
+            0x7f010173, 0x7f010174, 0x7f010175, 0x7f010176,
+            0x7f010177, 0x7f010178
         };
         /**
           <p>This symbol is the offset where the {@link android.support.transition.R.attr#backgroundTint}
@@ -8550,6 +8631,97 @@ containing a value of this type.
           @attr name android.support.transition:fabSize
         */
         public static int FloatingActionButton_fabSize = 4;
+        /**
+          <p>This symbol is the offset where the {@link android.support.transition.R.attr#fab_colorDisabled}
+          attribute's value can be found in the {@link #FloatingActionButton} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android.support.transition:fab_colorDisabled
+        */
+        public static int FloatingActionButton_fab_colorDisabled = 10;
+        /**
+          <p>This symbol is the offset where the {@link android.support.transition.R.attr#fab_colorNormal}
+          attribute's value can be found in the {@link #FloatingActionButton} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android.support.transition:fab_colorNormal
+        */
+        public static int FloatingActionButton_fab_colorNormal = 9;
+        /**
+          <p>This symbol is the offset where the {@link android.support.transition.R.attr#fab_colorPressed}
+          attribute's value can be found in the {@link #FloatingActionButton} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android.support.transition:fab_colorPressed
+        */
+        public static int FloatingActionButton_fab_colorPressed = 8;
+        /**
+          <p>This symbol is the offset where the {@link android.support.transition.R.attr#fab_colorRipple}
+          attribute's value can be found in the {@link #FloatingActionButton} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android.support.transition:fab_colorRipple
+        */
+        public static int FloatingActionButton_fab_colorRipple = 11;
+        /**
+          <p>This symbol is the offset where the {@link android.support.transition.R.attr#fab_shadow}
+          attribute's value can be found in the {@link #FloatingActionButton} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android.support.transition:fab_shadow
+        */
+        public static int FloatingActionButton_fab_shadow = 12;
+        /**
+          <p>This symbol is the offset where the {@link android.support.transition.R.attr#fab_size}
+          attribute's value can be found in the {@link #FloatingActionButton} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>normal</code></td><td>0</td><td></td></tr>
+<tr><td><code>mini</code></td><td>1</td><td></td></tr>
+</table>
+          @attr name android.support.transition:fab_size
+        */
+        public static int FloatingActionButton_fab_size = 13;
         /**
           <p>This symbol is the offset where the {@link android.support.transition.R.attr#pressedTranslationZ}
           attribute's value can be found in the {@link #FloatingActionButton} array.

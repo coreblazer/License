@@ -15,10 +15,22 @@ namespace App1.Views
 	{
 		public RegisterPageView()
 		{
-			InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
+
+            InitializeComponent();
             this.BindingContext = new RegisterPageViewModel();
 		}
 
-     
+        private async void RegisterButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new RegisterPageView());
+        }
+
+        protected override bool OnBackButtonPressed()
+        {
+            Navigation.PopAsync();
+            return true;
+        }
+
     }
 }

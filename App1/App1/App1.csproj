@@ -16,8 +16,17 @@
     <PackageReference Include="FireSharp" Version="2.0.4" />
     <PackageReference Include="Forms.Controls.FlexButton" Version="0.9.1" />
     <PackageReference Include="Reactive.Streams" Version="1.0.2" />
+    <PackageReference Include="Refractored.FloatingActionButtonForms" Version="2.1.0" />
+    <PackageReference Include="Xam.Plugin.Media" Version="4.0.1.5" />
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
     <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
     <PackageReference Include="XForms.Plugin.AnimationNavigationPage" Version="1.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Mono.Android">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\New\Community\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v9.0\Mono.Android.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>

@@ -17,6 +17,7 @@ namespace App1.ViewModels
     {
         public ICommand LoginCommand { set; get; }
         public ICommand NavigateToRegisterPageCommand { set; get; }
+        public ICommand PickPhotoCommand { set; get; }
 
 
         private string userEmail = null;
@@ -50,6 +51,7 @@ namespace App1.ViewModels
         {
             LoginCommand = new Command(Login);
             NavigateToRegisterPageCommand = new Command(Register);
+
         }
 
         public async void Login()
@@ -90,6 +92,7 @@ namespace App1.ViewModels
              .Child("Users")
              .OrderByKey()
              .StartAt(Helper.RetainedData.UserUuid)
+             .LimitToFirst(1)
              .OnceAsync<UserModel>();
             foreach (var user in users)
             {
@@ -99,11 +102,7 @@ namespace App1.ViewModels
         }
         public void Register()
         {
-            if (IsBusy) return;
-            IsBusy = true;
-            NavigationPage newNavigationPage = new NavigationPage(new RegisterPageView());
-            Application.Current.MainPage = newNavigationPage;
-            IsBusy = false;
+
 
         }
 
