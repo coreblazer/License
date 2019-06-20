@@ -2,7 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             xmlns:cvrt="clr-namespace:App1.Converters"
              x:Class="App1.Views.MainPageView">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <cvrt:ImageConverter x:Key="imageConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <StackLayout>
         <ScrollView>
             <StackLayout>
@@ -27,7 +33,7 @@
                 </Grid>
             </StackLayout>
         </ScrollView>
-        <ListView ItemsSource="{Binding Userlist}"
+        <ListView x:Name="List" ItemsSource="{Binding Userlist}"
               RowHeight="60" ItemSelected="OnSelectedItem">
 
             <ListView.ItemTemplate>
@@ -35,8 +41,20 @@
                     <ViewCell>
                         <StackLayout Margin="8">
                             <StackLayout Orientation="Horizontal">
+                                <controls:CircleImage Source="{Binding UserImage, Converter={StaticResource imageConverter}}" Aspect="AspectFill" Grid.Column="0" IsVisible="True">
+                                    <controls:CircleImage.WidthRequest>
+                                        <OnPlatform x:TypeArguments="x:Double">
+                                            <On Platform="Android, iOS">50</On>
+                                        </OnPlatform>
+                                    </controls:CircleImage.WidthRequest>
+                                    <controls:CircleImage.HeightRequest>
+                                        <OnPlatform x:TypeArguments="x:Double">
+                                            <On Platform="Android, iOS">50</On>
+                                        </OnPlatform>
+                                    </controls:CircleImage.HeightRequest>
+                                </controls:CircleImage>
                                 <Label Text="{Binding FirstName}"
-                               FontAttributes="Bold"/>
+                              FontAttributes="Bold"/>
                                 <Label Text="{Binding LastName}"
                                FontAttributes="Bold"/>
                             </StackLayout>

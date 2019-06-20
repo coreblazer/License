@@ -9,6 +9,9 @@ using Firebase.Database.Query;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -129,8 +132,18 @@ namespace App1.ViewModels
                                         {
                                             AuthTokenAsyncFactory = () => Task.FromResult(loginNewlyCreatedUser.FirebaseToken)
                                         });
-
-                UserModel userToBeAdded = new UserModel(Firstname, Lastname, loginNewlyCreatedUser.User.LocalId, Email);
+                var assembly = Assembly.GetExecutingAssembly();
+                string base64 = "";
+                string resourceName = assembly.GetManifestResourceNames()
+                  .Single(str => str.EndsWith("icon.png"));
+                using (Stream stream = assembly.GetManifestResourceStream(resourceName))
+                using (StreamReader reader = new StreamReader(stream))
+                {
+                    var bytes = new byte[stream.Length];
+                    await stream.ReadAsync(bytes, 0, (int)stream.Length);
+                    base64 = System.Convert.ToBase64String(bytes);
+                }
+                UserModel userToBeAdded = new UserModel(Firstname, Lastname, loginNewlyCreatedUser.User.LocalId, Email, base64);
                 MessageModel message = new MessageModel("abv", "abc", Helper.RetainedData.UserUuid, "abc", "abc", DateTime.Now);
                 await firebaseClient
                     .Child("Users")

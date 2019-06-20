@@ -17,8 +17,16 @@ namespace App1.Views {
     public partial class LoginPageView : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::App1.CustomRenders.CustomEntry Email;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::App1.CustomRenders.CustomEntry Password;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(LoginPageView));
+            Email = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::App1.CustomRenders.CustomEntry>(this, "Email");
+            Password = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::App1.CustomRenders.CustomEntry>(this, "Password");
         }
     }
 }

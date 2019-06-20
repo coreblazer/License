@@ -1,4 +1,11 @@
 App1
+FFImageLoading
+FFImageLoading.Forms
+FFImageLoading.Forms.Platform
+FFImageLoading.Platform
+FFImageLoading.Svg.Forms
+FFImageLoading.Svg.Platform
+FFImageLoading.Transformations
 Firebase.Auth
 Firebase.Database.Platform
 Firebase
@@ -21,6 +28,7 @@ Reactive.Streams
 Refractored.Fab
 Refractored.FabControl
 Refractored.FabControl.Droid
+SkiaSharp
 System.Net.Http.Extensions
 System.Net.Http.Primitives
 System.Reactive
@@ -56,3 +64,4 @@ Xamarin.GooglePlayServices.Tasks
 netstandard
 System.Reflection.Extensions
 System.Runtime.InteropServices.WindowsRuntime
+System.Resources.ResourceManager

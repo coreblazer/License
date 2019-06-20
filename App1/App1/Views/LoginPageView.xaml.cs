@@ -26,6 +26,11 @@ namespace App1.Views
             Navigation.PopAsync();
             return true;
         }
+
+        private void OnLoginButtonPresset(object sender, EventArgs e)
+        {
+            
+        }
     }
         
 }
