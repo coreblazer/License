@@ -9,6 +9,7 @@ using System.Reactive.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using Android.Graphics;
 using Android.Util;
 using App1.Helper;
@@ -29,7 +30,12 @@ namespace App1.ViewModels
         {
             get; set;
         }
-        
+
+        public string CurrentUserImage
+        {
+            get; set;
+        }
+
         public ObservableCollection<UserModel> Userlist
         {
             get
@@ -42,11 +48,25 @@ namespace App1.ViewModels
                 OnPropertyChanged("Userlist");
             }
         }
+        public ICommand LogoutCommand { get; set; }
+
         public MainPageViewModel()
         {
             Initialize();
+            LogoutCommand = new Command(Logout);
+
             UserName = Helper.RetainedData.CurrentUser.FirstName + " " + Helper.RetainedData.CurrentUser.LastName;
+            CurrentUserImage = Helper.RetainedData.CurrentUser.UserImage;
         }
+
+        private void Logout()
+        {
+            var firebase = Connectors.Client.DatabaseClient;
+            firebase.Dispose();
+            NavigationPage nav = new NavigationPage(new LoginPageView());
+            Application.Current.MainPage = nav;
+        }
+
         private async void Initialize()
         {
             await RetrieveUsers();
@@ -60,13 +80,13 @@ namespace App1.ViewModels
              .Child("Users")
              .OrderByKey()
              .OnceAsync<UserModel>();
-          
+
             foreach (var user in users)
             {
                 if (user.Object.UserUUID != Helper.RetainedData.UserUuid)
                 {
-                    
-                 
+
+
                     Userlist.Add(user.Object);
 
                 }
@@ -85,7 +105,7 @@ namespace App1.ViewModels
                 //return image;
             }
             return null;
-    
+
         }
     }
 }

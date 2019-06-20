@@ -152,6 +152,7 @@ C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\linksrc\App1.dl
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\linksrc\Lex.Db.dll.mdb
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\linksrc\Refractored.Fab.dll.mdb
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\linksrc\Refractored.FabControl.Droid.dll.mdb
+C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\res\drawable\menu.png
 C:\Users\Bogdan\source\repos\App1\App1\App1\bin\Debug\netstandard2.0\App1.dll
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\bin\Debug\App1.dll.mdb
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\linksrc\App1.dll.mdb

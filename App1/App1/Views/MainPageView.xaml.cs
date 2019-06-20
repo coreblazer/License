@@ -1,6 +1,8 @@
 ﻿using App1.Models;
 using App1.ViewModels;
+using Firebase.Database.Query;
 using ImageCircle.Forms.Plugin.Abstractions;
+using Plugin.Media;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -29,6 +31,38 @@ namespace App1.Views
         {
             UserModel user = e.SelectedItem as UserModel;
             await Navigation.PushModalAsync(new NavigationPage(new ChatPageView(user.UserUUID)));
+
+        }
+
+        private async void OnPhotoTapped(object sender, EventArgs e)
+        {
+            if (!CrossMedia.Current.IsPickPhotoSupported)
+            {
+                await DisplayAlert("Photos Not Supported", ":( Permission not granted to photos.", "OK");
+                return;
+            }
+            var file = await Plugin.Media.CrossMedia.Current.PickPhotoAsync(new Plugin.Media.Abstractions.PickMediaOptions
+            {
+                PhotoSize = Plugin.Media.Abstractions.PhotoSize.Medium,
+
+            });
+            if (file == null)
+                return;
+            var stream1 = file.GetStream();
+            var bytes = new byte[stream1.Length];
+            await stream1.ReadAsync(bytes, 0, (int)stream1.Length);
+            string base64 = System.Convert.ToBase64String(bytes);
+            Helper.RetainedData.CurrentUser.UserImage = base64;
+            await Connectors.Client.DatabaseClient
+                  .Child("Users")
+                  .Child(Helper.RetainedData.CurrentUser.UserUUID)
+                  .PutAsync(Helper.RetainedData.CurrentUser);
+            image.Source = ImageSource.FromStream(() =>
+            {
+                var stream = file.GetStream();
+                file.Dispose();
+                return stream;
+            });
 
         }
         //protected override void OnAppearing()

@@ -9,6 +9,18 @@
             <cvrt:ImageConverter x:Key="imageConverter"/>
         </ResourceDictionary>
     </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+
+        <!--<ToolbarItem Name="Settings" Order="Primary" Priority="1"  >
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource"
+                 Android="menu.png" />
+            </ToolbarItem.Icon>-->
+        <!--</ToolbarItem>-->
+        <ToolbarItem Name="Logout"  Order="Secondary" Priority="0"  Command="{Binding LogoutCommand}">
+        </ToolbarItem>
+        <ToolbarItem Name="Settings" Order="Secondary" Priority="1" />
+    </ContentPage.ToolbarItems>
     <StackLayout>
         <ScrollView>
             <StackLayout>
@@ -18,7 +30,7 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <Label Text="{Binding UserName, StringFormat='Welcome, {0:F0} !'}" IsVisible="True" Grid.Column="1"/>
-                    <controls:CircleImage Source="http://upload.wikimedia.org/wikipedia/commons/5/55/Tamarin_portrait.JPG" Aspect="AspectFill" Grid.Column="0" IsVisible="True">
+                    <controls:CircleImage x:Name="image" Source="{Binding CurrentUserImage, Converter={StaticResource imageConverter}}" Aspect="AspectFill" Grid.Column="0" IsVisible="True">
                         <controls:CircleImage.WidthRequest>
                             <OnPlatform x:TypeArguments="x:Double">
                                 <On Platform="Android, iOS">55</On>
@@ -29,13 +41,17 @@
                                 <On Platform="Android, iOS">55</On>
                             </OnPlatform>
                         </controls:CircleImage.HeightRequest>
+                        <controls:CircleImage.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnPhotoTapped">
+                                
+                            </TapGestureRecognizer>
+                        </controls:CircleImage.GestureRecognizers>
                     </controls:CircleImage>
                 </Grid>
             </StackLayout>
         </ScrollView>
         <ListView x:Name="List" ItemsSource="{Binding Userlist}"
               RowHeight="60" ItemSelected="OnSelectedItem">
-
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -62,8 +78,6 @@
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-
-
         </ListView>
     </StackLayout>
 
