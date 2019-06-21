@@ -27,6 +27,12 @@ namespace App1.Views
             return true;
         }
 
+        private void UnfocusEntry(object sender, EventArgs e)
+        {
+            Email.Unfocus();
+            Password.Unfocus();
+        }
+
         private void OnLoginButtonPresset(object sender, EventArgs e)
         {
             

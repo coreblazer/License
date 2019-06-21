@@ -10,14 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Resources\icon.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\icon.png" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="FirebaseAuthentication.net" Version="3.2.0" />
     <PackageReference Include="FirebaseDatabase.net" Version="4.0.1" />
     <PackageReference Include="FirebaseDatabase.Platform.net" Version="3.0.0" />

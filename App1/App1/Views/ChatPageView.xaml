@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Controls="clr-namespace:App1.CustomRenders"
              x:Class="App1.Views.ChatPageView">
     <ContentPage.Content>
         <StackLayout>
@@ -8,7 +9,7 @@
             </StackLayout>
             <ListView ItemsSource="{Binding MessageList}"
               RowHeight="60" >
-
+                <!--<Controls:CustomEntry x:Name="Email" Grid.Row="0" Grid.Column="0"  Placeholder="Email"  VerticalOptions="CenterAndExpand" Text="{Binding UserEmail}" TextColor="White"/>-->
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -25,8 +26,8 @@
                 </ListView.ItemTemplate>
             </ListView>
             <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand">
-                <Entry x:Name="messageEntry"  Text="{Binding Content}" HorizontalOptions="FillAndExpand"/>
-                <Button Text="Send" Command="{Binding SendMessageCommand}" HorizontalOptions="End"/>
+                <Controls:CustomEntry x:Name="messageEntry"  Placeholder="Write a message" Text="{Binding Content}" HorizontalOptions="FillAndExpand"/>
+                <Button Text="Send" Command="{Binding SendMessageCommand}" HorizontalOptions="End" Clicked="UnfocusEntry"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

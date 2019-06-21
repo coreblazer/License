@@ -33,6 +33,7 @@
     BackgroundColor="#6279B8"
     HighlightBackgroundColor="#8EA4D2"
                              IsToggled="{Binding IsBusy}"
+                             IsEnabled="{Binding IsBusy}"
                              Grid.Row="4" Grid.Column="0"/>
         </Grid>
         <!--<StackLayout VerticalOptions="CenterAndExpand" Padding="5">

@@ -75,11 +75,9 @@ namespace App1.ViewModels
                 Helper.RetainedData.Email = UserEmail;
                 Helper.RetainedData.UserUuid = data.User.LocalId;
                 await RetainLoggedUser();
-                NavigationPage nav = new NavigationPage(new MainPageView(new MainPageViewModel()));
-                Application.Current.MainPage = nav;
-               
                 IsBusy = false;
-
+                NavigationPage nav = new NavigationPage(new MainPageView(new MainPageViewModel()));
+                Application.Current.MainPage = nav;               
             }
             catch (Exception e)
             {

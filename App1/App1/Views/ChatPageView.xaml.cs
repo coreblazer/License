@@ -25,5 +25,11 @@ namespace App1.Views
             base.OnBackButtonPressed();
             return false;
         }
+
+        private void UnfocusEntry(object sender, EventArgs e)
+        {
+            messageEntry.Unfocus();
+            messageEntry.Text = "";
+        }
     }
 }

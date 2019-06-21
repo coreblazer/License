@@ -29,8 +29,15 @@ namespace App1.Views
 
         protected async void OnSelectedItem(object sender, SelectedItemChangedEventArgs e)
         {
+            if (e == null || e.SelectedItem == null) return;
             UserModel user = e.SelectedItem as UserModel;
             await Navigation.PushModalAsync(new NavigationPage(new ChatPageView(user.UserUUID)));
+            (sender as ListView).SelectedItem = null;
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
 
         }
 
@@ -65,40 +72,6 @@ namespace App1.Views
             });
 
         }
-        //protected override void OnAppearing()
-        //{
-
-        //    base.OnAppearing();
-        //    ViewCell viewCell = new ViewCell();
-        //    UsersList.ItemsSource = viewModel.Userlist;
-
-        //    DataTemplate dataTemplate = new DataTemplate(() =>
-        //    {
-        //        StackLayout stackLayout = new StackLayout { Margin = 20, Orientation = StackOrientation.Vertical };
-
-        //        foreach (UserModel user in UsersList.ItemsSource)
-        //        {
-        //            if (!(string.IsNullOrEmpty(user.UserImage)))
-        //            {
-        //                byte[] Base64Stream = Convert.FromBase64String(user.UserImage);
-        //                CircleImage UserImage = new CircleImage { WidthRequest = 55, HeightRequest = 55, Aspect = Aspect.AspectFill, IsVisible = true };
-        //                UserImage.Source = ImageSource.FromStream(() => new MemoryStream(Base64Stream));
-        //                stackLayout.Children.Add(UserImage);                  
-        //            }
-        //            Label FirstName = new Label { Text = user.FirstName };
-        //            Label LastName = new Label { Text = user.LastName };
-        //            stackLayout.Children.Add(FirstName);
-        //            stackLayout.Children.Add(LastName);
-        //        }
-        //        viewCell.View = stackLayout ;
-        //        return viewCell;
-        //    });
-        //    UsersList.ItemTemplate = dataTemplate;
-
-        //}
-
-
-
         protected override void OnDisappearing()
         {
 
