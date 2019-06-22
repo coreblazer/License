@@ -24,6 +24,9 @@ namespace App1.Views
                 Text = user.FirstName+ " " + user.LastName
             };
             this.ToolbarItems.Add(toolbarItem);
+            MessagingCenter.Subscribe<ScrollToBottomMessage>(this, "ScrollToBottomMessage", (arg) => {
+                MessagesListView.ScrollTo(arg, ScrollToPosition.End, true);
+            });
         }
 
         protected override bool OnBackButtonPressed()

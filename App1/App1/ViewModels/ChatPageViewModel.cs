@@ -99,6 +99,7 @@ namespace App1.ViewModels
                             //sorted.Add(f.Object);
                             MessageList.Add(f.Object);
 
+                            MessagingCenter.Send(new ScrollToBottomMessage(), "ScrollToBottomMessage");
                             messageUuids.Add(f.Object.MessageUuid);
                         }
                     }
