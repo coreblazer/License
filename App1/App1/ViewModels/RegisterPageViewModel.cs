@@ -107,7 +107,7 @@ namespace App1.ViewModels
                 await Connectors.Client.FireBaseAuthConfig.CreateUserWithEmailAndPasswordAsync(Email, Password);
                 if (await PasswordsFieldsAreValid())
                 {
-                    InsertNewUser();
+                    await InsertNewUser();
                     NavigationPage nav = new NavigationPage(new LoginPageView());
                     Application.Current.MainPage = nav;
                 }
@@ -121,7 +121,7 @@ namespace App1.ViewModels
             }
         }
 
-        private async void InsertNewUser() //for inserting new user informations in the db
+        private async Task InsertNewUser() //for inserting new user informations in the db
         {
             try
             {

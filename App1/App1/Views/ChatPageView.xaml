@@ -2,10 +2,17 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:Controls="clr-namespace:App1.CustomRenders"
+                          xmlns:cvrt="clr-namespace:App1.Converters"
+
              x:Class="App1.Views.ChatPageView">
     <!--<ContentPage.ToolbarItems>
         <ToolbarItem Name="{Binding TargetUser}" Order="Primary" Priority="1" />
     </ContentPage.ToolbarItems>-->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <cvrt:ColorConverter x:Key="colorConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
         
         <StackLayout>
@@ -25,7 +32,7 @@
                             
                             <StackLayout Margin="8">
                                 <StackLayout Orientation="Horizontal">
-                                    <Frame  BackgroundColor="#03A9F4" WidthRequest="400">
+                                    <Frame BackgroundColor="{Binding AuthorUuid, Converter={StaticResource colorConverter}}" WidthRequest="400">
                                         <Frame.HasShadow>
                                             <OnPlatform x:TypeArguments="x:Boolean" iOS="false" Android="true"/>
                                         </Frame.HasShadow>

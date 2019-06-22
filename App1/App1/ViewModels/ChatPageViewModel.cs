@@ -96,19 +96,21 @@ namespace App1.ViewModels
                     {
                         if (!(messageUuids.Contains(f.Object.MessageUuid)))
                         {
-                            sorted.Add(f.Object);
-                            sorted = sorted.OrderBy(x => x.TimeStamp).ToList();//necessary for ordering the messages when arriving
-                            foreach (var item in sorted)
-                            {
-                                MessageList.Add(item);
+                            //sorted.Add(f.Object);
+                            MessageList.Add(f.Object);
 
-                            }
                             messageUuids.Add(f.Object.MessageUuid);
                         }
-                        sorted.Clear();
                     }
 
                 });
+            sorted = sorted.OrderBy(x => x.TimeStamp).ToList();//necessary for ordering the messages when arriving
+            foreach (var item in sorted)
+            {
+
+            }
+            sorted.Clear();
+
         }
         public async Task RetrieveMessageHistory()
         {
@@ -121,22 +123,22 @@ namespace App1.ViewModels
              .OnceAsync<MessageModel>();
             foreach (var message in messages)
             {
-                if (message.Object.TargetUuid == User.UserUUID)
+                if (message.Object.TargetUuid == User.UserUUID || message.Object.AuthorUuid == User.UserUUID)
                 {
-
                     sorted.Add(message.Object);
-                    sorted = sorted.OrderBy(o => o.TimeStamp).ToList();//necessary for ordering the messages when arriving
-                    foreach (var item in sorted)
-                    {
-                        MessageList.Add(item);
-
-                    }
 
                     messageUuids.Add(message.Object.MessageUuid);
-                    sorted.Clear();
                 }
 
             }
+            sorted = sorted.OrderBy(o => o.TimeStamp).ToList();//necessary for ordering the messages when arriving
+            foreach (var item in sorted)
+            {
+                MessageList.Add(item);
+
+            }
+            sorted.Clear();
+
         }
 
 
