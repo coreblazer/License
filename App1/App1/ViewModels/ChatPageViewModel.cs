@@ -20,6 +20,8 @@ namespace App1.ViewModels
         private List<MessageModel> sorted = new List<MessageModel>();
         private List<string> messageUuids = new List<string>();
         public string UserUuid { get; set; }
+
+        public UserModel User { get; set; }
         public ICommand SendMessageCommand { get; set; }
 
         public string Author
@@ -47,9 +49,9 @@ namespace App1.ViewModels
         }
 
 
-        public ChatPageViewModel(string userUuid)
+        public ChatPageViewModel(UserModel user)
         {
-            UserUuid = userUuid;
+            User = user;
             base.SubscribeToReceiveMessages();
             SubscribeToReceiveMessages();
             Initialize();
@@ -66,11 +68,11 @@ namespace App1.ViewModels
         {
             Author = Helper.RetainedData.CurrentUser.FirstName + " " + Helper.RetainedData.CurrentUser.LastName;
             string messageUuid = Helper.UUIDGenerator.UuidGenerator;
-            MessageModel message = new MessageModel(messageUuid, Author, Helper.RetainedData.UserUuid, Content, UserUuid, DateTime.Now);
+            MessageModel message = new MessageModel(messageUuid, Author, Helper.RetainedData.CurrentUser.UserUUID, Content, User.UserUUID, DateTime.Now);
             MessageList.Add(message);
             await Connectors.Client.DatabaseClient
                     .Child("Conversations")
-                    .Child(UserUuid)
+                    .Child(User.UserUUID)
                     .Child(messageUuid)
                     .PutAsync(message);
             await Connectors.Client.DatabaseClient
@@ -78,7 +80,7 @@ namespace App1.ViewModels
         .Child(Helper.RetainedData.CurrentUser.UserUUID)
         .Child(messageUuid)
         .PutAsync(message);
-        Content = string.Empty;
+            Content = string.Empty;
         }
         protected void SubscribeToReceiveMessageFromCurrentUser()
         {
@@ -89,7 +91,7 @@ namespace App1.ViewModels
                 .Where(f => !string.IsNullOrEmpty(f.Key))
                 .Subscribe(f =>
                 {
-                    if (f.Object.AuthorUuid == UserUuid)
+                    if (f.Object.AuthorUuid == User.UserUUID)
                     {
                         if (!(messageUuids.Contains(f.Object.MessageUuid)))
                         {
@@ -118,7 +120,7 @@ namespace App1.ViewModels
              .OnceAsync<MessageModel>();
             foreach (var message in messages)
             {
-                if (message.Object.TargetUuid == UserUuid)
+                if (message.Object.TargetUuid == User.UserUUID)
                 {
 
                     sorted.Add(message.Object);

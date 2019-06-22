@@ -8449,11 +8449,11 @@ namespace App1.Droid
 			// aapt resource value: 0x7F09005B
 			public const int design_snackbar_background = 2131296347;
 			
-			// aapt resource value: 0x7F010006
-			public const int fab_shadow = 2130771974;
-			
 			// aapt resource value: 0x7F010007
-			public const int fab_shadow_mini = 2130771975;
+			public const int fab_shadow = 2130771975;
+			
+			// aapt resource value: 0x7F010008
+			public const int fab_shadow_mini = 2130771976;
 			
 			// aapt resource value: 0x1
 			public const int googleg_disabled_color_18 = 1;
@@ -9013,6 +9013,12 @@ namespace App1.Droid
 			// aapt resource value: 0x7F010004
 			public const int login_background = 2130771972;
 			
+			// aapt resource value: 0x7F010005
+			public const int main_page_image = 2130771973;
+			
+			// aapt resource value: 0x7F010006
+			public const int menu = 2130771974;
+			
 			// aapt resource value: 0x7F090105
 			public const int mr_button_connected_dark = 2131296517;
 			
@@ -9246,9 +9252,6 @@ namespace App1.Droid
 			
 			// aapt resource value: 0x1
 			public const int quantum_ic_volume_up_white_36 = 1;
-			
-			// aapt resource value: 0x7F010005
-			public const int show-more-button-with-three-dots = 2130771973;
 			
 			// aapt resource value: 0x7F090069
 			public const int tooltip_frame_dark = 2131296361;

@@ -1,4 +1,5 @@
-﻿using App1.ViewModels;
+﻿using App1.Models;
+using App1.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +14,9 @@ namespace App1.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ChatPageView : ContentPage
     {
-        public ChatPageView(string userUUID)
+        public ChatPageView(UserModel user)
         {
-            this.BindingContext = new ChatPageViewModel(userUUID);
+            this.BindingContext = new ChatPageViewModel(user);
             InitializeComponent();
         }
 

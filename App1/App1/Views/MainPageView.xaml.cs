@@ -31,7 +31,7 @@ namespace App1.Views
         {
             if (e == null || e.SelectedItem == null) return;
             UserModel user = e.SelectedItem as UserModel;
-            await Navigation.PushModalAsync(new NavigationPage(new ChatPageView(user.UserUUID)));
+            await Navigation.PushModalAsync(new NavigationPage(new ChatPageView(user)));
             (sender as ListView).SelectedItem = null;
         }
 
