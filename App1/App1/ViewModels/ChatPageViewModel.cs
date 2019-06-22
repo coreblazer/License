@@ -16,7 +16,7 @@ namespace App1.ViewModels
     {
         private string author { get; set; }
         private string content { get; set; }
-
+        public string TargetUser { get; set; }
         private List<MessageModel> sorted = new List<MessageModel>();
         private List<string> messageUuids = new List<string>();
         public string UserUuid { get; set; }
@@ -52,6 +52,7 @@ namespace App1.ViewModels
         public ChatPageViewModel(UserModel user)
         {
             User = user;
+            TargetUser = User.FirstName + " " + User.LastName;
             base.SubscribeToReceiveMessages();
             SubscribeToReceiveMessages();
             Initialize();

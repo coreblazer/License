@@ -18,6 +18,12 @@ namespace App1.Views
         {
             this.BindingContext = new ChatPageViewModel(user);
             InitializeComponent();
+            ToolbarItem toolbarItem = new ToolbarItem
+            {
+                Order=ToolbarItemOrder.Primary,
+                Text = user.FirstName+ " " + user.LastName
+            };
+            this.ToolbarItems.Add(toolbarItem);
         }
 
         protected override bool OnBackButtonPressed()

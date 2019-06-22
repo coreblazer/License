@@ -3,22 +3,41 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:Controls="clr-namespace:App1.CustomRenders"
              x:Class="App1.Views.ChatPageView">
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem Name="{Binding TargetUser}" Order="Primary" Priority="1" />
+    </ContentPage.ToolbarItems>-->
     <ContentPage.Content>
+        
         <StackLayout>
             <StackLayout x:Name="MyContent" VerticalOptions="Start">
             </StackLayout>
-            <ListView ItemsSource="{Binding MessageList}"
+            
+           
+            <ListView ItemsSource="{Binding MessageList}" HasUnevenRows="True"
               RowHeight="60" >
+                
                 <!--<Controls:CustomEntry x:Name="Email" Grid.Row="0" Grid.Column="0"  Placeholder="Email"  VerticalOptions="CenterAndExpand" Text="{Binding UserEmail}" TextColor="White"/>-->
                 <ListView.ItemTemplate>
+                    
                     <DataTemplate>
                         <ViewCell>
+                            
+                            
                             <StackLayout Margin="8">
                                 <StackLayout Orientation="Horizontal">
-                                    <Label Text="{Binding Author}"
+                                    <Frame  BackgroundColor="#03A9F4" WidthRequest="400">
+                                        <Frame.HasShadow>
+                                            <OnPlatform x:TypeArguments="x:Boolean" iOS="false" Android="true"/>
+                                        </Frame.HasShadow>
+                                            <Frame.Content>
+                                                <Label  Text="{Binding Content}"
                                FontAttributes="Bold"/>
-                                    <Label Text="{Binding Content}"
-                               FontAttributes="Bold"/>
+                                            </Frame.Content>
+                                           
+                                     
+                                    </Frame>
+                                    
+
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell>
