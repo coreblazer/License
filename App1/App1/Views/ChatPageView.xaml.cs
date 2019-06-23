@@ -20,7 +20,7 @@ namespace App1.Views
             InitializeComponent();
             ToolbarItem toolbarItem = new ToolbarItem
             {
-                Order=ToolbarItemOrder.Primary,
+                Order=ToolbarItemOrder.Default,
                 Text = user.FirstName+ " " + user.LastName
             };
             this.ToolbarItems.Add(toolbarItem);
@@ -39,7 +39,6 @@ namespace App1.Views
         private void UnfocusEntry(object sender, EventArgs e)
         {
             messageEntry.Unfocus();
-            messageEntry.Text = "";
         }
     }
 }

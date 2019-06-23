@@ -8449,11 +8449,11 @@ namespace App1.Droid
 			// aapt resource value: 0x7F09005B
 			public const int design_snackbar_background = 2131296347;
 			
-			// aapt resource value: 0x7F010007
-			public const int fab_shadow = 2130771975;
+			// aapt resource value: 0x7F010010
+			public const int fab_shadow = 2130771984;
 			
-			// aapt resource value: 0x7F010008
-			public const int fab_shadow_mini = 2130771976;
+			// aapt resource value: 0x7F010011
+			public const int fab_shadow_mini = 2130771985;
 			
 			// aapt resource value: 0x1
 			public const int googleg_disabled_color_18 = 1;
@@ -9252,6 +9252,15 @@ namespace App1.Droid
 			
 			// aapt resource value: 0x1
 			public const int quantum_ic_volume_up_white_36 = 1;
+			
+			// aapt resource value: 0x7F010007
+			public const int registration_form = 2130771975;
+			
+			// aapt resource value: 0x7F010008
+			public const int reg_wallpaper = 2130771976;
+			
+			// aapt resource value: 0x7F010009
+			public const int send = 2130771977;
 			
 			// aapt resource value: 0x7F090069
 			public const int tooltip_frame_dark = 2131296361;

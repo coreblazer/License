@@ -2,49 +2,34 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:Controls="clr-namespace:App1.CustomRenders"
-                          xmlns:cvrt="clr-namespace:App1.Converters"
-
+             xmlns:cvrt="clr-namespace:App1.Converters"
+             xmlns:flex="clr-namespace:Flex.Controls;assembly=Flex"
              x:Class="App1.Views.ChatPageView">
-    <!--<ContentPage.ToolbarItems>
-        <ToolbarItem Name="{Binding TargetUser}" Order="Primary" Priority="1" />
-    </ContentPage.ToolbarItems>-->
     <ContentPage.Resources>
         <ResourceDictionary>
             <cvrt:ColorConverter x:Key="colorConverter"/>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        
         <StackLayout>
             <StackLayout x:Name="MyContent" VerticalOptions="Start">
             </StackLayout>
-            
-           
             <ListView ItemsSource="{Binding MessageList}" HasUnevenRows="True"
               RowHeight="60" x:Name="MessagesListView" >
-                
                 <!--<Controls:CustomEntry x:Name="Email" Grid.Row="0" Grid.Column="0"  Placeholder="Email"  VerticalOptions="CenterAndExpand" Text="{Binding UserEmail}" TextColor="White"/>-->
                 <ListView.ItemTemplate>
-                    
                     <DataTemplate>
                         <ViewCell>
-                            
-                            
                             <StackLayout Margin="8">
                                 <StackLayout Orientation="Horizontal">
                                     <Frame BackgroundColor="{Binding AuthorUuid, Converter={StaticResource colorConverter}}" WidthRequest="400">
                                         <Frame.HasShadow>
                                             <OnPlatform x:TypeArguments="x:Boolean" iOS="false" Android="true"/>
                                         </Frame.HasShadow>
-                                            <Frame.Content>
-                                                <Label  Text="{Binding Content}"
-                               FontAttributes="Bold"/>
-                                            </Frame.Content>
-                                           
-                                     
+                                        <Frame.Content>
+                                            <Label Text="{Binding Content}" FontFamily="LilitaOne-Regular.ttf#LilitaOne-Regular" TextColor="Black"                                                    />
+                                        </Frame.Content>
                                     </Frame>
-                                    
-
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell>
@@ -52,8 +37,22 @@
                 </ListView.ItemTemplate>
             </ListView>
             <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand">
-                <Controls:CustomEntry x:Name="messageEntry"  Placeholder="Write a message" Text="{Binding Content}" HorizontalOptions="FillAndExpand"/>
-                <Button Text="Send" Command="{Binding SendMessageCommand}" HorizontalOptions="End" Clicked="UnfocusEntry"/>
+                <Controls:CustomEntry x:Name="messageEntry"  Placeholder="Write a message..." Text="{Binding Content, Mode=TwoWay}"  HorizontalOptions="FillAndExpand"/>
+                <!--<Button Text="Send" WidthRequest="40" HeightRequest="40" BorderRadius="20" Command="{Binding SendMessageCommand}" HorizontalOptions="End" Clicked="UnfocusEntry"/>-->
+                <flex:FlexButton                    
+                    WidthRequest="40"
+                    HeightRequest="40"
+                    CornerRadius="20"
+                    Icon="send.png"
+                    VerticalOptions="Start"
+                    ForegroundColor="#ffffff"
+                    HighlightForegroundColor="#49516F"
+                    BackgroundColor="#6279B8"
+                    HighlightBackgroundColor="#8EA4D2"
+                    ClickedCommand="{Binding SendMessageCommand}"
+                    Clicked="UnfocusEntry"
+                    FontFamily="LilitaOne-Regular.ttf#LilitaOne-Regular"
+                    />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

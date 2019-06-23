@@ -45,6 +45,7 @@ namespace App1.ViewModels
             set
             {
                 content = value;
+                OnPropertyChanged("Content");
             }
         }
 
@@ -81,7 +82,7 @@ namespace App1.ViewModels
         .Child(Helper.RetainedData.CurrentUser.UserUUID)
         .Child(messageUuid)
         .PutAsync(message);
-            Content = string.Empty;
+            Content = "";
         }
         protected void SubscribeToReceiveMessageFromCurrentUser()
         {

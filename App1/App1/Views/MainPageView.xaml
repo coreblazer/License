@@ -12,7 +12,7 @@
     </ContentPage.Resources>
     <ContentPage.ToolbarItems>
 
-        <ToolbarItem Name="Logout"  Order="Secondary" Priority="0"  Command="{Binding LogoutCommand}">
+        <ToolbarItem Name="Logout" Order="Secondary" Priority="0"  Command="{Binding LogoutCommand}">
         </ToolbarItem>
         <ToolbarItem Name="Settings" Order="Secondary" Priority="1" />
     </ContentPage.ToolbarItems>
@@ -25,7 +25,7 @@
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
-                    <Label Text="{Binding UserName, StringFormat='Welcome, {0:F0} !'}" IsVisible="True" Grid.Column="1"/>
+                    <Label Text="{Binding UserName, StringFormat='Welcome, {0:F0} !'}" IsVisible="True" Grid.Column="1" FontFamily="LilitaOne-Regular.ttf#LilitaOne-Regular" />
                     <controls:CircleImage x:Name="image" Source="{Binding CurrentUserImage, Converter={StaticResource imageConverter}}" Aspect="AspectFill" Grid.Column="0" IsVisible="True">
                         <controls:CircleImage.WidthRequest>
                             <OnPlatform x:TypeArguments="x:Double">
@@ -66,9 +66,9 @@
                                     </controls:CircleImage.HeightRequest>
                                 </controls:CircleImage>
                                 <Label Text="{Binding FirstName}"
-                              FontAttributes="Bold"/>
+                              FontFamily="LilitaOne-Regular.ttf#LilitaOne-Regular"/>
                                 <Label Text="{Binding LastName}"
-                               FontAttributes="Bold"/>
+                               FontFamily="LilitaOne-Regular.ttf#LilitaOne-Regular"/>
                             </StackLayout>
                         </StackLayout>
                     </ViewCell>

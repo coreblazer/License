@@ -20,8 +20,8 @@
                 <ColumnDefinition Width="5*" />
             </Grid.ColumnDefinitions>
 
-            <Controls:CustomEntry x:Name="Email" Grid.Row="0" Grid.Column="0"  Placeholder="Email"  VerticalOptions="CenterAndExpand" Text="{Binding UserEmail}" TextColor="White"/>
-            <Controls:CustomEntry  x:Name="Password" Grid.Row="1" Grid.Column="0"  IsPassword="true" Placeholder="Password" VerticalOptions="CenterAndExpand"
+            <Controls:CustomEntry x:Name="Email" Grid.Row="0" Grid.Column="0"  Placeholder="Email"  VerticalOptions="CenterAndExpand" Text="{Binding UserEmail}" TextColor="White" FontFamily="LilitaOne-Regular.ttf#LilitaOne-Regular"/>
+            <Controls:CustomEntry  x:Name="Password" Grid.Row="1" Grid.Column="0"  IsPassword="true" Placeholder="Password" VerticalOptions="CenterAndExpand" FontFamily="LilitaOne-Regular.ttf#LilitaOne-Regular"
                                   Text="{Binding UserPassword}" TextColor="White" />
             <flex:FlexButton Text="Login" ClickedCommand="{Binding LoginCommand}"  
                              WidthRequest="76"
@@ -34,6 +34,7 @@
                              IsEnabled="{Binding IsBusy}"
                              IsToggled="{Binding IsBusy}"
                              Clicked="UnfocusEntry"
+                             FontFamily="LilitaOne-Regular.ttf#LilitaOne-Regular"
                              Grid.Row="2" Grid.Column="0"/>
             <flex:FlexButton Text="Not a member yet? Hop in!" Clicked="RegisterButtonClicked" 
                               WidthRequest="76"
@@ -43,6 +44,7 @@
                              HighlightForegroundColor="#49516F"
                              BackgroundColor="#6279B8"
                              HighlightBackgroundColor="#8EA4D2"
+                             FontFamily="LilitaOne-Regular.ttf#LilitaOne-Regular"
                              Grid.Row="3" Grid.Column="0"
                              />
             <ActivityIndicator IsRunning="{Binding IsBusy}"
