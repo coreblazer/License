@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:Controls="clr-namespace:App1.CustomRenders"
              xmlns:flex="clr-namespace:Flex.Controls;assembly=Flex"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
              x:Class="App1.Views.LoginPageView"
              BackgroundImage="login.jpg">
 
@@ -23,7 +24,7 @@
             <Controls:CustomEntry x:Name="Email" Grid.Row="0" Grid.Column="0"  Placeholder="Email"  VerticalOptions="CenterAndExpand" Text="{Binding UserEmail}" TextColor="White" FontFamily="LilitaOne-Regular.ttf#LilitaOne-Regular"/>
             <Controls:CustomEntry  x:Name="Password" Grid.Row="1" Grid.Column="0"  IsPassword="true" Placeholder="Password" VerticalOptions="CenterAndExpand" FontFamily="LilitaOne-Regular.ttf#LilitaOne-Regular"
                                   Text="{Binding UserPassword}" TextColor="White" />
-            <flex:FlexButton Text="Login" ClickedCommand="{Binding LoginCommand}"  
+            <flex:FlexButton x:Name="loginButton" Text="Login" ClickedCommand="{Binding LoginCommand}"  
                              WidthRequest="76"
                              HeightRequest="76"
                              CornerRadius="38"
@@ -47,11 +48,21 @@
                              FontFamily="LilitaOne-Regular.ttf#LilitaOne-Regular"
                              Grid.Row="3" Grid.Column="0"
                              />
-            <ActivityIndicator IsRunning="{Binding IsBusy}"
-                         IsVisible="{Binding IsBusy}"
+            <ActivityIndicator IsRunning="False"
+                         IsVisible="false"
                           HeightRequest="40"
                           VerticalOptions="CenterAndExpand"
                           HorizontalOptions="CenterAndExpand" Grid.Row="4"/>
+            <forms:AnimationView 
+            x:Name="animationView" 
+            Grid.Row="4"
+            Animation="spinner.json" 
+                IsVisible="{Binding IsBusy}"
+                Scale="3"
+            Loop="true" 
+            IsPlaying="{Binding IsBusy}"
+            VerticalOptions="FillAndExpand" 
+HorizontalOptions="FillAndExpand" />
         </Grid>
 
     </ContentPage.Content>

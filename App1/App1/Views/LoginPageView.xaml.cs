@@ -13,8 +13,11 @@ namespace App1.Views
         {
             NavigationPage.SetHasNavigationBar(this, false);
             var viewModel = new LoginPageViewModel();
+
             this.BindingContext = viewModel;
             InitializeComponent();
+            loginButton.Clicked += (sender, e) => animationView.PlayProgressSegment(0.65f, 0.0f);
+            loginButton.Clicked += (sender, e) => animationView.PlayFrameSegment(100, 1);
         }
         private async void RegisterButtonClicked(object sender, EventArgs e)
         {

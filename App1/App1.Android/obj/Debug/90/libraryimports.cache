@@ -1,10 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Paths>
   <ManifestDocuments>
-    <ManifestDocument>obj\Debug\90\lp\37\jl\AndroidManifest.xml</ManifestDocument>
-    <ManifestDocument>obj\Debug\90\lp\38\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\Debug\90\lp\20\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\Debug\90\lp\39\jl\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\Debug\90\lp\40\jl\AndroidManifest.xml</ManifestDocument>
-    <ManifestDocument>obj\Debug\90\lp\41\jl\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\Debug\90\lp\42\jl\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\Debug\90\lp\43\jl\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\Debug\90\lp\44\jl\AndroidManifest.xml</ManifestDocument>
@@ -20,19 +19,20 @@
     <ManifestDocument>obj\Debug\90\lp\54\jl\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\Debug\90\lp\55\jl\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\Debug\90\lp\56\jl\AndroidManifest.xml</ManifestDocument>
-    <ManifestDocument>obj\Debug\90\lp\61\jl\AndroidManifest.xml</ManifestDocument>
-    <ManifestDocument>obj\Debug\90\lp\62\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\Debug\90\lp\57\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\Debug\90\lp\58\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\Debug\90\lp\63\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\Debug\90\lp\64\jl\AndroidManifest.xml</ManifestDocument>
   </ManifestDocuments>
   <NativeLibraries />
   <Jars>
     <Jar>obj\Debug\90\lp\16\jl\formsviewgroup.jar</Jar>
-    <Jar>obj\Debug\90\lp\35\jl\arch-core-common.jar</Jar>
-    <Jar>obj\Debug\90\lp\36\jl\arch-lifecycle-common.jar</Jar>
-    <Jar>obj\Debug\90\lp\37\jl\bin\classes.jar</Jar>
-    <Jar>obj\Debug\90\lp\38\jl\bin\classes.jar</Jar>
-    <Jar>obj\Debug\90\lp\39\jl\support-annotations.jar</Jar>
+    <Jar>obj\Debug\90\lp\20\jl\bin\classes.jar</Jar>
+    <Jar>obj\Debug\90\lp\37\jl\arch-core-common.jar</Jar>
+    <Jar>obj\Debug\90\lp\38\jl\arch-lifecycle-common.jar</Jar>
+    <Jar>obj\Debug\90\lp\39\jl\bin\classes.jar</Jar>
     <Jar>obj\Debug\90\lp\40\jl\bin\classes.jar</Jar>
-    <Jar>obj\Debug\90\lp\41\jl\bin\classes.jar</Jar>
+    <Jar>obj\Debug\90\lp\41\jl\support-annotations.jar</Jar>
     <Jar>obj\Debug\90\lp\42\jl\bin\classes.jar</Jar>
     <Jar>obj\Debug\90\lp\43\jl\bin\classes.jar</Jar>
     <Jar>obj\Debug\90\lp\44\jl\bin\classes.jar</Jar>
@@ -45,10 +45,12 @@
     <Jar>obj\Debug\90\lp\51\jl\bin\classes.jar</Jar>
     <Jar>obj\Debug\90\lp\52\jl\bin\classes.jar</Jar>
     <Jar>obj\Debug\90\lp\53\jl\bin\classes.jar</Jar>
-    <Jar>obj\Debug\90\lp\54\jl\classes.jar</Jar>
-    <Jar>obj\Debug\90\lp\55\jl\classes.jar</Jar>
+    <Jar>obj\Debug\90\lp\54\jl\bin\classes.jar</Jar>
+    <Jar>obj\Debug\90\lp\55\jl\bin\classes.jar</Jar>
     <Jar>obj\Debug\90\lp\56\jl\classes.jar</Jar>
-    <Jar>obj\Debug\90\lp\61\jl\classes.jar</Jar>
-    <Jar>obj\Debug\90\lp\62\jl\classes.jar</Jar>
+    <Jar>obj\Debug\90\lp\57\jl\classes.jar</Jar>
+    <Jar>obj\Debug\90\lp\58\jl\classes.jar</Jar>
+    <Jar>obj\Debug\90\lp\63\jl\classes.jar</Jar>
+    <Jar>obj\Debug\90\lp\64\jl\classes.jar</Jar>
   </Jars>
 </Paths>

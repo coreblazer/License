@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "203ab3f6fa8d3c3e68fcdf6d98d397aa44f20aea"
+    "signature": "bce2471f114af5b51ffcff954d9de27d751c9fde"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,6 +9,7 @@
     ".NETStandard,Version=v2.0/": {
       "App1/1.0.0": {
         "dependencies": {
+          "Com.Airbnb.Xamarin.Forms.Lottie": "2.7.0",
           "FireSharp": "2.0.4",
           "FirebaseAuthentication.net": "3.2.0",
           "FirebaseDatabase.Platform.net": "3.0.0",
@@ -25,6 +26,17 @@
         },
         "runtime": {
           "App1.dll": {}
+        }
+      },
+      "Com.Airbnb.Xamarin.Forms.Lottie/2.7.0": {
+        "dependencies": {
+          "Xamarin.Forms": "3.4.0.1008975"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Lottie.Forms.dll": {
+            "assemblyVersion": "2.7.0.0",
+            "fileVersion": "2.7.0.0"
+          }
         }
       },
       "FirebaseAuthentication.net/3.2.0": {
@@ -337,6 +349,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Com.Airbnb.Xamarin.Forms.Lottie/2.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RQsVaoOBwMyg4ERJxaCVMqUVj6X5d3qLPV66G6oVhOQ3Sf0/OfuH98cSxoa3XSkN1uO/qSRQPddvj/VHH8JjAg==",
+      "path": "com.airbnb.xamarin.forms.lottie/2.7.0",
+      "hashPath": "com.airbnb.xamarin.forms.lottie.2.7.0.nupkg.sha512"
     },
     "FirebaseAuthentication.net/3.2.0": {
       "type": "package",

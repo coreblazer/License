@@ -91,11 +91,13 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\LilitaOne-Regular.ttf" />
+    <AndroidAsset Include="Assets\spinner.json" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml">
       <SubType>Designer</SubType>
     </None>
+    <AndroidResource Include="Resources\drawable\spinner.json" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Tabbar.axml" />

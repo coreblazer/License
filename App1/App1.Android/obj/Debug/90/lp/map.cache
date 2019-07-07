@@ -18,6 +18,8 @@ FormsViewGroup
 ImageCircle.Forms.Plugin
 Lex.Db
 LiteDB
+Lottie.Android
+Lottie.Forms
 Microsoft.Threading.Tasks
 Microsoft.Threading.Tasks.Extensions
 Newtonsoft.Json

@@ -127,6 +127,8 @@ class MonoPackageManager_Resources {
 		"ImageCircle.Forms.Plugin.dll",
 		"Lex.Db.dll",
 		"LiteDB.dll",
+		"Lottie.Android.dll",
+		"Lottie.Forms.dll",
 		"Microsoft.Threading.Tasks.dll",
 		"Microsoft.Threading.Tasks.Extensions.dll",
 		"Newtonsoft.Json.dll",

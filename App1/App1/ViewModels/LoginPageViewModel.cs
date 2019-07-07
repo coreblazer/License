@@ -60,6 +60,7 @@ namespace App1.ViewModels
         public async void Login()
         {
             if (IsBusy) return;
+            StartPlaying = true;
             try
             {
                 IsBusy = true;
@@ -75,15 +76,21 @@ namespace App1.ViewModels
                 Helper.RetainedData.Email = UserEmail;
                 Helper.RetainedData.UserUuid = data.User.LocalId;
                 await RetainLoggedUser();
-                IsBusy = false;
                 NavigationPage nav = new NavigationPage(new MainPageView(new MainPageViewModel()));
-                Application.Current.MainPage = nav;               
+                Application.Current.MainPage = nav;
+                IsBusy = false;
+                
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
                 await App.Current.MainPage.DisplayAlert("Alert", "Credentials wrong!", "OK");
                 IsBusy = false;
+            }
+            finally
+            {
+                StartPlaying = false;
+                StopPlaying = true;
             }
         }
 

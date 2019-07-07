@@ -20,6 +20,8 @@ C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\Java.Interop.dll
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\Lex.Db.dll
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\LiteDB.dll
+C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\Lottie.Android.dll
+C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\Lottie.Forms.dll
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\Microsoft.Threading.Tasks.dll
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\Microsoft.Threading.Tasks.Extensions.dll
 C:\Users\Bogdan\source\repos\App1\App1\App1.Android\obj\Debug\90\android\assets\Mono.Android.dll

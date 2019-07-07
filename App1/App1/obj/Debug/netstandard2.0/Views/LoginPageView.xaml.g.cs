@@ -23,10 +23,18 @@ namespace App1.Views {
         private global::App1.CustomRenders.CustomEntry Password;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Flex.Controls.FlexButton loginButton;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Lottie.Forms.AnimationView animationView;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(LoginPageView));
             Email = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::App1.CustomRenders.CustomEntry>(this, "Email");
             Password = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::App1.CustomRenders.CustomEntry>(this, "Password");
+            loginButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Flex.Controls.FlexButton>(this, "loginButton");
+            animationView = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Lottie.Forms.AnimationView>(this, "animationView");
         }
     }
 }

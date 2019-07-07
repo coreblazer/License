@@ -31,7 +31,6 @@ namespace App1.Droid
 
             if (e.OldElement == null)
             {
-                //Control.SetBackgroundResource(Resource.Layout.rounded_shape);
                 var gradientDrawable = new GradientDrawable();
                 gradientDrawable.SetCornerRadius(60f);
                 gradientDrawable.SetStroke(5, Android.Graphics.Color.DarkGray);

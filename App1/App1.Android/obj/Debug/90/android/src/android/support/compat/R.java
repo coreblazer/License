@@ -1868,6 +1868,102 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static int logoDescription=0x7f010110;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int lottie_autoPlay=0x7f01017c;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int lottie_colorFilter=0x7f010183;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int lottie_enableMergePathsForKitKatAndAbove=0x7f010182;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int lottie_fileName=0x7f010179;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int lottie_imageAssetsFolder=0x7f010180;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int lottie_loop=0x7f01017d;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int lottie_progress=0x7f010181;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static int lottie_rawRes=0x7f01017a;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int lottie_repeatCount=0x7f01017f;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>restart</code></td><td>1</td><td></td></tr>
+<tr><td><code>reverse</code></td><td>2</td><td></td></tr>
+</table>
+         */
+        public static int lottie_repeatMode=0x7f01017e;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int lottie_scale=0x7f010184;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int lottie_url=0x7f01017b;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -3380,13 +3476,13 @@ containing a value of this type.
         public static int abc_textfield_search_material=0x7f020051;
         public static int abc_vector_test=0x7f020052;
         public static int avd_hide_password=0x7f020053;
-        public static int avd_hide_password_1=0x7f020134;
-        public static int avd_hide_password_2=0x7f020135;
-        public static int avd_hide_password_3=0x7f020136;
+        public static int avd_hide_password_1=0x7f020139;
+        public static int avd_hide_password_2=0x7f02013a;
+        public static int avd_hide_password_3=0x7f02013b;
         public static int avd_show_password=0x7f020054;
-        public static int avd_show_password_1=0x7f020137;
-        public static int avd_show_password_2=0x7f020138;
-        public static int avd_show_password_3=0x7f020139;
+        public static int avd_show_password_1=0x7f02013c;
+        public static int avd_show_password_2=0x7f02013d;
+        public static int avd_show_password_3=0x7f02013e;
         public static int design_bottom_navigation_item_background=0x7f020055;
         public static int design_fab_background=0x7f020056;
         public static int design_ic_visibility=0x7f020057;
@@ -3575,246 +3671,254 @@ containing a value of this type.
         public static int icon=0x7f02010e;
         public static int login=0x7f02010f;
         public static int login_background=0x7f020110;
-        public static int mr_button_connected_dark=0x7f020111;
-        public static int mr_button_connected_light=0x7f020112;
-        public static int mr_button_connecting_dark=0x7f020113;
-        public static int mr_button_connecting_light=0x7f020114;
-        public static int mr_button_dark=0x7f020115;
-        public static int mr_button_light=0x7f020116;
-        public static int mr_dialog_close_dark=0x7f020117;
-        public static int mr_dialog_close_light=0x7f020118;
-        public static int mr_dialog_material_background_dark=0x7f020119;
-        public static int mr_dialog_material_background_light=0x7f02011a;
-        public static int mr_group_collapse=0x7f02011b;
-        public static int mr_group_expand=0x7f02011c;
-        public static int mr_media_pause_dark=0x7f02011d;
-        public static int mr_media_pause_light=0x7f02011e;
-        public static int mr_media_play_dark=0x7f02011f;
-        public static int mr_media_play_light=0x7f020120;
-        public static int mr_media_stop_dark=0x7f020121;
-        public static int mr_media_stop_light=0x7f020122;
-        public static int mr_vol_type_audiotrack_dark=0x7f020123;
-        public static int mr_vol_type_audiotrack_light=0x7f020124;
-        public static int navigation_empty_icon=0x7f020125;
-        public static int notification_action_background=0x7f020126;
-        public static int notification_bg=0x7f020127;
-        public static int notification_bg_low=0x7f020128;
-        public static int notification_bg_low_normal=0x7f020129;
-        public static int notification_bg_low_pressed=0x7f02012a;
-        public static int notification_bg_normal=0x7f02012b;
-        public static int notification_bg_normal_pressed=0x7f02012c;
-        public static int notification_icon_background=0x7f02012d;
-        public static int notification_template_icon_bg=0x7f020132;
-        public static int notification_template_icon_low_bg=0x7f020133;
-        public static int notification_tile_bg=0x7f02012e;
-        public static int notify_panel_notification_icon_bg=0x7f02012f;
-        public static int tooltip_frame_dark=0x7f020130;
-        public static int tooltip_frame_light=0x7f020131;
+        public static int menu=0x7f020111;
+        public static int mr_button_connected_dark=0x7f020112;
+        public static int mr_button_connected_light=0x7f020113;
+        public static int mr_button_connecting_dark=0x7f020114;
+        public static int mr_button_connecting_light=0x7f020115;
+        public static int mr_button_dark=0x7f020116;
+        public static int mr_button_light=0x7f020117;
+        public static int mr_dialog_close_dark=0x7f020118;
+        public static int mr_dialog_close_light=0x7f020119;
+        public static int mr_dialog_material_background_dark=0x7f02011a;
+        public static int mr_dialog_material_background_light=0x7f02011b;
+        public static int mr_group_collapse=0x7f02011c;
+        public static int mr_group_expand=0x7f02011d;
+        public static int mr_media_pause_dark=0x7f02011e;
+        public static int mr_media_pause_light=0x7f02011f;
+        public static int mr_media_play_dark=0x7f020120;
+        public static int mr_media_play_light=0x7f020121;
+        public static int mr_media_stop_dark=0x7f020122;
+        public static int mr_media_stop_light=0x7f020123;
+        public static int mr_vol_type_audiotrack_dark=0x7f020124;
+        public static int mr_vol_type_audiotrack_light=0x7f020125;
+        public static int navigation_empty_icon=0x7f020126;
+        public static int notification_action_background=0x7f020127;
+        public static int notification_bg=0x7f020128;
+        public static int notification_bg_low=0x7f020129;
+        public static int notification_bg_low_normal=0x7f02012a;
+        public static int notification_bg_low_pressed=0x7f02012b;
+        public static int notification_bg_normal=0x7f02012c;
+        public static int notification_bg_normal_pressed=0x7f02012d;
+        public static int notification_icon_background=0x7f02012e;
+        public static int notification_template_icon_bg=0x7f020137;
+        public static int notification_template_icon_low_bg=0x7f020138;
+        public static int notification_tile_bg=0x7f02012f;
+        public static int notify_panel_notification_icon_bg=0x7f020130;
+        public static int reg_wallpaper=0x7f020131;
+        public static int registration_form=0x7f020132;
+        public static int send=0x7f020133;
+        public static int spinner=0x7f020134;
+        public static int tooltip_frame_dark=0x7f020135;
+        public static int tooltip_frame_light=0x7f020136;
     }
     public static final class id {
-        public static int ALT=0x7f0b0032;
-        public static int CTRL=0x7f0b0033;
-        public static int FUNCTION=0x7f0b0034;
-        public static int META=0x7f0b0035;
-        public static int SHIFT=0x7f0b0036;
-        public static int SYM=0x7f0b0037;
-        public static int action0=0x7f0b00b6;
-        public static int action_bar=0x7f0b007c;
+        public static int ALT=0x7f0b0033;
+        public static int CTRL=0x7f0b0034;
+        public static int FUNCTION=0x7f0b0035;
+        public static int META=0x7f0b0036;
+        public static int SHIFT=0x7f0b0037;
+        public static int SYM=0x7f0b0038;
+        public static int action0=0x7f0b00b9;
+        public static int action_bar=0x7f0b007f;
         public static int action_bar_activity_content=0x7f0b0001;
-        public static int action_bar_container=0x7f0b007b;
-        public static int action_bar_root=0x7f0b0077;
+        public static int action_bar_container=0x7f0b007e;
+        public static int action_bar_root=0x7f0b007a;
         public static int action_bar_spinner=0x7f0b0002;
-        public static int action_bar_subtitle=0x7f0b005b;
-        public static int action_bar_title=0x7f0b005a;
-        public static int action_container=0x7f0b00b3;
-        public static int action_context_bar=0x7f0b007d;
-        public static int action_divider=0x7f0b00ba;
-        public static int action_image=0x7f0b00b4;
+        public static int action_bar_subtitle=0x7f0b005e;
+        public static int action_bar_title=0x7f0b005d;
+        public static int action_container=0x7f0b00b6;
+        public static int action_context_bar=0x7f0b0080;
+        public static int action_divider=0x7f0b00bd;
+        public static int action_image=0x7f0b00b7;
         public static int action_menu_divider=0x7f0b0003;
         public static int action_menu_presenter=0x7f0b0004;
-        public static int action_mode_bar=0x7f0b0079;
-        public static int action_mode_bar_stub=0x7f0b0078;
-        public static int action_mode_close_button=0x7f0b005c;
-        public static int action_text=0x7f0b00b5;
-        public static int actions=0x7f0b00c3;
-        public static int activity_chooser_view_content=0x7f0b005d;
-        public static int add=0x7f0b0027;
-        public static int alertTitle=0x7f0b0070;
-        public static int all=0x7f0b0052;
-        public static int always=0x7f0b0038;
-        public static int async=0x7f0b0056;
-        public static int auto=0x7f0b0044;
-        public static int beginning=0x7f0b002f;
-        public static int blocking=0x7f0b0057;
-        public static int bottom=0x7f0b003d;
-        public static int buttonPanel=0x7f0b0063;
-        public static int cancel_action=0x7f0b00b7;
-        public static int center=0x7f0b0045;
-        public static int center_horizontal=0x7f0b0046;
-        public static int center_vertical=0x7f0b0047;
-        public static int checkbox=0x7f0b0073;
-        public static int chronometer=0x7f0b00bf;
-        public static int clip_horizontal=0x7f0b004e;
-        public static int clip_vertical=0x7f0b004f;
-        public static int collapseActionView=0x7f0b0039;
-        public static int container=0x7f0b008d;
-        public static int contentPanel=0x7f0b0066;
-        public static int coordinator=0x7f0b008e;
-        public static int custom=0x7f0b006d;
-        public static int customPanel=0x7f0b006c;
-        public static int decor_content_parent=0x7f0b007a;
-        public static int default_activity_button=0x7f0b0060;
-        public static int design_bottom_sheet=0x7f0b0090;
-        public static int design_menu_item_action_area=0x7f0b0097;
-        public static int design_menu_item_action_area_stub=0x7f0b0096;
-        public static int design_menu_item_text=0x7f0b0095;
-        public static int design_navigation_view=0x7f0b0094;
-        public static int disableHome=0x7f0b0020;
-        public static int edit_query=0x7f0b007e;
-        public static int end=0x7f0b0030;
-        public static int end_padder=0x7f0b00c5;
-        public static int enterAlways=0x7f0b003f;
-        public static int enterAlwaysCollapsed=0x7f0b0040;
-        public static int exitUntilCollapsed=0x7f0b0041;
-        public static int expand_activities_button=0x7f0b005e;
-        public static int expanded_menu=0x7f0b0072;
-        public static int fill=0x7f0b0050;
-        public static int fill_horizontal=0x7f0b0051;
-        public static int fill_vertical=0x7f0b0048;
-        public static int fixed=0x7f0b0054;
-        public static int forever=0x7f0b0058;
+        public static int action_mode_bar=0x7f0b007c;
+        public static int action_mode_bar_stub=0x7f0b007b;
+        public static int action_mode_close_button=0x7f0b005f;
+        public static int action_text=0x7f0b00b8;
+        public static int actions=0x7f0b00c6;
+        public static int activity_chooser_view_content=0x7f0b0060;
+        public static int add=0x7f0b0028;
+        public static int alertTitle=0x7f0b0073;
+        public static int all=0x7f0b0053;
+        public static int always=0x7f0b0039;
+        public static int async=0x7f0b0057;
+        public static int auto=0x7f0b0045;
+        public static int beginning=0x7f0b0030;
+        public static int blocking=0x7f0b0058;
+        public static int bottom=0x7f0b003e;
+        public static int buttonPanel=0x7f0b0066;
+        public static int cancel_action=0x7f0b00ba;
+        public static int center=0x7f0b0046;
+        public static int center_horizontal=0x7f0b0047;
+        public static int center_vertical=0x7f0b0048;
+        public static int checkbox=0x7f0b0076;
+        public static int chronometer=0x7f0b00c2;
+        public static int clip_horizontal=0x7f0b004f;
+        public static int clip_vertical=0x7f0b0050;
+        public static int collapseActionView=0x7f0b003a;
+        public static int container=0x7f0b0090;
+        public static int contentPanel=0x7f0b0069;
+        public static int coordinator=0x7f0b0091;
+        public static int custom=0x7f0b0070;
+        public static int customPanel=0x7f0b006f;
+        public static int decor_content_parent=0x7f0b007d;
+        public static int default_activity_button=0x7f0b0063;
+        public static int design_bottom_sheet=0x7f0b0093;
+        public static int design_menu_item_action_area=0x7f0b009a;
+        public static int design_menu_item_action_area_stub=0x7f0b0099;
+        public static int design_menu_item_text=0x7f0b0098;
+        public static int design_navigation_view=0x7f0b0097;
+        public static int disableHome=0x7f0b0021;
+        public static int edit_query=0x7f0b0081;
+        public static int end=0x7f0b0031;
+        public static int end_padder=0x7f0b00c8;
+        public static int enterAlways=0x7f0b0040;
+        public static int enterAlwaysCollapsed=0x7f0b0041;
+        public static int exitUntilCollapsed=0x7f0b0042;
+        public static int expand_activities_button=0x7f0b0061;
+        public static int expanded_menu=0x7f0b0075;
+        public static int fill=0x7f0b0051;
+        public static int fill_horizontal=0x7f0b0052;
+        public static int fill_vertical=0x7f0b0049;
+        public static int fixed=0x7f0b0055;
+        public static int forever=0x7f0b0059;
         public static int ghost_view=0x7f0b000a;
         public static int home=0x7f0b0005;
-        public static int homeAsUp=0x7f0b0021;
-        public static int icon=0x7f0b0062;
-        public static int icon_group=0x7f0b00c4;
-        public static int ifRoom=0x7f0b003a;
-        public static int image=0x7f0b005f;
-        public static int info=0x7f0b00c0;
-        public static int italic=0x7f0b0059;
+        public static int homeAsUp=0x7f0b0022;
+        public static int icon=0x7f0b0065;
+        public static int icon_group=0x7f0b00c7;
+        public static int ifRoom=0x7f0b003b;
+        public static int image=0x7f0b0062;
+        public static int info=0x7f0b00c3;
+        public static int italic=0x7f0b005a;
         public static int item_touch_helper_previous_elevation=0x7f0b0000;
-        public static int largeLabel=0x7f0b008c;
-        public static int left=0x7f0b0049;
+        public static int largeLabel=0x7f0b008f;
+        public static int left=0x7f0b004a;
         public static int line1=0x7f0b0017;
         public static int line3=0x7f0b0018;
-        public static int listMode=0x7f0b001d;
-        public static int list_item=0x7f0b0061;
-        public static int masked=0x7f0b00ca;
-        public static int media_actions=0x7f0b00b9;
-        public static int message=0x7f0b00c8;
-        public static int middle=0x7f0b0031;
-        public static int mini=0x7f0b0053;
-        public static int mr_art=0x7f0b00a5;
-        public static int mr_chooser_list=0x7f0b009a;
-        public static int mr_chooser_route_desc=0x7f0b009d;
-        public static int mr_chooser_route_icon=0x7f0b009b;
-        public static int mr_chooser_route_name=0x7f0b009c;
-        public static int mr_chooser_title=0x7f0b0099;
-        public static int mr_close=0x7f0b00a2;
-        public static int mr_control_divider=0x7f0b00a8;
-        public static int mr_control_playback_ctrl=0x7f0b00ae;
-        public static int mr_control_subtitle=0x7f0b00b1;
-        public static int mr_control_title=0x7f0b00b0;
-        public static int mr_control_title_container=0x7f0b00af;
-        public static int mr_custom_control=0x7f0b00a3;
-        public static int mr_default_control=0x7f0b00a4;
-        public static int mr_dialog_area=0x7f0b009f;
-        public static int mr_expandable_area=0x7f0b009e;
-        public static int mr_group_expand_collapse=0x7f0b00b2;
-        public static int mr_media_main_control=0x7f0b00a6;
-        public static int mr_name=0x7f0b00a1;
-        public static int mr_playback_control=0x7f0b00a7;
-        public static int mr_title_bar=0x7f0b00a0;
-        public static int mr_volume_control=0x7f0b00a9;
-        public static int mr_volume_group_list=0x7f0b00aa;
-        public static int mr_volume_item_icon=0x7f0b00ac;
-        public static int mr_volume_slider=0x7f0b00ad;
-        public static int multiply=0x7f0b0028;
-        public static int navigation_header_container=0x7f0b0093;
-        public static int never=0x7f0b003b;
-        public static int none=0x7f0b0022;
-        public static int normal=0x7f0b001e;
-        public static int notification_background=0x7f0b00c2;
-        public static int notification_main_column=0x7f0b00bc;
-        public static int notification_main_column_container=0x7f0b00bb;
-        public static int parallax=0x7f0b004c;
-        public static int parentPanel=0x7f0b0065;
+        public static int listMode=0x7f0b001e;
+        public static int list_item=0x7f0b0064;
+        public static int lottie_layer_name=0x7f0b001d;
+        public static int masked=0x7f0b00cd;
+        public static int media_actions=0x7f0b00bc;
+        public static int message=0x7f0b00cb;
+        public static int middle=0x7f0b0032;
+        public static int mini=0x7f0b0054;
+        public static int mr_art=0x7f0b00a8;
+        public static int mr_chooser_list=0x7f0b009d;
+        public static int mr_chooser_route_desc=0x7f0b00a0;
+        public static int mr_chooser_route_icon=0x7f0b009e;
+        public static int mr_chooser_route_name=0x7f0b009f;
+        public static int mr_chooser_title=0x7f0b009c;
+        public static int mr_close=0x7f0b00a5;
+        public static int mr_control_divider=0x7f0b00ab;
+        public static int mr_control_playback_ctrl=0x7f0b00b1;
+        public static int mr_control_subtitle=0x7f0b00b4;
+        public static int mr_control_title=0x7f0b00b3;
+        public static int mr_control_title_container=0x7f0b00b2;
+        public static int mr_custom_control=0x7f0b00a6;
+        public static int mr_default_control=0x7f0b00a7;
+        public static int mr_dialog_area=0x7f0b00a2;
+        public static int mr_expandable_area=0x7f0b00a1;
+        public static int mr_group_expand_collapse=0x7f0b00b5;
+        public static int mr_media_main_control=0x7f0b00a9;
+        public static int mr_name=0x7f0b00a4;
+        public static int mr_playback_control=0x7f0b00aa;
+        public static int mr_title_bar=0x7f0b00a3;
+        public static int mr_volume_control=0x7f0b00ac;
+        public static int mr_volume_group_list=0x7f0b00ad;
+        public static int mr_volume_item_icon=0x7f0b00af;
+        public static int mr_volume_slider=0x7f0b00b0;
+        public static int multiply=0x7f0b0029;
+        public static int navigation_header_container=0x7f0b0096;
+        public static int never=0x7f0b003c;
+        public static int none=0x7f0b0023;
+        public static int normal=0x7f0b001f;
+        public static int notification_background=0x7f0b00c5;
+        public static int notification_main_column=0x7f0b00bf;
+        public static int notification_main_column_container=0x7f0b00be;
+        public static int parallax=0x7f0b004d;
+        public static int parentPanel=0x7f0b0068;
         public static int parent_matrix=0x7f0b000b;
-        public static int pin=0x7f0b004d;
+        public static int pin=0x7f0b004e;
         public static int progress_circular=0x7f0b0006;
         public static int progress_horizontal=0x7f0b0007;
-        public static int radio=0x7f0b0075;
-        public static int right=0x7f0b004a;
-        public static int right_icon=0x7f0b00c1;
-        public static int right_side=0x7f0b00bd;
+        public static int radio=0x7f0b0078;
+        public static int restart=0x7f0b005b;
+        public static int reverse=0x7f0b005c;
+        public static int right=0x7f0b004b;
+        public static int right_icon=0x7f0b00c4;
+        public static int right_side=0x7f0b00c0;
         public static int save_image_matrix=0x7f0b000c;
         public static int save_non_transition_alpha=0x7f0b000d;
         public static int save_scale_type=0x7f0b000e;
-        public static int screen=0x7f0b0029;
-        public static int scroll=0x7f0b0042;
-        public static int scrollIndicatorDown=0x7f0b006b;
-        public static int scrollIndicatorUp=0x7f0b0067;
-        public static int scrollView=0x7f0b0068;
-        public static int scrollable=0x7f0b0055;
-        public static int search_badge=0x7f0b0080;
-        public static int search_bar=0x7f0b007f;
-        public static int search_button=0x7f0b0081;
-        public static int search_close_btn=0x7f0b0086;
-        public static int search_edit_frame=0x7f0b0082;
-        public static int search_go_btn=0x7f0b0088;
-        public static int search_mag_icon=0x7f0b0083;
-        public static int search_plate=0x7f0b0084;
-        public static int search_src_text=0x7f0b0085;
-        public static int search_voice_btn=0x7f0b0089;
-        public static int select_dialog_listview=0x7f0b008a;
-        public static int shortcut=0x7f0b0074;
-        public static int showCustom=0x7f0b0023;
-        public static int showHome=0x7f0b0024;
-        public static int showTitle=0x7f0b0025;
-        public static int sliding_tabs=0x7f0b00c6;
-        public static int smallLabel=0x7f0b008b;
-        public static int snackbar_action=0x7f0b0092;
-        public static int snackbar_text=0x7f0b0091;
-        public static int snap=0x7f0b0043;
-        public static int spacer=0x7f0b0064;
+        public static int screen=0x7f0b002a;
+        public static int scroll=0x7f0b0043;
+        public static int scrollIndicatorDown=0x7f0b006e;
+        public static int scrollIndicatorUp=0x7f0b006a;
+        public static int scrollView=0x7f0b006b;
+        public static int scrollable=0x7f0b0056;
+        public static int search_badge=0x7f0b0083;
+        public static int search_bar=0x7f0b0082;
+        public static int search_button=0x7f0b0084;
+        public static int search_close_btn=0x7f0b0089;
+        public static int search_edit_frame=0x7f0b0085;
+        public static int search_go_btn=0x7f0b008b;
+        public static int search_mag_icon=0x7f0b0086;
+        public static int search_plate=0x7f0b0087;
+        public static int search_src_text=0x7f0b0088;
+        public static int search_voice_btn=0x7f0b008c;
+        public static int select_dialog_listview=0x7f0b008d;
+        public static int shortcut=0x7f0b0077;
+        public static int showCustom=0x7f0b0024;
+        public static int showHome=0x7f0b0025;
+        public static int showTitle=0x7f0b0026;
+        public static int sliding_tabs=0x7f0b00c9;
+        public static int smallLabel=0x7f0b008e;
+        public static int snackbar_action=0x7f0b0095;
+        public static int snackbar_text=0x7f0b0094;
+        public static int snap=0x7f0b0044;
+        public static int spacer=0x7f0b0067;
         public static int split_action_bar=0x7f0b0008;
-        public static int src_atop=0x7f0b002a;
-        public static int src_in=0x7f0b002b;
-        public static int src_over=0x7f0b002c;
-        public static int start=0x7f0b004b;
-        public static int status_bar_latest_event_content=0x7f0b00b8;
-        public static int submenuarrow=0x7f0b0076;
-        public static int submit_area=0x7f0b0087;
-        public static int tabMode=0x7f0b001f;
+        public static int src_atop=0x7f0b002b;
+        public static int src_in=0x7f0b002c;
+        public static int src_over=0x7f0b002d;
+        public static int start=0x7f0b004c;
+        public static int status_bar_latest_event_content=0x7f0b00bb;
+        public static int submenuarrow=0x7f0b0079;
+        public static int submit_area=0x7f0b008a;
+        public static int tabMode=0x7f0b0020;
         public static int tag_transition_group=0x7f0b0019;
         public static int text=0x7f0b001a;
         public static int text2=0x7f0b001b;
-        public static int textSpacerNoButtons=0x7f0b006a;
-        public static int textSpacerNoTitle=0x7f0b0069;
-        public static int text_input_password_toggle=0x7f0b0098;
+        public static int textSpacerNoButtons=0x7f0b006d;
+        public static int textSpacerNoTitle=0x7f0b006c;
+        public static int text_input_password_toggle=0x7f0b009b;
         public static int textinput_counter=0x7f0b0014;
         public static int textinput_error=0x7f0b0015;
-        public static int time=0x7f0b00be;
+        public static int time=0x7f0b00c1;
         public static int title=0x7f0b001c;
-        public static int titleDividerNoCustom=0x7f0b0071;
-        public static int title_template=0x7f0b006f;
-        public static int toolbar=0x7f0b00c7;
-        public static int top=0x7f0b003e;
-        public static int topPanel=0x7f0b006e;
-        public static int touch_outside=0x7f0b008f;
+        public static int titleDividerNoCustom=0x7f0b0074;
+        public static int title_template=0x7f0b0072;
+        public static int toolbar=0x7f0b00ca;
+        public static int top=0x7f0b003f;
+        public static int topPanel=0x7f0b0071;
+        public static int touch_outside=0x7f0b0092;
         public static int transition_current_scene=0x7f0b000f;
         public static int transition_layout_save=0x7f0b0010;
         public static int transition_position=0x7f0b0011;
         public static int transition_scene_layoutid_cache=0x7f0b0012;
         public static int transition_transform=0x7f0b0013;
-        public static int uniform=0x7f0b002d;
+        public static int uniform=0x7f0b002e;
         public static int up=0x7f0b0009;
-        public static int useLogo=0x7f0b0026;
+        public static int useLogo=0x7f0b0027;
         public static int view_offset_helper=0x7f0b0016;
-        public static int visible=0x7f0b00c9;
-        public static int volume_item_container=0x7f0b00ab;
-        public static int withText=0x7f0b003c;
-        public static int wrap_content=0x7f0b002e;
+        public static int visible=0x7f0b00cc;
+        public static int volume_item_container=0x7f0b00ae;
+        public static int withText=0x7f0b003d;
+        public static int wrap_content=0x7f0b002f;
     }
     public static final class integer {
         public static int abc_config_activityDefaultDur=0x7f080004;
@@ -9226,6 +9330,211 @@ containing a value of this type.
           @attr name android:dropDownVerticalOffset
         */
         public static int ListPopupWindow_android_dropDownVerticalOffset = 1;
+        /** Attributes that can be used with a LottieAnimationView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #LottieAnimationView_lottie_autoPlay android.support.compat:lottie_autoPlay}</code></td><td></td></tr>
+           <tr><td><code>{@link #LottieAnimationView_lottie_colorFilter android.support.compat:lottie_colorFilter}</code></td><td></td></tr>
+           <tr><td><code>{@link #LottieAnimationView_lottie_enableMergePathsForKitKatAndAbove android.support.compat:lottie_enableMergePathsForKitKatAndAbove}</code></td><td></td></tr>
+           <tr><td><code>{@link #LottieAnimationView_lottie_fileName android.support.compat:lottie_fileName}</code></td><td></td></tr>
+           <tr><td><code>{@link #LottieAnimationView_lottie_imageAssetsFolder android.support.compat:lottie_imageAssetsFolder}</code></td><td></td></tr>
+           <tr><td><code>{@link #LottieAnimationView_lottie_loop android.support.compat:lottie_loop}</code></td><td></td></tr>
+           <tr><td><code>{@link #LottieAnimationView_lottie_progress android.support.compat:lottie_progress}</code></td><td></td></tr>
+           <tr><td><code>{@link #LottieAnimationView_lottie_rawRes android.support.compat:lottie_rawRes}</code></td><td></td></tr>
+           <tr><td><code>{@link #LottieAnimationView_lottie_repeatCount android.support.compat:lottie_repeatCount}</code></td><td></td></tr>
+           <tr><td><code>{@link #LottieAnimationView_lottie_repeatMode android.support.compat:lottie_repeatMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #LottieAnimationView_lottie_scale android.support.compat:lottie_scale}</code></td><td></td></tr>
+           <tr><td><code>{@link #LottieAnimationView_lottie_url android.support.compat:lottie_url}</code></td><td></td></tr>
+           </table>
+           @see #LottieAnimationView_lottie_autoPlay
+           @see #LottieAnimationView_lottie_colorFilter
+           @see #LottieAnimationView_lottie_enableMergePathsForKitKatAndAbove
+           @see #LottieAnimationView_lottie_fileName
+           @see #LottieAnimationView_lottie_imageAssetsFolder
+           @see #LottieAnimationView_lottie_loop
+           @see #LottieAnimationView_lottie_progress
+           @see #LottieAnimationView_lottie_rawRes
+           @see #LottieAnimationView_lottie_repeatCount
+           @see #LottieAnimationView_lottie_repeatMode
+           @see #LottieAnimationView_lottie_scale
+           @see #LottieAnimationView_lottie_url
+         */
+        public static final int[] LottieAnimationView = {
+            0x7f010179, 0x7f01017a, 0x7f01017b, 0x7f01017c,
+            0x7f01017d, 0x7f01017e, 0x7f01017f, 0x7f010180,
+            0x7f010181, 0x7f010182, 0x7f010183, 0x7f010184
+        };
+        /**
+          <p>This symbol is the offset where the {@link android.support.compat.R.attr#lottie_autoPlay}
+          attribute's value can be found in the {@link #LottieAnimationView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android.support.compat:lottie_autoPlay
+        */
+        public static int LottieAnimationView_lottie_autoPlay = 3;
+        /**
+          <p>This symbol is the offset where the {@link android.support.compat.R.attr#lottie_colorFilter}
+          attribute's value can be found in the {@link #LottieAnimationView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android.support.compat:lottie_colorFilter
+        */
+        public static int LottieAnimationView_lottie_colorFilter = 10;
+        /**
+          <p>This symbol is the offset where the {@link android.support.compat.R.attr#lottie_enableMergePathsForKitKatAndAbove}
+          attribute's value can be found in the {@link #LottieAnimationView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android.support.compat:lottie_enableMergePathsForKitKatAndAbove
+        */
+        public static int LottieAnimationView_lottie_enableMergePathsForKitKatAndAbove = 9;
+        /**
+          <p>This symbol is the offset where the {@link android.support.compat.R.attr#lottie_fileName}
+          attribute's value can be found in the {@link #LottieAnimationView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android.support.compat:lottie_fileName
+        */
+        public static int LottieAnimationView_lottie_fileName = 0;
+        /**
+          <p>This symbol is the offset where the {@link android.support.compat.R.attr#lottie_imageAssetsFolder}
+          attribute's value can be found in the {@link #LottieAnimationView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android.support.compat:lottie_imageAssetsFolder
+        */
+        public static int LottieAnimationView_lottie_imageAssetsFolder = 7;
+        /**
+          <p>This symbol is the offset where the {@link android.support.compat.R.attr#lottie_loop}
+          attribute's value can be found in the {@link #LottieAnimationView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android.support.compat:lottie_loop
+        */
+        public static int LottieAnimationView_lottie_loop = 4;
+        /**
+          <p>This symbol is the offset where the {@link android.support.compat.R.attr#lottie_progress}
+          attribute's value can be found in the {@link #LottieAnimationView} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android.support.compat:lottie_progress
+        */
+        public static int LottieAnimationView_lottie_progress = 8;
+        /**
+          <p>This symbol is the offset where the {@link android.support.compat.R.attr#lottie_rawRes}
+          attribute's value can be found in the {@link #LottieAnimationView} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android.support.compat:lottie_rawRes
+        */
+        public static int LottieAnimationView_lottie_rawRes = 1;
+        /**
+          <p>This symbol is the offset where the {@link android.support.compat.R.attr#lottie_repeatCount}
+          attribute's value can be found in the {@link #LottieAnimationView} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android.support.compat:lottie_repeatCount
+        */
+        public static int LottieAnimationView_lottie_repeatCount = 6;
+        /**
+          <p>This symbol is the offset where the {@link android.support.compat.R.attr#lottie_repeatMode}
+          attribute's value can be found in the {@link #LottieAnimationView} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>restart</code></td><td>1</td><td></td></tr>
+<tr><td><code>reverse</code></td><td>2</td><td></td></tr>
+</table>
+          @attr name android.support.compat:lottie_repeatMode
+        */
+        public static int LottieAnimationView_lottie_repeatMode = 5;
+        /**
+          <p>This symbol is the offset where the {@link android.support.compat.R.attr#lottie_scale}
+          attribute's value can be found in the {@link #LottieAnimationView} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android.support.compat:lottie_scale
+        */
+        public static int LottieAnimationView_lottie_scale = 11;
+        /**
+          <p>This symbol is the offset where the {@link android.support.compat.R.attr#lottie_url}
+          attribute's value can be found in the {@link #LottieAnimationView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android.support.compat:lottie_url
+        */
+        public static int LottieAnimationView_lottie_url = 2;
         /** Attributes that can be used with a MediaRouteButton.
            <p>Includes the following attributes:</p>
            <table>

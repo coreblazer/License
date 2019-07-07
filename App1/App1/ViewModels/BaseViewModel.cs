@@ -16,6 +16,8 @@ namespace App1.ViewModels
     public class BaseViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
+        private bool startPlaying { get; set; }
+        private bool stopPlaying { get; set; }
         private bool isbusy { get; set; }
         public bool IsBusy
         {
@@ -25,9 +27,27 @@ namespace App1.ViewModels
                 isbusy = value; OnPropertyChanged("IsBusy");
             }
         }
-        private ObservableCollection<MessageModel> messageList = new ObservableCollection<MessageModel>();
+
+        public bool StartPlaying
+        {
+            get => startPlaying;
+            set
+            {
+                startPlaying = value; OnPropertyChanged("StartPlaying");
+            }
+        }
+
+        public bool StopPlaying
+        {
+            get => stopPlaying;
+            set
+            {
+                stopPlaying = value; OnPropertyChanged("StopPlaying");
+            }
+        }
 
         private List<string> messageUuid = new List<string>();
+        private ObservableCollection<MessageModel> messageList = new ObservableCollection<MessageModel>();
 
         public ObservableCollection<MessageModel> MessageList
         {
